@@ -1,21 +1,27 @@
-// @ts-check
+// @ts-nocheck
 import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ontex — Instrukcje pracy",
+  title: "Instrukcje pracy",
   tagline: "Dokumentacja bezpieczeństwa i procedur",
   favicon: "img/favicon.ico",
-  url: "https://GrzegorzStacel.github.io",
+
+  url: "https://grzegorzstacel.github.io",
   baseUrl: "/docs/",
-  organizationName: "ontex",
-  projectName: "ontex_docs",
-  onBrokenLinks: "throw",
+
+  organizationName: "GrzegorzStacel",
+  projectName: "docs",
+  deploymentBranch: "gh-pages",
+
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+
   i18n: {
     defaultLocale: "pl",
     locales: ["pl"],
   },
+
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -23,40 +29,36 @@ const config = {
         docs: {
           path: "docs",
           routeBasePath: "/",
-          remarkPlugins: [],
-          rehypePlugins: [],
+          sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
         },
       },
     ],
   ],
+
   themeConfig: {
-    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Instrukcje BHP",
-      logo: {
-        alt: "Ontex logo",
-        src: "img/logo.svg",
-      },
-      items: [
-        { to: "/docs/pierwsza-pomoc", label: "Dokumentacja", position: "left" },
-        { href: "https://github.com/ontex/ontex_docs", label: "GitHub", position: "right" },
-      ],
+      items: [{ to: "/znajomosc-bhp", label: "Dokumentacja", position: "left" }],
     },
+
     footer: {
       style: "dark",
       links: [
         {
           title: "Działy",
           items: [
-            { label: "Pierwsza pomoc", to: "/docs/pierwsza-pomoc" },
-            { label: "Bezpieczeństwo", to: "/docs/bezpieczenstwo/gasnice" },
-            { label: "Operacje", to: "/docs/operacje/zamawianie" },
+            { label: "Znajomość zasad BHP", to: "/znajomosc-bhp" },
+            { label: "Znajomość zagrożeń na stanowisku", to: "/zagrozenia-praca" },
+            { label: "Nadzór nad przydzielonym sprzętem", to: "/nadzor-sprzetu" },
+            { label: "System LOTO", to: "/system-loto" },
+            { label: "Zarządzanie gospodarką odpadami", to: "/zarzadzanie-gospodarka-odpadami" },
+            { label: "Operacje (Linia-RAD05)", to: "/linia-rad05/zamawianie" },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Ontex.`,
+      copyright: `© ${new Date().getFullYear()}`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

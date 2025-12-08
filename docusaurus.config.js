@@ -15,8 +15,12 @@ const config = {
   deploymentBranch: "gh-pages",
 
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
 
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "pl",
     locales: ["pl"],
@@ -38,7 +42,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      items: [{ to: "/znajomosc-bhp", label: "Dokumentacja", position: "left" }],
+      items: [{ to: "obliczanie-dlugosci-rolki", label: "Dokumentacja", position: "left" }],
     },
 
     footer: {
@@ -47,12 +51,14 @@ const config = {
         {
           title: "Działy",
           items: [
-            { label: "Znajomość zasad BHP", to: "/znajomosc-bhp" },
-            { label: "Znajomość zagrożeń na stanowisku", to: "/zagrozenia-praca" },
-            { label: "Nadzór nad przydzielonym sprzętem", to: "/nadzor-sprzetu" },
-            { label: "System LOTO", to: "/system-loto" },
-            { label: "Zarządzanie gospodarką odpadami", to: "/zarzadzanie-gospodarka-odpadami" },
-            { label: "Operacje (Linia-RAD05)", to: "/linia-rad05/zamawianie" },
+            { label: "Znajomość zasad BHP", to: "bhp/znajomosc-bhp" },
+            { label: "Znajomość zagrożeń na stanowisku", to: "bhp/zagrozenia-praca" },
+            { label: "Nadzór nad przydzielonym sprzętem", to: "bhp/nadzor-sprzetu" },
+            { label: "System LOTO", to: "bhp/system-loto" },
+            { label: "Zarządzanie gospodarką odpadami", to: "bhp/zarzadzanie-gospodarka-odpadami" },
+            // { label: "Operacje (Linia-RAD05)", to: "/linia-rad05/zamawianie" },
+            { to: "/lkj/postepowanie-z-wyrobem-niezgodnym", label: "LKJ", position: "left" },
+            { label: "Obliczanie długości rolki", to: "obliczanie-dlugosci-rolki" },
           ],
         },
       ],

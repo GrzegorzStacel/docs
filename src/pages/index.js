@@ -7,7 +7,7 @@ export default function Home() {
       <h1>📘 Instrukcje pracy</h1>
       <p className="text-lg mt-2">Znajdziesz tu wszystkie procedury bezpieczeństwa, obsługi maszyn i instrukcje pracy.</p>
       <div className="mt-6 flex justify-center gap-4">
-        <Link className="button button--primary" to="/docs/pierwsza-pomoc">
+        <Link className="button button--primary" to="/docs/obliczanie-dlugosci-rolki">
           Zaczynamy →
         </Link>
       </div>

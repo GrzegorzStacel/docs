@@ -1,5 +1,6 @@
 ---
 title: Jak przygotować i zamówić towar
+draft: true
 ---
 
 # Zamawianie towaru — krok po kroku

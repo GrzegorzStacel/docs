@@ -1,0 +1,48 @@
+---
+title: 📷 Kontrola kamer – poprawne wykonywanie testów
+---
+
+### 📄 Lokalizacja testów
+
+Testy kamer znajdują się **na stronie 134**.  
+Wykonujemy je **na każdej zmianie**.
+
+---
+
+## 🔧 Sekcja _Fault Register_
+
+Przechodzimy do sekcji **Fault Register**, gdzie możemy wykonać testy **Tape** i **Sealing**.
+
+W tej sekcji ustawiamy:
+
+- **ile pieluszek** ma zostać wyrzuconych,
+- **w jakim momencie** ma nastąpić wyrzut.
+
+Zasada działania jest **zbliżona do sekcji Eject**, jednak kluczowa różnica polega na tym, że w **Fault Register celowo wywołujemy błąd** na konkretnej sekcji maszyny.
+
+Celem testu jest:
+
+- sprawdzenie, czy **kamera poprawnie wykrywa błąd**,
+- ocena, czy system **wyrzuca poprawną liczbę pieluszek**,
+- potwierdzenie, że wyrzut następuje **we właściwej kolejności**.
+
+---
+
+# 🧪 Pozostałe testy
+
+## 🧲 Metal Detector
+
+Test wykonuje się poprzez **naklejenie taśmy na rolkę**.
+
+Celem testu jest sprawdzenie, czy detektor metalu prawidłowo reaguje na zakłócenie i **wyrzuca pieluszkę z naklejoną taśmą**.
+
+---
+
+## 🌀 Test braku rdzenia (Core Absence Test)
+
+Test wykonuje się poprzez wciśnięcie przycisku znajdującego się przy panelu **otwierania drzwi po sekcji Core Cut** na linii RAD20.
+
+Procedura przebiega następująco:
+
+- wciśnij przycisk odpowiedzialny za **zdmuchnięcie rdzenia** (symulację braku rdzenia),
+- kamera powinna prawidłowo wykryć brak rdzenia, a system powinien wyrzucić pieluszkę pozbawioną rdzenia.

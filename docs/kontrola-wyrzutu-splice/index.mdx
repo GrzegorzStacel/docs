@@ -1,0 +1,32 @@
+---
+title: 🧪 Kontrola poprawnego wyrzutu – Splice
+---
+
+### Sekcja „Eject” – strona 131
+
+Kontrolę wykonujemy **na każdej zmianie**.
+
+Po wykonaniu sklejenia (_splice_) należy sprawdzić, czy kolejność wyrzuconych pieluszek jest prawidłowa:
+
+1. najpierw **pieluszki dobre**,
+2. następnie **pieluszki wadliwe**,
+3. a po nich ponownie **pieluszki dobre**.
+
+Weryfikacja odbywa się na podstawie **numerów wyrzuconych pieluszek**.
+
+Jeżeli kolejność jest nieprawidłowa (np. wadliwe pieluszki są na początku lub na końcu serii), należy **skorygować parametry**:
+
+- **Start**
+- **End**
+
+---
+
+## Przykład
+
+Start = 96
+End = 116
+
+Taki zakres oznacza, że po danym _splice_ maszyna wyrzuci **20 pieluszek**.  
+Pieluszka zawierająca taśmę powinna znaleźć się **dokładnie w ich środku**.
+
+Jeżeli tak nie jest, należy ponownie dostosować wartości **Start** oraz **End**.

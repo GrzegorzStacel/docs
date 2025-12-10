@@ -4,7 +4,8 @@ module.exports = {
     // { type: "doc", id: "zagrozenia-praca/index", label: "Znajomość zagrożeń na stanowisku" },
     // { type: "doc", id: "nadzor-sprzetu/nadzor-sprzetu", label: "Nadzór nad przydzielonym sprzętem" },
     // { type: "doc", id: "system-loto/system-loto", label: "System LOTO" },
-    // { type: "doc", id: "zarzadzanie-gospodarka-odpadami/index", label: "Zarządzanie gospodarką odpadami" },
+    { type: "doc", id: "kontrola-wyrzutu-splice/index", label: "🧪 Kontrola poprawnego wyrzutu splice" },
+    { type: "doc", id: "kontrola-kamer/index", label: "📷 Kontrola kamer – poprawne wykonywanie testów" },
     { type: "doc", id: "obliczanie-dlugosci-rolki", label: "📏 Obliczanie długości rolki" },
     // {
     //   type: "category",

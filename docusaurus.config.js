@@ -59,6 +59,8 @@ const config = {
             // { label: "Operacje (Linia-RAD05)", to: "/linia-rad05/zamawianie" },
             { to: "/lkj/postepowanie-z-wyrobem-niezgodnym", label: "LKJ", position: "left" },
             { label: "Obliczanie długości rolki", to: "obliczanie-dlugosci-rolki" },
+            { label: "Kontrola poprawnego wyrzutu splice", to: "kontrola-wyrzutu-splice" },
+            { label: "Kontrola kamer – poprawne wykonywanie testów", to: "kontrola-kamer" },
           ],
         },
       ],

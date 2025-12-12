@@ -61,6 +61,8 @@ const config = {
             { label: "Obliczanie długości rolki", to: "obliczanie-dlugosci-rolki" },
             { label: "Kontrola poprawnego wyrzutu splice", to: "kontrola-wyrzutu-splice" },
             { label: "Kontrola kamer – poprawne wykonywanie testów", to: "kontrola-kamer" },
+            { label: "Panel HMI", to: "panel-hmi" },
+            { label: "Herman", to: "herman" },
           ],
         },
       ],

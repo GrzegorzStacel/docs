@@ -1,0 +1,283 @@
+---
+title: "🖥️ Panel HMI"
+---
+
+import Admonition from "@theme/Admonition";
+
+<br />
+## ⚙️ Obsługa i regulacje
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 100**
+</Admonition>
+
+### 🌀 Drumformer
+
+- Odpowiada za **pozycję na kole formującym** tworzonego rdzenia.
+- Umożliwia przesunięcie **wzoru Panamy** w górę lub w dół.
+
+### ✂️ Core Cut
+
+- Reguluje **pozycję cięcia rdzenia**.
+
+<Admonition type="tip" title="Regulacja pozycji kanału Panamy">
+
+Jeżeli **pozycja kanału Panamy** jest zbyt przesunięta w lewą lub prawą stronę i **wykracza poza tolerancję wymiarów z rysunku technicznego**, należy użyć tej sekcji, aby **wyregulować jego pozycję**.
+
+</Admonition>
+
+### 🎯 Poly Position
+
+- Określa pozycję **Primarka na folii**.
+
+<Admonition type="warning" title="Błąd krytyczny – pozycja Primarka">
+  Primark powinien znajdować się **dokładnie w połowie pieluszki**. Jeżeli jest przesunięty, **logo na gotowym produkcie również będzie w złym miejscu**, co traktowane jest jako **błąd
+  krytyczny**.
+</Admonition>
+
+<Admonition type="tip" title="Produkty bez wzoru">
+  Pieluszki **bez wzoru lub bez loga** nie mają Primarka, ponieważ **nie ma potrzeby utrzymywania sztywnej pozycji folii**.
+</Admonition>
+
+### 🔥 Chassis Sealing 1
+
+- Steruje **dwoma pierwszymi zgrzewami**.
+
+<Admonition type="tip" title="Wyśrodkowanie zgrzewu">
+
+Jeżeli **zgrzew na pieluszce nie jest wyśrodkowany**, używamy sekcji **Chassis Sealing 1**, aby **wycentrować cały układ zgrzewów**.
+
+</Admonition>
+
+<Admonition type="info" title="Regulacja podczas przebudów i testów">
+
+Podczas przebudowy lub testów często zachodzi potrzeba **przesunięcia zgrzewów w lewo lub w prawo**.
+
+**W takiej sytuacji:**
+
+1. Używamy **Chassis Sealing 1**, aby przesunąć **oba zgrzewy jednocześnie**.
+2. Przesuwamy do momentu, aż **pierwszy zgrzew** (lewa strona Herman’a) osiągnie **właściwą pozycję**.
+3. Następnie regulujemy **Chassis Sealing 2**, aby ustawić **drugi zgrzew** w pożądanym miejscu.
+
+</Admonition>
+
+### 🔥 Chassis Sealing 2
+
+- Odpowiada za **drugi zgrzew** (prawa strona Herman’a).
+- **Pierwszy nie reaguje** na tę regulację.
+
+<Admonition type="tip" title="Doprecyzowanie po pozycji pierwszego zgrzewu">
+  {" "}
+  Tę regulację stosujemy **dopiero po ustawieniu pierwszego zgrzewu** w sekcji **Chassis Sealing 1**. Pozwala to **precyzyjnie wyrównać tylko drugi zgrzew**, bez wpływu na pierwszy.{" "}
+</Admonition>
+
+### ✂️ Highloft Cut
+
+- Reguluje **pozycję cięcia highloftu** oraz jego finalne ułożenie na rdzeniu.
+
+<details>
+  <summary>💡 Tip: Regulacja pozycji Highloft (kliknij, aby rozwinąć)</summary>
+
+Zmieniając pozycję w tej sekcji, **koło odbierające wraz z nożem przyśpieszy lub zwolni**, co spowoduje, że:
+
+- pierwsza ucięta sztuka będzie **dłuższa lub krótsza**,
+- od drugiej sztuki cięcie będzie następowało w **zadanej pozycji**.
+
+Nie sterujemy tutaj długością ADL – jest ona ustawiona w innej sekcji.  
+Ta regulacja decyduje **o momencie wklejenia ADL w Cuff’a**, czyli **o jego pozycji**.
+
+Robimy tę regulację np. wtedy, gdy **ADL nie zakrywa w całości kanału Panamy**.
+
+</details>
+
+### 🔄 Rotator Pad & Final
+
+- Regulacja odbywa się przez zmianę **prędkości rotatora**.
+- Wpływa na:
+  - moment zebrania materiału (wcześniej/później),
+  - pozycję materiału na kopycie,
+  - przesunięcie materiału w stronę **operatora** lub **napędów**.
+
+<br />
+
+---
+
+## 🧪 Sterowanie dawkowaniem SAP / Celulozy
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 1**
+</Admonition>
+
+### 🌲 Fluff (Celuloza)
+
+- **Production** — liczba gramów na produkt.
+- **Start up** — ilość materiału podawana przy starcie maszyny (1-szy bieg).
+- **Stop** — ilość materiału podawana podczas zatrzymania maszyny.
+- **Actual** — aktualne dozowanie.
+
+### ⚙️ Machine PPM (parts per minute)
+
+- **PPM** — aktualna prędkość maszyny.
+- **Start up** — prędkość początkowa (1-szy bieg).
+- **Target** — prędkość docelowa.
+- **Time delay** — czas (w minutach), po którym maszyna automatycznie przejdzie do prędkości docelowej.
+  - Przyspieszy, jeśli jedzie zbyt wolno.
+  - Zwolni, jeśli jest idzie za szybko.
+
+### 💧 SAP
+
+- Ilość gramów SAP podawana **na produkt**.
+
+<br />
+
+---
+
+## 🔧 Znajomość punktu „0” noży i urządzeń
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 400**
+</Admonition>
+
+<br />
+
+<Admonition type="warning" title="Do uzupełnienia ⚠️">
+  Do uzupełnienia, jak to się robi
+</Admonition>
+
+<br />
+
+---
+
+## 🟡 Regulacje pozycji kleju na produkcie
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 121+**
+</Admonition>
+
+### 🟨 Klejenie taktowane
+
+- **Start** — miejsce rozpoczęcia nakładania kleju (regulacja góra/dół).
+- **Length** — długość odcinka, na który nakładany jest klej.
+
+### 🧴 Rodzaje podawania kleju:
+
+- **Taktowane**
+- **Stałe**
+
+<br />
+
+---
+
+## 🛢️ Regulacja dawkowaniem klejów
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 114**
+</Admonition>
+
+- **RPM for MAX line speed** — obroty na minutę dla maksymalnej prędkości linii.
+- **RPM of the drive** — bieżąca prędkość obrotowa.
+- **Actual Pressure [bar]** — aktualne ciśnienie podawanie kleju.
+
+<br />
+
+---
+
+## 🛠️ Uruchamianie serwonapędów
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 410**
+</Admonition>
+
+### 🔧 Kiedy używać?
+
+- W przypadku zerwania materiału — wyłączamy wszystkie napędy, pozostawiając jedynie wybrane, aby ułatwić ponowne przeciągnięcie materiału.
+
+- Przy przezbrajaniu na inny produkt — wygodniejsza i bardziej precyzyjna regulacja tylko aktywnych sekcji.
+
+### 🔥 Przykładowe funkcje:
+
+- Wyłączenie poszczególnych **głowic klejowych**, aby uniknąć podawania kleju przed naciągnięciem materiału.
+
+<Admonition type="tip" title="Kontrola kleju">
+
+Jeżeli materiał nie jest rozłożony na całą szerokość głowicy, klej może **oblepiać rolki**, powodując powstawanie **orinków z kleju** i tworzenie się **zakładek na materiale**.
+
+</Admonition>
+
+- Włączanie tylko wybranych sekcji, np. **core**, **cuff**, itp.
+- Na panelu HMI możemy uruchomić **tylko wybraną sekcję maszyny**.  
+  System automatycznie włącza wszystkie **napędy wymagane do pracy tej sekcji**, dzięki czemu nie trzeba ręcznie aktywować każdego napędu z osobna.
+
+<br />
+
+---
+
+## 🌬️ Napędy wentylatorów maszyny
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 1**
+</Admonition>
+
+<br />
+
+- Włączamy lub wyłączamy napędy, wciskając przycisk **"AuxDrive Standstill"**.
+- Napędy wyłączamy, jeśli maszyna **nie będzie pracowała przez dłuższy czas** lub gdy wchodzimy do
+  **Osprey'a**.
+
+<br />
+
+---
+
+## 📸 Ustawienie pozycji kamer
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 100**
+</Admonition>
+
+<br />
+
+- Regulujemy **moment wykonania zdjęcia przez kamerę**.
+- Zmiana wartości powoduje, że obraz pieluszki na monitorze przesunie się, umożliwiając właściwe ustawienie inspekcji.
+
+<br />
+
+---
+
+## 🖨️ Ustawianie pozycji nadruku
+
+<br />
+
+<Admonition type="tip" title="Informacja">
+  📄 **Strona 141 (prawdopodobnie)**
+</Admonition>
+
+<br />
+
+- Funkcja pozwala przesunąć pozycję nadruku na produkcie w górę lub w dół.
+
+<br />
+
+---
+
+# 📦 Ustawienie składania produktu
+
+Finalny etap procesu — składanie **wzdłużne i poprzeczne** produktu:
+
+- Składanie wzdłużne odbywa się przed **Herman'em**.
+- Składanie poprzeczne jest po **final rotatorze**.

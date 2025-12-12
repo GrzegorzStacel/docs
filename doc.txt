@@ -1,0 +1,15 @@
+w mdx dodajemy na początku tylko:
+
+---
+title: "🖥️ Panel HMI"
+---
+
+---
+
+
+w config:
+{ label: "Panel HMI", to: "panel-hmi" },
+
+
+a w sidebars:
+{ type: "doc", id: "panel-hmi/index", label: "Panel HMI" },

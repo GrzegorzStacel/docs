@@ -63,6 +63,7 @@ const config = {
             { label: "Kontrola kamer – poprawne wykonywanie testów", to: "kontrola-kamer" },
             { label: "Panel HMI", to: "panel-hmi" },
             { label: "Herman", to: "herman" },
+            { label: "Audyt", to: "audyt" },
           ],
         },
       ],

@@ -9,6 +9,7 @@ module.exports = {
     { type: "doc", id: "obliczanie-dlugosci-rolki", label: "📏 Obliczanie długości rolki" },
     { type: "doc", id: "panel-hmi/index", label: "🖥️ Panel HMI" },
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
+    { type: "doc", id: "audyt/index", label: "Audyt" },
     // {
     //   type: "category",
     //   label: "Operacje (Linia-RAD05)",

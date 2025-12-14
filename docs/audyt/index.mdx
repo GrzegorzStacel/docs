@@ -1,36 +1,93 @@
 ---
-title: "📸 Audyt"
+title: "🔍 Audyt"
 ---
 
-# 📸 Audyt
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
 
-<div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-    gap: "1rem",
-    justifyItems: "center",
-  }}
->
-  <img src={require("@site/static/img/audyt/D05.webp").default} alt="Audyt 1" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/E05.webp").default} alt="Audyt 2" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/kamera_glowna.webp").default} alt="Audyt 3" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/kamera_metal_detektor.webp").default} alt="Audyt 4" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/ML11.webp").default} alt="Audyt 5" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/napedy.webp").default} alt="Audyt 6" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/oliwienie_ciecie_koncowe.webp").default} alt="Audyt 7" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/oliwienie_ciecie_tape.webp").default} alt="Audyt 8" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/oliwienie_unit_adl.webp").default} alt="Audyt 9" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/oliwienie_unit_pad_cut.webp").default} alt="Audyt 10" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OPT21.webp").default} alt="Audyt 11" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OPT22.webp").default} alt="Audyt 12" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OPT23.webp").default} alt="Audyt 13" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OPT25.webp").default} alt="Audyt 14" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OS001.webp").default} alt="Audyt 15" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OS002.webp").default} alt="Audyt 16" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OS004.webp").default} alt="Audyt 17" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/OS006.webp").default} alt="Audyt 18" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/rys_tech_1.webp").default} alt="Audyt 19" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/rys_tech_2.webp").default} alt="Audyt 20" style={{ maxWidth: "200px", height: "auto" }} />
-  <img src={require("@site/static/img/audyt/sterowanie.webp").default} alt="Audyt 21" style={{ maxWidth: "200px", height: "auto" }} />
-</div>
+<h2>Zmiana 2 📸</h2>
+
+<details>
+  <summary style={{ cursor: "pointer", fontWeight: 600 }}>
+    ▶️ Pokaż / ukryj zdjęcia audytu (zmiana 2)
+  </summary>
+
+  <ImageCarousel
+    changeContext="Zmiana 2" 
+    images={[
+      
+      { src: require("@site/static/img/audyt/zmiana_2/D05.webp").default, title: "D05", fullTitle: "Zawór D05: Kontrola szczelności systemu" },
+      { src: require("@site/static/img/audyt/zmiana_2/E05.webp").default, title: "E05", fullTitle: "Stan mechaniczny E05 po resecie linii" },
+      { src: require("@site/static/img/audyt/zmiana_2/kamera_glowna.webp").default, title: "Kamera Główna", fullTitle: "Regulacja kamery głównej: Ustawienie ostrości i położenia" },
+      { src: require("@site/static/img/audyt/zmiana_2/kamera_metal_detektor.webp").default, title: "Kamera MD", fullTitle: "Kamera przy detektorze metalu" },
+      { src: require("@site/static/img/audyt/zmiana_2/ML11.webp").default, title: "ML11", fullTitle: "Stan czujnika ML11: Pomiar poziomu oleju" },
+      { src: require("@site/static/img/audyt/zmiana_2/napedy.webp").default, title: "Napędy", fullTitle: "Stan napędów serwo: Kontrola uszczelnień" },
+      { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_koncowe.webp").default, title: "Oliwienie Końcowe", fullTitle: "Punkt oliwienia przy cięciu końcowym" },
+      { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_tape.webp").default, title: "Oliwienie Tape", fullTitle: "Punkt oliwienia przy cięciu taśmy" },
+      { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_adl.webp").default, title: "Oliwienie ADL", fullTitle: "Punkt oliwienia Unit ADL" },
+      { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_pad_cut.webp").default, title: "Oliwienie Pad Cut", fullTitle: "Punkt oliwienia Unit Pad Cut" },
+      { src: require("@site/static/img/audyt/zmiana_2/OPT21.webp").default, title: "OPT21", fullTitle: "Optyka OPT21: Kontrola czystości" },
+      { src: require("@site/static/img/audyt/zmiana_2/OPT22.webp").default, title: "OPT22", fullTitle: "Optyka OPT22" },
+      { src: require("@site/static/img/audyt/zmiana_2/OPT23.webp").default, title: "OPT23", fullTitle: "Optyka OPT23" },
+      { src: require("@site/static/img/audyt/zmiana_2/OPT25.webp").default, title: "OPT25", fullTitle: "Optyka OPT25" },
+      { src: require("@site/static/img/audyt/zmiana_2/OS001.webp").default, title: "OS001", fullTitle: "Czujnik OS001: Pomiary" },
+      { src: require("@site/static/img/audyt/zmiana_2/OS002.webp").default, title: "OS002", fullTitle: "Czujnik OS002" },
+      { src: require("@site/static/img/audyt/zmiana_2/OS004.webp").default, title: "OS004", fullTitle: "Czujnik OS004" },
+      { src: require("@site/static/img/audyt/zmiana_2/OS006.webp").default, title: "OS006", fullTitle: "Czujnik OS006" },
+    ]}
+  />
+</details>
+
+<h2>Zmiana 3 🔍</h2>
+
+<details>
+  <summary style={{ cursor: "pointer", fontWeight: 600 }}>
+    ▶️ Pokaż / ukryj zdjęcia audytu (zmiana 3)
+  </summary>
+
+  <ImageCarousel
+    changeContext="Zmiana 3" 
+    images={[
+      { src: require("@site/static/img/audyt/zmiana_3/A01.jpg").default, title: "Glue A01", fullTitle: "Stan mechaniczny dyszy klejowej A01" },
+      { src: require("@site/static/img/audyt/zmiana_3/A02.jpg").default, title: "Glue A02", fullTitle: "Stan dyszy klejowej A02" },
+      { src: require("@site/static/img/audyt/zmiana_3/B07.jpg").default, title: "Glue B07", fullTitle: "Stan dyszy klejowej B07" },
+      { src: require("@site/static/img/audyt/zmiana_3/B08.jpg").default, title: "Glue B08", fullTitle: "Stan dyszy klejowej B08" },
+      { src: require("@site/static/img/audyt/zmiana_3/C03.jpg").default, title: "Glue C03", fullTitle: "Stan dyszy klejowej C03" },
+      { src: require("@site/static/img/audyt/zmiana_3/D03.jpg").default, title: "Glue D03", fullTitle: "Stan dyszy klejowej D03" },
+      { src: require("@site/static/img/audyt/zmiana_3/D04.jpg").default, title: "Glue D04", fullTitle: "Stan dyszy klejowej D04" },
+      { src: require("@site/static/img/audyt/zmiana_3/E01.jpg").default, title: "Glue E01", fullTitle: "Stan dyszy klejowej E01" },
+      { src: require("@site/static/img/audyt/zmiana_3/E02.jpg").default, title: "Glue E02", fullTitle: "Stan dyszy klejowej E02" },
+      { src: require("@site/static/img/audyt/zmiana_3/E06.jpg").default, title: "Glue E06", fullTitle: "Stan dyszy klejowej E06" },
+      { src: require("@site/static/img/audyt/zmiana_3/E07.jpg").default, title: "Glue E07", fullTitle: "Stan dyszy klejowej E07" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet_endseal.jpg").default, title: "Glue Backsheet Endseal", fullTitle: "Weryfikacja klejenia: Backsheet Endseal" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet.jpg").default, title: "Glue Backsheet", fullTitle: "Weryfikacja klejenia: Backsheet" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_attachment.jpg").default, title: "Glue Cuff Attachment", fullTitle: "Weryfikacja klejenia: Cuff Attachment" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_elastic.jpg").default, title: "Glue Cuff Elastic", fullTitle: "Weryfikacja klejenia: Cuff Elastic" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_take_down.jpg").default, title: "Glue Cuff Take Down", fullTitle: "Weryfikacja klejenia: Cuff Take Down" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_delta_lycra.jpg").default, title: "Glue Delta Lycra", fullTitle: "Weryfikacja klejenia: Delta Lycra" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_delta_pocked_fold.jpg").default, title: "Glue Delta Pocked Fold", fullTitle: "Weryfikacja klejenia: Delta Pocked Fold" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_leg_elastic.jpg").default, title: "Glue Leg Elastic", fullTitle: "Weryfikacja klejenia: Leg Elastic" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_folding.jpg").default, title: "Glue Pad Folding", fullTitle: "Weryfikacja klejenia: Pad Folding" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_sn.jpg").default, title: "Glue Pad to Cover SN", fullTitle: "Weryfikacja klejenia: Pad to Cover SN" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_so.jpg").default, title: "Glue Pad to Cover SO", fullTitle: "Weryfikacja klejenia: Pad to Cover SO" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_poly_txb.jpg").default, title: "Glue Poly TXB", fullTitle: "Weryfikacja klejenia: Poly TXB" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_topsheet.jpg").default, title: "Glue Topsheet", fullTitle: "Weryfikacja klejenia: Topsheet" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_sn.jpg").default, title: "Glue Tummy Spray SN", fullTitle: "Weryfikacja klejenia: Tummy Spray SN" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_so.jpg").default, title: "Glue Tummy Spray SO", fullTitle: "Weryfikacja klejenia: Tummy Spray SO" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_sn.jpg").default, title: "Glue Waist Elastic SN", fullTitle: "Weryfikacja klejenia: Waist Elastic SN" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_so.jpg").default, title: "Glue Waist Elastic SO", fullTitle: "Weryfikacja klejenia: Waist Elastic SO" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_sn.jpg").default, title: "Glue Waist Fold SN", fullTitle: "Weryfikacja klejenia: Waist Fold SN" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_food_so.jpg").default, title: "Glue Waist Food SO", fullTitle: "Weryfikacja klejenia: Waist Food SO" },
+      { src: require("@site/static/img/audyt/zmiana_3/glue_wi.jpg").default, title: "Glue WI", fullTitle: "Weryfikacja klejenia: Glue WI" },
+
+      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2.jpg").default, title: "Tank Glue 2", fullTitle: "Stan zbiornika kleju nr 2" },
+      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_1.jpg").default, title: "Tank Glue 2 Screen 1", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 1)" },
+      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_2.jpg").default, title: "Tank Glue 2 Screen 2", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 2)" },
+      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_3.jpg").default, title: "Tank Glue 2 Screen 3", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 3)" },
+
+      { src: require("@site/static/img/audyt/zmiana_3/H04.jpg").default, title: "Audit H04", fullTitle: "Pomiar temperatury na stacji H04" },
+      { src: require("@site/static/img/audyt/zmiana_3/M01.jpg").default, title: "Audit M01", fullTitle: "Wyniki audytu w sekcji M01" },
+    ]}
+
+/>
+
+</details>

@@ -1,0 +1,157 @@
+/* Styl dla siatki miniatur */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px 0;
+}
+
+/* 🆕 KLUCZOWY STYL: Kontener miniatury (jest klikalny i grupuje obraz + tytuł) */
+.thumbContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden; /* Upewnia się, że treść jest przycięta do border-radius */
+  transition: transform 0.2s;
+}
+
+.thumbContainer:hover {
+  transform: scale(1.03);
+}
+
+/* 🛠️ POPRAWIONY STYL: Obraz wewnątrz kontenera */
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🆕 KLUCZOWY STYL: Tytuł na miniaturze */
+.thumbTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  /* Szare tło z przezroczystością */
+  background-color: rgba(60, 60, 60, 0.85);
+
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  /* Wyśrodkowanie tekstu */
+  text-align: center;
+
+  /* Obsługa długich tytułów */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Styl dla pełnoekranowego podglądu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kontener dla tytułu, obrazu i licznika (centruje je horyzontalnie) */
+.fullImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* CENTROWANIE horyzontalne dla wszystkich elementów wewnątrz */
+  justify-content: center;
+  margin: 0 50px;
+  max-width: 90%;
+  max-height: 100vh;
+}
+
+/* Styl dla tytułu obrazu (widok pełnoekranowy) */
+.imageTitle {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold; /* Teraz tylko dla tekstu w <strong> */
+  text-align: center;
+  /* Dodaj niewielki odstęp od góry, aby tytuł nie był przyklejony do krawędzi */
+  margin-top: 20px;
+}
+/* Opcjonalnie: upewnienie się, że pogrubienie działa tylko na numerze zmiany */
+.imageTitle strong {
+  font-weight: bold;
+}
+
+/* Styl dla powiększonego obrazu */
+.full {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Styl dla licznika obrazów (pod zdjęciem) */
+.imageCounter {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  margin-top: 5px; /* Odstęp od obrazu */
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-align: center; /* CENTROWANIE TEKSTU */
+}
+
+/* Styl dla przycisków nawigacyjnych */
+.left,
+.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 20px;
+  z-index: 1001;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.left:hover,
+.right:hover {
+  opacity: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+/* Responsywność dla małych ekranów */
+@media (max-width: 768px) {
+  .full {
+    max-height: 70vh;
+  }
+  .left,
+  .right {
+    font-size: 3rem;
+  }
+}

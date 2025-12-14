@@ -11,7 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@site/*": ["./*"]
-    }
+    },
+    "jsx": "react-jsx"
   },
   "include": ["src", "docusaurus.config.ts", "sidebars.ts"]
 }

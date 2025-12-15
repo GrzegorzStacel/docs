@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import styles from "./ImageCarousel.module.css";
+
+// Ustawienia czułości gestu swipe
+const SWIPE_THRESHOLD = 50; // Minimalna odległość przesunięcia (w pikselach)
 
 // Zaktualizowany typ danych
 type ImageItem = {
@@ -16,10 +19,14 @@ type Props = {
 export default function ImageCarousel({ images, changeContext }: Props) {
   const [index, setIndex] = useState<number | null>(null);
 
+  // Ref do przechowywania początkowej pozycji dotyku
+  const touchStartRef = useRef<number | null>(null);
+
   if (!images || images.length === 0) {
     return <p style={{ padding: "10px", color: "gray" }}>Brak obrazów do wyświetlenia.</p>;
   }
 
+  // --- Funkcje do sterowania karuzelą (już istniejące) ---
   const close = useCallback(() => setIndex(null), []);
 
   const prev = useCallback(() => {
@@ -35,8 +42,63 @@ export default function ImageCarousel({ images, changeContext }: Props) {
       return (i + 1) % images.length;
     });
   }, [images.length]);
+  // --------------------------------------------------------
 
-  // Obsługa klawiatury
+  // --- Obsługa GESTÓW SWIPE ---
+
+  // 1. touchstart: Zapisuje początkową pozycję dotyku X
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    // Sprawdzamy, czy dotyk jest pojedynczy
+    if (e.touches.length === 1) {
+      touchStartRef.current = e.touches[0].clientX;
+    } else {
+      touchStartRef.current = null;
+    }
+  }, []);
+
+  // 2. touchend: Oblicza przesunięcie i wywołuje prev/next
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      // Jeśli nie ma zapisanego punktu startu, wychodzimy
+      if (touchStartRef.current === null) return;
+
+      // Miejsce zakończenia dotyku
+      const touchEndX = e.changedTouches[0].clientX;
+
+      // Obliczamy różnicę (przesunięcie)
+      const diff = touchStartRef.current - touchEndX;
+
+      // Sprawdzamy, czy gest był wystarczająco długi
+      if (Math.abs(diff) > SWIPE_THRESHOLD) {
+        if (diff > 0) {
+          // Przesunięcie w lewo (diff > 0) -> przejdź do następnego zdjęcia
+          next();
+        } else {
+          // Przesunięcie w prawo (diff < 0) -> przejdź do poprzedniego zdjęcia
+          prev();
+        }
+      }
+
+      // Resetujemy referencję
+      touchStartRef.current = null;
+    },
+    [prev, next]
+  );
+
+  // 3. touchmove: Zapobiega przewijaniu strony podczas przesuwania palcem w obszarze karuzeli (opcjonalne, ale zalecane)
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    // Zapobiegamy domyślnej akcji (np. przewijaniu strony w pionie), jeśli
+    // to jest swipe horyzontalny
+    if (touchStartRef.current !== null) {
+      // e.preventDefault();
+      // Ostrzeżenie: e.preventDefault() może zakłócić inne zachowania przeglądarki.
+      // Zostawiamy zakomentowane, chyba że wystąpią problemy z przewijaniem pionowym.
+    }
+  }, []);
+
+  // ----------------------------------------------------
+
+  // Obsługa klawiatury (bez zmian)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (index === null) return;
@@ -56,21 +118,13 @@ export default function ImageCarousel({ images, changeContext }: Props) {
       <div className={styles.grid}>
         {images.map((item, i) => (
           <div key={item.src} className={styles.thumbContainer} onClick={() => setIndex(i)}>
-            {/* 💡 KLUCZOWA ZMIANA: Usuwamy loading="lazy" z miniatur, aby przeglądarka 
-               nie de-renderowała ich agresywnie podczas szybkiego przewijania na telefonie.
-               
-               Miniatury są i tak chronione przez <details>, więc ładowanie rozpocznie się
-               dopiero po otwarciu sekcji. Usunięcie "lazy" wymusi ich utrzymanie 
-               w pamięci renderowania po załadowaniu.
-            */}
             <img
               src={item.src}
               alt={item.title}
               className={styles.thumb}
-              // Usunięto loading="lazy"
+              // Usunięto loading="lazy" (tak jak w poprzedniej poprawce)
             />
 
-            {/* Krótki tytuł */}
             <div className={styles.thumbTitle}>{item.title}</div>
           </div>
         ))}
@@ -78,7 +132,14 @@ export default function ImageCarousel({ images, changeContext }: Props) {
 
       {/* 2. SEKCJA PEŁNOEKRANOWA (OVERLAY) */}
       {index !== null && currentImage && (
-        <div className={styles.overlay} onClick={close}>
+        <div
+          className={styles.overlay}
+          onClick={close}
+          // Dodajemy Handlery do elementu pełnoekranowego:
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             className={styles.left}
             onClick={(e) => {
@@ -90,7 +151,6 @@ export default function ImageCarousel({ images, changeContext }: Props) {
           </button>
 
           <div className={styles.fullImageContainer}>
-            {/* TYTUŁ PEŁNOEKRANOWY (Używa przekazanego propa) */}
             <div className={styles.imageTitle}>
               <strong>{changeContext}</strong>
               <br />
@@ -99,7 +159,6 @@ export default function ImageCarousel({ images, changeContext }: Props) {
 
             <img src={currentImage.src} alt={currentImage.fullTitle} className={styles.full} />
 
-            {/* Licznik (pod obrazem) */}
             <div className={styles.imageCounter}>
               {index + 1} / {images.length}
             </div>

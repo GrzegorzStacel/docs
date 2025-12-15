@@ -10,7 +10,7 @@ type ImageItem = {
 
 type Props = {
   images: ImageItem[];
-  changeContext: string; // Nowy prop: np. "Zmiana 2"
+  changeContext: string;
 };
 
 export default function ImageCarousel({ images, changeContext }: Props) {
@@ -56,7 +56,19 @@ export default function ImageCarousel({ images, changeContext }: Props) {
       <div className={styles.grid}>
         {images.map((item, i) => (
           <div key={item.src} className={styles.thumbContainer} onClick={() => setIndex(i)}>
-            <img src={item.src} alt={item.title} className={styles.thumb} loading="lazy" />
+            {/* 💡 KLUCZOWA ZMIANA: Usuwamy loading="lazy" z miniatur, aby przeglądarka 
+               nie de-renderowała ich agresywnie podczas szybkiego przewijania na telefonie.
+               
+               Miniatury są i tak chronione przez <details>, więc ładowanie rozpocznie się
+               dopiero po otwarciu sekcji. Usunięcie "lazy" wymusi ich utrzymanie 
+               w pamięci renderowania po załadowaniu.
+            */}
+            <img
+              src={item.src}
+              alt={item.title}
+              className={styles.thumb}
+              // Usunięto loading="lazy"
+            />
 
             {/* Krótki tytuł */}
             <div className={styles.thumbTitle}>{item.title}</div>
@@ -80,11 +92,8 @@ export default function ImageCarousel({ images, changeContext }: Props) {
           <div className={styles.fullImageContainer}>
             {/* TYTUŁ PEŁNOEKRANOWY (Używa przekazanego propa) */}
             <div className={styles.imageTitle}>
-              {/* Kontekst Zmiany (pogrubiony) */}
               <strong>{changeContext}</strong>
-              {/* Nowa linia (przełamanie linii) */}
               <br />
-              {/* Pełny tytuł */}
               {currentImage.fullTitle}
             </div>
 

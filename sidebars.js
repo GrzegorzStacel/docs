@@ -10,6 +10,7 @@ module.exports = {
     { type: "doc", id: "panel-hmi/index", label: "🖥️ Panel HMI" },
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
     { type: "doc", id: "audyt/index", label: "🔍 Audyt" },
+    { type: "doc", id: "optima/index", label: "📦 Optima" },
     // {
     //   type: "category",
     //   label: "Operacje (Linia-RAD05)",

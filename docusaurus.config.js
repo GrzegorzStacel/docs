@@ -64,6 +64,7 @@ const config = {
             { label: "Panel HMI", to: "panel-hmi" },
             { label: "Herman", to: "herman" },
             { label: "Audyt", to: "audyt" },
+            { label: "Optima", to: "optima" },
           ],
         },
       ],

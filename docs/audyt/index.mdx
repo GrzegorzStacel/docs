@@ -2,119 +2,160 @@
 title: "🔍 Audyt"
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
 
-<h2>Zmiana 2 📸</h2>
+:::info Instrukcja przeprowadzania audytu
 
-<details>
-  <summary style={{ cursor: "pointer", fontWeight: 600 }}>
-    ▶️ Pokaż / ukryj zdjęcia audytu (zmiana 2)
-  </summary>
+**Podstawowe informacje:**
 
-  <ImageCarousel
-    changeContext="Zmiana 2" 
-    images={[
-            { src: require("@site/static/img/audyt/zmiana_2/A03.webp").default, title: "A03", fullTitle: "A03: Naciąg czarnego pasa nr 148 (nie dotyczy swimpants)" },
-  { src: require("@site/static/img/audyt/zmiana_2/D01.webp").default, title: "D01", fullTitle: "D01: Ciśnienie noża krążkowego" },
-  { src: require("@site/static/img/audyt/zmiana_2/D05.webp").default, title: "D05", fullTitle: "D05: Czerwona rolka dociskowa przed Pad Cut" },
-  { src: require("@site/static/img/audyt/zmiana_2/E05.webp").default, title: "E05", fullTitle: "E05: Napięcie pasa przenoszącego wstęgę Ax 1_28" },
-  { src: require("@site/static/img/audyt/zmiana_2/E08.webp").default, title: "E08", fullTitle: "E08: Podciśnienie przenośnika Delta Przód" },
-  { src: require("@site/static/img/audyt/zmiana_2/E09.webp").default, title: "E09", fullTitle: "E09: Podciśnienie przenośnika Delta Tył" },
-  { src: require("@site/static/img/audyt/zmiana_2/E177.webp").default, title: "E177", fullTitle: "E177: Siła docisku cięcia lycry SN" },
-  { src: require("@site/static/img/audyt/zmiana_2/E178.webp").default, title: "E178", fullTitle: "E178: Siła docisku cięcia lycry SO" },
-  { src: require("@site/static/img/audyt/zmiana_2/F01.webp").default, title: "F01", fullTitle: "F01: Rolka dociskowa przed cięciem tummy pause SO (Ax 2_23)" },
-  { src: require("@site/static/img/audyt/zmiana_2/F02.webp").default, title: "F02", fullTitle: "F02: Rolka dociskowa za cięciem tummy pause SO (Ax 2_25)" },
-  { src: require("@site/static/img/audyt/zmiana_2/F03.webp").default, title: "F03", fullTitle: "F03: Rolka dociskowa przed cięciem tummy pause SN (Ax 2_20)" },
-  { src: require("@site/static/img/audyt/zmiana_2/F04.webp").default, title: "F04", fullTitle: "F04: Rolka dociskowa za cięciem tummy pause SN (Ax 2_22)" },
-  { src: require("@site/static/img/audyt/zmiana_2/F05.webp").default, title: "F05", fullTitle: "F05: (254 SO) Rolka dociskowa za płozami składającymi (Ax 1_21) SO" },
-  { src: require("@site/static/img/audyt/zmiana_2/F06.webp").default, title: "F06", fullTitle: "F06: (254 SO) Rolka dociskowa za płozami składającymi (Ax 1_21) SN" },
-  { src: require("@site/static/img/audyt/zmiana_2/G185.webp").default, title: "G 185", fullTitle: "G 185: Czerwone rolki dociskowe za kamerą Pad/Tape" },
-  { src: require("@site/static/img/audyt/zmiana_2/G254.webp").default, title: "G 254", fullTitle: "G 254: Rolka dociskowa Inner/Outer Ax 4_21" },
-  { src: require("@site/static/img/audyt/zmiana_2/H01.webp").default, title: "H 01", fullTitle: "H 01: Pas P&O - siła docisku" },
-  { src: require("@site/static/img/audyt/zmiana_2/H02.webp").default, title: "H 02", fullTitle: "H 02: Czerwona rolka dociskowa przed bębnem transportowym" },
-  { src: require("@site/static/img/audyt/zmiana_2/H03.webp").default, title: "H 03", fullTitle: "H 03: Podciśnienie na odebraniu Transfer Drum przed Final Rotator" },
-  { src: require("@site/static/img/audyt/zmiana_2/H06.webp").default, title: "H 06", fullTitle: "H 06: Odłożenie na bębnie transportującym przed Final Rotator" },
-  { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_temperatura.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Temperatura" },
-  { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_stp.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Zgrzew górny - pozycja STP" },
-  { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_sila_N.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Zgrzew górny - siła [N]" },
-  { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_temperatura.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Temperatura" },
-  { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_stp.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Zgrzew dolny - pozycja STP" },
-  { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_Sila_N.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Zgrzew dolny - siła [N]" },
-  { src: require("@site/static/img/audyt/zmiana_2/kamera_glowna.webp").default, title: "Kamera", fullTitle: "Kamera Główna (Pozycja z HMI / wyrzut rzeczywisty)" },
-  { src: require("@site/static/img/audyt/zmiana_2/kamera_metal_detektor.webp").default, title: "Kamera", fullTitle: "Kamera Metal Inline (Pozycja z HMI / wyrzut rzeczywisty)" },
-  { src: require("@site/static/img/audyt/zmiana_2/kamera_tape_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera Chassis Sealing / Disposal Tape (Pozycja z HMI / wyrzut rzeczywisty)" },
-  { src: require("@site/static/img/audyt/zmiana_2/LKJ_01.webp").default, title: "LKJ_01", fullTitle: "LKJ_01: Manometr urządzenia kontroli szwów" },
-  { src: require("@site/static/img/audyt/zmiana_2/ML11.webp").default, title: "ML 11", fullTitle: "ML 11: Obciążenie serwonapędu 1.2 Core Processor" },
-  { src: require("@site/static/img/audyt/zmiana_2/ML12.webp").default, title: "ML 12", fullTitle: "ML 12: Temperatura serwonapędu 1.2 Core Processor" },
-  { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_rdzenia.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - cięcie rdzenia" },
-  { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_adl.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Unit ADL" },
-  { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_pad_cut.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Unit Pad Cut" },
-  { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_koncowe.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - cięcie końcowe" },
-  { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_tape.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Cięcie Tape" },
-  { src: require("@site/static/img/audyt/zmiana_2/OPT21.webp").default, title: "OPT 21", fullTitle: "OPT 21: Ciśnienie robocze (wyjazd gotowych worków, prawa strona)" },
-  { src: require("@site/static/img/audyt/zmiana_2/OPT22.webp").default, title: "OPT 22", fullTitle: "OPT 22: Ciśnienie na szablach (tył, drzwi 54, wysokość oczu)" },
-  { src: require("@site/static/img/audyt/zmiana_2/OPT23.webp").default, title: "OPT 23", fullTitle: "OPT 23: Ciśnienie płyt kompresji (drzwi 54, wysokość kolan)" },
-  { src: require("@site/static/img/audyt/zmiana_2/OPT24.webp").default, title: "OPT 24", fullTitle: "OPT 24: Ciśnienie odrzutu: 5.5 bara" },
-  { src: require("@site/static/img/audyt/zmiana_2/OPT25.webp").default, title: "OPT 25", fullTitle: "OPT 25: Ciśnienie naciągu łańcucha (drzwi 7, po lewej stronie)" },
-  { src: require("@site/static/img/audyt/zmiana_2/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: Ciśnienie różnicowe" },
-  { src: require("@site/static/img/audyt/zmiana_2/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie" },
-  { src: require("@site/static/img/audyt/zmiana_2/OS004.webp").default, title: "OS 004", fullTitle: "OS 004: Kabina Filtra Dywanowego - stan filtra" },
-  { src: require("@site/static/img/audyt/zmiana_2/OS006.webp").default, title: "OS 006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów" },
-    ]}
-  />
+- **Urządzenie:** Tablet z aplikacją **EPMS**.
+- **Hasło:** `2024`
+- **Czas wykonania:** Do 2 godzin od rozpoczęcia zmiany.
+
+**Przebieg audytu:**
+Należy zweryfikować 4 kategorie audytów. Status wykonania sygnalizowany jest kolorami:
+
+- 🔴 **Kolor czerwony:** Audyt do wykonania.
+- 🟢 **Kolor zielony:** Audyt został już zakończony.
+
+### Opis kategorii:
+
+1. **CIL:** Ankieta dotycząca kompletności kroków wykonanych podczas sprzątania maszyny (zgodnie z listą kontrolną).
+2. **CLM:** Odczyt i wprowadzenie wartości z manometrów oraz panelu HMI (ciśnienia oraz stan filtrów). _Uwaga: Dane do wprowadzenia różnią się w zależności od zmiany._
+3. **SAFETY:** Weryfikacja przestrzegania **standardów bezpieczeństwa** oraz instrukcji BHP.
+4. **QUALITY:** Weryfikacja zgodności z **wymogami jakościowymi** niezbędnymi do utrzymania parametrów produktu.
+
+:::
+
+## Dokumentacja fotograficzna {#dokumentacja}
+
+Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdjęcia pomocnicze.
+
+<Tabs>
+  <TabItem value="zmiana-2" label="Zmiana 2" default>
+
+{" "}
+
+<details open>
+  <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 2)</summary>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Zmiana 2"
+      images={[
+        { src: require("@site/static/img/audyt/zmiana_2/A03.webp").default, title: "A03", fullTitle: "A03: Naciąg czarnego pasa nr 148 (nie dotyczy swimpants)" },
+        { src: require("@site/static/img/audyt/zmiana_2/D01.webp").default, title: "D01", fullTitle: "D01: Ciśnienie noża krążkowego" },
+        { src: require("@site/static/img/audyt/zmiana_2/D05.webp").default, title: "D05", fullTitle: "D05: Czerwona rolka dociskowa przed Pad Cut" },
+        { src: require("@site/static/img/audyt/zmiana_2/E05.webp").default, title: "E05", fullTitle: "E05: Napięcie pasa przenoszącego wstęgę Ax 1_28" },
+        { src: require("@site/static/img/audyt/zmiana_2/E08.webp").default, title: "E08", fullTitle: "E08: Podciśnienie przenośnika Delta Przód" },
+        { src: require("@site/static/img/audyt/zmiana_2/E09.webp").default, title: "E09", fullTitle: "E09: Podciśnienie przenośnika Delta Tył" },
+        { src: require("@site/static/img/audyt/zmiana_2/E177.webp").default, title: "E177", fullTitle: "E177: Siła docisku cięcia lycry SN" },
+        { src: require("@site/static/img/audyt/zmiana_2/E178.webp").default, title: "E178", fullTitle: "E178: Siła docisku cięcia lycry SO" },
+        { src: require("@site/static/img/audyt/zmiana_2/F01.webp").default, title: "F01", fullTitle: "F01: Rolka dociskowa przed cięciem tummy pause SO (Ax 2_23)" },
+        { src: require("@site/static/img/audyt/zmiana_2/F02.webp").default, title: "F02", fullTitle: "F02: Rolka dociskowa za cięciem tummy pause SO (Ax 2_25)" },
+        { src: require("@site/static/img/audyt/zmiana_2/F03.webp").default, title: "F03", fullTitle: "F03: Rolka dociskowa przed cięciem tummy pause SN (Ax 2_20)" },
+        { src: require("@site/static/img/audyt/zmiana_2/F04.webp").default, title: "F04", fullTitle: "F04: Rolka dociskowa za cięciem tummy pause SN (Ax 2_22)" },
+        { src: require("@site/static/img/audyt/zmiana_2/F05.webp").default, title: "F05", fullTitle: "F05: (254 SO) Rolka dociskowa za płozami składającymi (Ax 1_21) SO" },
+        { src: require("@site/static/img/audyt/zmiana_2/F06.webp").default, title: "F06", fullTitle: "F06: (254 SO) Rolka dociskowa za płozami składającymi (Ax 1_21) SN" },
+        { src: require("@site/static/img/audyt/zmiana_2/G185.webp").default, title: "G 185", fullTitle: "G 185: Czerwone rolki dociskowe za kamerą Pad/Tape" },
+        { src: require("@site/static/img/audyt/zmiana_2/G254.webp").default, title: "G 254", fullTitle: "G 254: Rolka dociskowa Inner/Outer Ax 4_21" },
+        { src: require("@site/static/img/audyt/zmiana_2/H01.webp").default, title: "H 01", fullTitle: "H 01: Pas P&O - siła docisku" },
+        { src: require("@site/static/img/audyt/zmiana_2/H02.webp").default, title: "H 02", fullTitle: "H 02: Czerwona rolka dociskowa przed bębnem transportowym" },
+        { src: require("@site/static/img/audyt/zmiana_2/H03.webp").default, title: "H 03", fullTitle: "H 03: Podciśnienie na odebraniu Transfer Drum przed Final Rotator" },
+        { src: require("@site/static/img/audyt/zmiana_2/H06.webp").default, title: "H 06", fullTitle: "H 06: Odłożenie na bębnie transportującym przed Final Rotator" },
+        { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_temperatura.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Temperatura" },
+        { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_stp.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Zgrzew górny - pozycja STP" },
+        { src: require("@site/static/img/audyt/zmiana_2/H07_AC_1_sila_N.webp").default, title: "H 07 AC 1", fullTitle: "H 07 AC 1: Zgrzew górny - siła [N]" },
+        { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_temperatura.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Temperatura" },
+        { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_stp.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Zgrzew dolny - pozycja STP" },
+        { src: require("@site/static/img/audyt/zmiana_2/H08_AC_2_Sila_N.webp").default, title: "H 08 AC 2", fullTitle: "H 08 AC 2: Zgrzew dolny - siła [N]" },
+        {
+          src: require("@site/static/img/audyt/zmiana_2/kamera_tape_chassis_sealing.webp").default,
+          title: "Kamera",
+          fullTitle: "Kamera Chassis Sealing / Disposal Tape (Pozycja z HMI / wyrzut rzeczywisty) (HMI, str. 134)",
+        },
+        { src: require("@site/static/img/audyt/zmiana_2/kamera_glowna.webp").default, title: "Kamera", fullTitle: "Kamera Główna (Pozycja z HMI / wyrzut rzeczywisty) (HMI, str. 134)" },
+        {
+          src: require("@site/static/img/audyt/zmiana_2/kamera_metal_detektor.webp").default,
+          title: "Kamera",
+          fullTitle: "Kamera Metal Inline (Pozycja z HMI / wyrzut rzeczywisty) (HMI, str. 134)",
+        },
+        { src: require("@site/static/img/audyt/zmiana_2/LKJ_01.webp").default, title: "LKJ_01", fullTitle: "LKJ_01: Manometr urządzenia kontroli szwów (koło komputera)" },
+        { src: require("@site/static/img/audyt/zmiana_2/ML11.webp").default, title: "ML 11", fullTitle: "ML 11: Obciążenie serwonapędu 1.2 Core Processor (str. 421)" },
+        { src: require("@site/static/img/audyt/zmiana_2/ML12.webp").default, title: "ML 12", fullTitle: "ML 12: Temperatura serwonapędu 1.2 Core Processor (str. 421)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_rdzenia.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - cięcie rdzenia (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_adl.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Unit ADL (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_pad_cut.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Unit Pad Cut (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_koncowe.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - cięcie końcowe (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_tape.webp").default, title: "Oliwienie", fullTitle: "Oliwienie - Cięcie Tape (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT04.webp").default, title: "OPT 04", fullTitle: "OPT 04: Naciąg pasa zielonego (z przodu, drzwi nr. ?6?)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT21.webp").default, title: "OPT 21", fullTitle: "OPT 21: Ciśnienie robocze (na końcu Optimy)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT22.webp").default, title: "OPT 22", fullTitle: "OPT 22: Ciśnienie na szablach (z tyłu, drzwi nr. 54)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT23.webp").default, title: "OPT 23", fullTitle: "OPT 23: Ciśnienie płyt kompresji (z tyłu, drzwi nr. 54)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT24.webp").default, title: "OPT 24", fullTitle: "OPT 24: Ciśnienie odrzutu (za metal detektorem)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OPT25.webp").default, title: "OPT 25", fullTitle: "OPT 25: Ciśnienie naciągu łańcucha (z przodu, drzwi nr. 7)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: Ciśnienie różnicowe (HMI, str. 236)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie (HMI, str. 236)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OS004.webp").default, title: "OS 004", fullTitle: "OS 004: Kabina Filtra Dywanowego - stan filtra dywanowego (Osprey)" },
+        { src: require("@site/static/img/audyt/zmiana_2/OS006.webp").default, title: "OS 006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów (Osprey)" },
+      ]}
+    />
+  </div>
 </details>
 
-<h2>Zmiana 3 🔍</h2>
+  </TabItem>
+  <TabItem value="zmiana-3" label="Zmiana 3">
 
-<details>
-  <summary style={{ cursor: "pointer", fontWeight: 600 }}>
-    ▶️ Pokaż / ukryj zdjęcia audytu (zmiana 3)
-  </summary>
+{" "}
 
-  <ImageCarousel
-    changeContext="Zmiana 3" 
-    images={[
-      { src: require("@site/static/img/audyt/zmiana_3/A01.webp").default, title: "Glue A01", fullTitle: "Stan mechaniczny dyszy klejowej A01" },
-      { src: require("@site/static/img/audyt/zmiana_3/A02.webp").default, title: "Glue A02", fullTitle: "Stan dyszy klejowej A02" },
-      { src: require("@site/static/img/audyt/zmiana_3/B07.webp").default, title: "Glue B07", fullTitle: "Stan dyszy klejowej B07" },
-      { src: require("@site/static/img/audyt/zmiana_3/B08.webp").default, title: "Glue B08", fullTitle: "Stan dyszy klejowej B08" },
-      { src: require("@site/static/img/audyt/zmiana_3/C03.webp").default, title: "Glue C03", fullTitle: "Stan dyszy klejowej C03" },
-      { src: require("@site/static/img/audyt/zmiana_3/D03.webp").default, title: "Glue D03", fullTitle: "Stan dyszy klejowej D03" },
-      { src: require("@site/static/img/audyt/zmiana_3/D04.webp").default, title: "Glue D04", fullTitle: "Stan dyszy klejowej D04" },
-      { src: require("@site/static/img/audyt/zmiana_3/E01.webp").default, title: "Glue E01", fullTitle: "Stan dyszy klejowej E01" },
-      { src: require("@site/static/img/audyt/zmiana_3/E02.webp").default, title: "Glue E02", fullTitle: "Stan dyszy klejowej E02" },
-      { src: require("@site/static/img/audyt/zmiana_3/E06.webp").default, title: "Glue E06", fullTitle: "Stan dyszy klejowej E06" },
-      { src: require("@site/static/img/audyt/zmiana_3/E07.webp").default, title: "Glue E07", fullTitle: "Stan dyszy klejowej E07" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet_endseal.webp").default, title: "Glue Backsheet Endseal", fullTitle: "Weryfikacja klejenia: Backsheet Endseal" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet.webp").default, title: "Glue Backsheet", fullTitle: "Weryfikacja klejenia: Backsheet" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_attachment.webp").default, title: "Glue Cuff Attachment", fullTitle: "Weryfikacja klejenia: Cuff Attachment" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_elastic.webp").default, title: "Glue Cuff Elastic", fullTitle: "Weryfikacja klejenia: Cuff Elastic" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_take_down.webp").default, title: "Glue Cuff Take Down", fullTitle: "Weryfikacja klejenia: Cuff Take Down" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_delta_lycra.webp").default, title: "Glue Delta Lycra", fullTitle: "Weryfikacja klejenia: Delta Lycra" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_delta_pocked_fold.webp").default, title: "Glue Delta Pocked Fold", fullTitle: "Weryfikacja klejenia: Delta Pocked Fold" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_leg_elastic.webp").default, title: "Glue Leg Elastic", fullTitle: "Weryfikacja klejenia: Leg Elastic" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_folding.webp").default, title: "Glue Pad Folding", fullTitle: "Weryfikacja klejenia: Pad Folding" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_sn.webp").default, title: "Glue Pad to Cover SN", fullTitle: "Weryfikacja klejenia: Pad to Cover SN" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_so.webp").default, title: "Glue Pad to Cover SO", fullTitle: "Weryfikacja klejenia: Pad to Cover SO" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_poly_txb.webp").default, title: "Glue Poly TXB", fullTitle: "Weryfikacja klejenia: Poly TXB" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_topsheet.webp").default, title: "Glue Topsheet", fullTitle: "Weryfikacja klejenia: Topsheet" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_sn.webp").default, title: "Glue Tummy Spray SN", fullTitle: "Weryfikacja klejenia: Tummy Spray SN" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_so.webp").default, title: "Glue Tummy Spray SO", fullTitle: "Weryfikacja klejenia: Tummy Spray SO" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_sn.webp").default, title: "Glue Waist Elastic SN", fullTitle: "Weryfikacja klejenia: Waist Elastic SN" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_so.webp").default, title: "Glue Waist Elastic SO", fullTitle: "Weryfikacja klejenia: Waist Elastic SO" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_sn.webp").default, title: "Glue Waist Fold SN", fullTitle: "Weryfikacja klejenia: Waist Fold SN" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_so.webp").default, title: "Glue Waist Fold SO", fullTitle: "Weryfikacja klejenia: Waist Fold SO" },
-      { src: require("@site/static/img/audyt/zmiana_3/glue_wi.webp").default, title: "Glue WI", fullTitle: "Weryfikacja klejenia: Glue WI" },
-
-      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2.webp").default, title: "Tank Glue 2", fullTitle: "Stan zbiornika kleju nr 2" },
-      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_1.webp").default, title: "Tank Glue 2 Screen 1", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 1)" },
-      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_2.webp").default, title: "Tank Glue 2 Screen 2", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 2)" },
-      { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_3.webp").default, title: "Tank Glue 2 Screen 3", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 3)" },
-
-      { src: require("@site/static/img/audyt/zmiana_3/H04.webp").default, title: "Audit H04", fullTitle: "Pomiar temperatury na stacji H04" },
-      { src: require("@site/static/img/audyt/zmiana_3/M01.webp").default, title: "Audit M01", fullTitle: "Wyniki audytu w sekcji M01" },
-    ]}
-
-/>
-
+<details open>
+  <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 3)</summary>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Zmiana 3"
+      images={[
+        { src: require("@site/static/img/audyt/zmiana_3/A01.webp").default, title: "Glue A01", fullTitle: "Stan mechaniczny dyszy klejowej A01" },
+        { src: require("@site/static/img/audyt/zmiana_3/A02.webp").default, title: "Glue A02", fullTitle: "Stan dyszy klejowej A02" },
+        { src: require("@site/static/img/audyt/zmiana_3/B07.webp").default, title: "Glue B07", fullTitle: "Stan dyszy klejowej B07" },
+        { src: require("@site/static/img/audyt/zmiana_3/B08.webp").default, title: "Glue B08", fullTitle: "Stan dyszy klejowej B08" },
+        { src: require("@site/static/img/audyt/zmiana_3/C03.webp").default, title: "Glue C03", fullTitle: "Stan dyszy klejowej C03" },
+        { src: require("@site/static/img/audyt/zmiana_3/D03.webp").default, title: "Glue D03", fullTitle: "Stan dyszy klejowej D03" },
+        { src: require("@site/static/img/audyt/zmiana_3/D04.webp").default, title: "Glue D04", fullTitle: "Stan dyszy klejowej D04" },
+        { src: require("@site/static/img/audyt/zmiana_3/E01.webp").default, title: "Glue E01", fullTitle: "Stan dyszy klejowej E01" },
+        { src: require("@site/static/img/audyt/zmiana_3/E02.webp").default, title: "Glue E02", fullTitle: "Stan dyszy klejowej E02" },
+        { src: require("@site/static/img/audyt/zmiana_3/E06.webp").default, title: "Glue E06", fullTitle: "Stan dyszy klejowej E06" },
+        { src: require("@site/static/img/audyt/zmiana_3/E07.webp").default, title: "Glue E07", fullTitle: "Stan dyszy klejowej E07" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet_endseal.webp").default, title: "Glue Backsheet Endseal", fullTitle: "Weryfikacja klejenia: Backsheet Endseal" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet.webp").default, title: "Glue Backsheet", fullTitle: "Weryfikacja klejenia: Backsheet" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_attachment.webp").default, title: "Glue Cuff Attachment", fullTitle: "Weryfikacja klejenia: Cuff Attachment" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_elastic.webp").default, title: "Glue Cuff Elastic", fullTitle: "Weryfikacja klejenia: Cuff Elastic" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_take_down.webp").default, title: "Glue Cuff Take Down", fullTitle: "Weryfikacja klejenia: Cuff Take Down" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_lycra.webp").default, title: "Glue Delta Lycra", fullTitle: "Weryfikacja klejenia: Delta Lycra" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_pocked_fold.webp").default, title: "Glue Delta Pocked Fold", fullTitle: "Weryfikacja klejenia: Delta Pocked Fold" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_leg_elastic.webp").default, title: "Glue Leg Elastic", fullTitle: "Weryfikacja klejenia: Leg Elastic" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_folding.webp").default, title: "Glue Pad Folding", fullTitle: "Weryfikacja klejenia: Pad Folding" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_sn.webp").default, title: "Glue Pad to Cover SN", fullTitle: "Weryfikacja klejenia: Pad to Cover SN" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_so.webp").default, title: "Glue Pad to Cover SO", fullTitle: "Weryfikacja klejenia: Pad to Cover SO" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_poly_txb.webp").default, title: "Glue Poly TXB", fullTitle: "Weryfikacja klejenia: Poly TXB" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_topsheet.webp").default, title: "Glue Topsheet", fullTitle: "Weryfikacja klejenia: Topsheet" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_sn.webp").default, title: "Glue Tummy Spray SN", fullTitle: "Weryfikacja klejenia: Tummy Spray SN" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_so.webp").default, title: "Glue Tummy Spray SO", fullTitle: "Weryfikacja klejenia: Tummy Spray SO" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_sn.webp").default, title: "Glue Waist Elastic SN", fullTitle: "Weryfikacja klejenia: Waist Elastic SN" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_so.webp").default, title: "Glue Waist Elastic SO", fullTitle: "Weryfikacja klejenia: Waist Elastic SO" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_sn.webp").default, title: "Glue Waist Fold SN", fullTitle: "Weryfikacja klejenia: Waist Fold SN" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_so.webp").default, title: "Glue Waist Fold SO", fullTitle: "Weryfikacja klejenia: Waist Fold SO" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_wi.webp").default, title: "Glue WI", fullTitle: "Weryfikacja klejenia: Glue WI" },
+        { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2.webp").default, title: "Tank Glue 2", fullTitle: "Stan zbiornika kleju nr 2" },
+        { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_1.webp").default, title: "Tank Glue 2 Screen 1", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 1)" },
+        { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_2.webp").default, title: "Tank Glue 2 Screen 2", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 2)" },
+        { src: require("@site/static/img/audyt/zmiana_3/tank_glue_2_screen_3.webp").default, title: "Tank Glue 2 Screen 3", fullTitle: "Ekran kontrolny zbiornika nr 2 (strona 3)" },
+        { src: require("@site/static/img/audyt/zmiana_3/H04.webp").default, title: "Audit H04", fullTitle: "Pomiar temperatury na stacji H04" },
+        { src: require("@site/static/img/audyt/zmiana_3/M01.webp").default, title: "Audit M01", fullTitle: "Wyniki audytu w sekcji M01" },
+      ]}
+    />
+  </div>
 </details>
+
+  </TabItem>
+</Tabs>

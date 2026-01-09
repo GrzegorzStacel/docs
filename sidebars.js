@@ -13,6 +13,7 @@ module.exports = {
     { type: "doc", id: "optima/index", label: "📦 Optima" },
     { type: "doc", id: "btsr/index", label: "🧵 BTSR" },
     { type: "doc", id: "zlecenie-produkcyjne/index", label: "📋 Zlecenie produkcyjne" },
+    { type: "doc", id: "skaner-liniowy/index", label: "🔫 Skaner liniowy" },
     // {
     //   type: "category",
     //   label: "Operacje (Linia-RAD05)",

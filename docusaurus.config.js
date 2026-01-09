@@ -67,6 +67,7 @@ const config = {
             { label: "Optima", to: "optima" },
             { label: "BTSR", to: "btsr" },
             { label: "Zlecenie produkcyjne", to: "zlecenie-produkcyjne" },
+            { label: "Skaner liniowy", to: "skaner-liniowy" },
           ],
         },
       ],

@@ -1,0 +1,46 @@
+# 🧵 System kontroli naciągu nici (BTSR)
+
+System BTSR odpowiada za precyzyjne monitorowanie parametrów nici elastycznych (lycry) podczas produkcji.
+
+:::tip Modele paneli BTSR
+
+- Na **RAD05** pracujemy z systemem **MATRIX TOUCH**.
+- Na **RAD20** pracujemy ze starszym systemem **Smart Matrix**.
+  :::
+
+---
+
+## 📍 Lokalizacja czujników
+
+W procesie wykorzystujemy dwa rodzaje czujników, które różnią się miejscem montażu i przeznaczeniem:
+
+1.  **Czujnik OFFLINE (Poza maszyną)** ➡️ Znajduje się przy szafach ze szpulami. Kontroluje nić na samym początku drogi.
+2.  **Czujnik INLINE (Na linii)** ➡️ Znajduje się bezpośrednio wewnątrz maszyny. Monitoruje naciąg podczas nakładania nici na produkt.
+
+---
+
+## 🖥️ System Smart Matrix i czujniki TMS
+
+Sercem układu jest jednostka sterująca **Smart Matrix**. Zbiera ona dane z czujników **TMS** (_Tension and Metering Sensor_).
+
+:::info Czym jest TMS?
+Skrót **TMS** oznacza czujnik, który potrafi mierzyć dwa parametry jednocześnie: **napięcie** oraz **prędkość** nici.
+:::
+
+### Kluczowe parametry odczytu:
+
+| Parametr        | Opis                                  | Jednostka                   |
+| :-------------- | :------------------------------------ | :-------------------------- |
+| **TMS Speed**   | Aktualna prędkość nici.               | **m/min** (metry na minutę) |
+| **TMS Tension** | Aktualny naciąg (siła napięcia) nici. | **cN** (centyniutony)       |
+
+---
+
+## 💡 Inne
+
+:::tip Terminologia podzespołów
+**Kluczowe elementy szafy lycry:**
+
+- **Rozwijacz:** Duża rolka sterująca, odpowiadająca za aktywne odwijanie lycry ze szpuli oraz precyzyjną kontrolę jej naciągu.
+- **Rolki prowadzące:** Mniejsze rolki znajdujące się pod rozwijaczem, służą do stabilizacji toru nici.
+  :::

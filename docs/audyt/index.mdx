@@ -8,6 +8,31 @@ import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
 
 :::info Instrukcja przeprowadzania audytu
 
+<div
+  style={{
+    float: "right",
+    width: "120px",
+    maxWidth: "35%",
+    marginLeft: "15px",
+    marginBottom: "5px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    overflow: "hidden",
+  }}
+>
+  <ImageCarousel
+    changeContext="Tablet EPMS"
+    images={[
+      {
+        src: require("@site/static/img/audyt/opisy/tablet_epms.webp").default,
+        title: "Tablet",
+        fullTitle: "Tablet z aplikacją EPMS",
+      },
+    ]}
+  />
+</div>
+
 **Podstawowe informacje:**
 
 - **Urządzenie:** Tablet z aplikacją **EPMS**.
@@ -73,13 +98,13 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
         { src: require("@site/static/img/audyt/zmiana_1/I05.webp").default, title: "I 05", fullTitle: "I 05: Podciśnienie na oddaniu Transfer Drum za Final Rotator" },
         { src: require("@site/static/img/audyt/zmiana_1/I06.webp").default, title: "I 06", fullTitle: "I 06: Podciśnienie na białym pasie na składaniu SN" },
         { src: require("@site/static/img/audyt/zmiana_1/I07.webp").default, title: "I 07", fullTitle: "I 07: Podciśnienie na białym pasie na składaniu SO" },
-        { src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty)" },
-        { src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default, title: "Kamera", fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty)" },
+        { src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty) (str. 134)" },
+        { src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default, title: "Kamera", fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty) (str. 134)" },
         { src: require("@site/static/img/audyt/wspolne/kamera_glowna.webp").default, title: "Kamera", fullTitle: "Kamera: Główna (pozycja z HMI / wyrzut rzeczywisty)" },
         { src: require("@site/static/img/audyt/wspolne/kamera_metal_detektor.webp").default, title: "Kamera", fullTitle: "Kamera: Metal Inline (pozycja z HMI / wyrzut rzeczywisty)" },
         { src: require("@site/static/img/audyt/wspolne/LKJ_01.webp").default, title: "LKJ_01", fullTitle: "LKJ_01: manometr urządzenia kontroli szwów" },
-        { src: require("@site/static/img/audyt/zmiana_1/ML001.webp").default, title: "ML 001", fullTitle: "ML 001: Młyn młotkowy Drgania SO" },
-        { src: require("@site/static/img/audyt/zmiana_1/ML002.webp").default, title: "ML 002", fullTitle: "ML 002: Młyn młotkowy Drgania SN" },
+        { src: require("@site/static/img/audyt/zmiana_1/ML001.webp").default, title: "ML 001", fullTitle: "ML 001: Młyn młotkowy Drgania SO (str. 231)" },
+        { src: require("@site/static/img/audyt/zmiana_1/ML002.webp").default, title: "ML 002", fullTitle: "ML 002: Młyn młotkowy Drgania SN (str. 231)" },
         { src: require("@site/static/img/audyt/zmiana_1/ML003.webp").default, title: "ML 003", fullTitle: "ML 003: Młyn młotkowy Celuloza wciągnięcie 1 góra - ciśnienie" },
         { src: require("@site/static/img/audyt/zmiana_1/ML004.webp").default, title: "ML 004", fullTitle: "ML 004: Młyn młotkowy Celuloza wciągnięcie 2 góra - ciśnienie" },
         { src: require("@site/static/img/audyt/zmiana_1/ML005.webp").default, title: "ML 005", fullTitle: "ML 005: Młyn młotkowy Celuloza wciągnięcie 1 dół - ciśnienie" },
@@ -88,8 +113,8 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
         { src: require("@site/static/img/audyt/zmiana_1/ML008.webp").default, title: "ML 008", fullTitle: "ML 008: Core Processor - szczelina" },
         { src: require("@site/static/img/audyt/zmiana_1/ML009.webp").default, title: "ML 009", fullTitle: "ML 009: Podciśnienie zasówy górnej" },
         { src: require("@site/static/img/audyt/zmiana_1/ML010.webp").default, title: "ML 010", fullTitle: "ML 010: Podciśnienie zasówy dolnej" },
-        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: ciśnienie rożnicowe" },
-        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie" },
+        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: ciśnienie rożnicowe (str. 236)" },
+        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie (str. 236)" },
         { src: require("@site/static/img/audyt/zmiana_1/OS003.webp").default, title: "OS 003", fullTitle: "OS 003: Ciśnienie czyszczenia dysku wagi SAP" },
         { src: require("@site/static/img/audyt/wspolne/OS004.webp").default, title: "OS 004", fullTitle: "OS 004: kabina filtra dywanowego - stan filtra dywanowego" },
         { src: require("@site/static/img/audyt/wspolne/OS006.webp").default, title: "OS 006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów" },
@@ -136,28 +161,36 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_temperatura.webp").default, title: "H08", fullTitle: "H 08: AC 2 - temperatura" },
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_stp.webp").default, title: "H08", fullTitle: "H 08: AC 2 zgrzew dolny - pozycja STP" },
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_Sila_N.webp").default, title: "H08", fullTitle: "H 08: AC 2 zgrzew dolny - siła [N]" },
-        { src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty)" },
-        { src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default, title: "Kamera", fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty)" },
+        {
+          src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default,
+          title: "Kamera",
+          fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty) (str. 134)",
+        },
+        {
+          src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default,
+          title: "Kamera",
+          fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty) (str. 134)",
+        },
         { src: require("@site/static/img/audyt/wspolne/kamera_glowna.webp").default, title: "Kamera", fullTitle: "Kamera: Główna (pozycja z HMI / wyrzut rzeczywisty)" },
         { src: require("@site/static/img/audyt/wspolne/kamera_metal_detektor.webp").default, title: "Kamera", fullTitle: "Kamera: Metal Inline (pozycja z HMI / wyrzut rzeczywisty)" },
         { src: require("@site/static/img/audyt/wspolne/LKJ_01.webp").default, title: "LKJ_01", fullTitle: "LKJ_01: manometr urządzenia kontroli szwów" },
-        { src: require("@site/static/img/audyt/zmiana_2/ML11.webp").default, title: "ML11", fullTitle: "ML 11: Obciążenie serwonapedu 1.2 Core Procesor" },
-        { src: require("@site/static/img/audyt/zmiana_2/ML12.webp").default, title: "ML12", fullTitle: "ML 12: Temperatura serwonapedu 1.2 Core Procesor" },
-        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_rdzenia.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: cięcie rdzenia" },
-        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_adl.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Unit ADL" },
-        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_pad_cut.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Unit Pad Cut" },
-        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_koncowe.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: cięcie końcowe" },
-        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_tape.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Cięcie Tape" },
+        { src: require("@site/static/img/audyt/zmiana_2/ML11.webp").default, title: "ML 11", fullTitle: "ML 11: Obciążenie serwonapedu 1.2 Core Procesor (str. 421)" },
+        { src: require("@site/static/img/audyt/zmiana_2/ML12.webp").default, title: "ML 12", fullTitle: "ML 12: Temperatura serwonapedu 1.2 Core Procesor (str. 421)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_rdzenia.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: cięcie rdzenia (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_adl.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Unit ADL (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_unit_pad_cut.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Unit Pad Cut (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_koncowe.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: cięcie końcowe (str. 251)" },
+        { src: require("@site/static/img/audyt/zmiana_2/oliwienie_ciecie_tape.webp").default, title: "Oliwienie", fullTitle: "Oliwienie: Cięcie Tape (str. 251)" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT04.webp").default, title: "OPT04", fullTitle: "OPT 04: Naciąg pasa zielonego" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT21.webp").default, title: "OPT21", fullTitle: "OPT 21: ciśnienie robocze (prawa strona)" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT22.webp").default, title: "OPT22", fullTitle: "OPT 22: ciśnienie na szablach (tył, drzwi 54)" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT23.webp").default, title: "OPT23", fullTitle: "OPT 23: ciśnienie płyt kompresji (drzwi 54)" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT24.webp").default, title: "OPT24", fullTitle: "OPT 24: ciśnienie odrzutu" },
         { src: require("@site/static/img/audyt/zmiana_2/OPT25.webp").default, title: "OPT25", fullTitle: "OPT 25: ciśnienie naciągu łańcucha (drzwi 7)" },
-        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS001", fullTitle: "OS 001: Ciśnienie różnicowe" },
-        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie" },
-        { src: require("@site/static/img/audyt/wspolne/OS004.webp").default, title: "OS004", fullTitle: "OS 004: Kabina Filtra Dywanowego - stan filtra Dywanowego" },
-        { src: require("@site/static/img/audyt/wspolne/OS006.webp").default, title: "OS006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów" },
+        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: Ciśnienie różnicowe (str. 236)" },
+        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie (str. 236)" },
+        { src: require("@site/static/img/audyt/wspolne/OS004.webp").default, title: "OS 004", fullTitle: "OS 004: Kabina Filtra Dywanowego - stan filtra Dywanowego" },
+        { src: require("@site/static/img/audyt/wspolne/OS006.webp").default, title: "OS 006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów" },
       ]}
     />
   </div>
@@ -187,53 +220,45 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
         { src: require("@site/static/img/audyt/zmiana_3/E06.webp").default, title: "E 06", fullTitle: "E 06: Ciśnienie głowicy Delta Pocket" },
         { src: require("@site/static/img/audyt/zmiana_3/E07.webp").default, title: "E 07", fullTitle: "E 07: Ciśnienie głowicy Delta Lycra" },
         { src: require("@site/static/img/audyt/zmiana_3/H04.webp").default, title: "H 04", fullTitle: "H 04: Podciśnienie na oddaniu Transfer Drum przed Final Rotator" },
-
-        // Pozycje Wspólne - AC
         { src: require("@site/static/img/audyt/wspolne/H07_AC_1_temperatura.webp").default, title: "H 07", fullTitle: "H 07: AC 1 - temperatura" },
         { src: require("@site/static/img/audyt/wspolne/H07_AC_1_stp.webp").default, title: "H 07", fullTitle: "H 07: AC 1 zgrzew górny - pozycja STP" },
         { src: require("@site/static/img/audyt/wspolne/H07_AC_1_sila_N.webp").default, title: "H 07", fullTitle: "H 07: AC 1 zgrzew górny - siła [N]" },
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_temperatura.webp").default, title: "H 08", fullTitle: "H 08: AC 2 - temperatura" },
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_stp.webp").default, title: "H 08", fullTitle: "H 08: AC 2 zgrzew dolny - pozycja STP" },
         { src: require("@site/static/img/audyt/wspolne/H08_AC_2_Sila_N.webp").default, title: "H 08", fullTitle: "H 08: AC 2 zgrzew dolny - siła [N]" },
-
-        // Pozycje Wspólne - Kamery
-        { src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty)" },
-        { src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default, title: "Kamera", fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty)" },
+        { src: require("@site/static/img/audyt/wspolne/kamera_chassis_sealing.webp").default, title: "Kamera", fullTitle: "Kamera: Chasis saeling (pozycja z HMI / wyrzut rzeczywisty) (str. 134)" },
+        { src: require("@site/static/img/audyt/wspolne/kamera_disposal_tape.webp").default, title: "Kamera", fullTitle: "Kamera: Disposal Tape (pozycja z HMI / wyrzut rzeczywisty) (str. 134)" },
         { src: require("@site/static/img/audyt/wspolne/kamera_glowna.webp").default, title: "Kamera", fullTitle: "Kamera: Główna (pozycja z HMI / wyrzut rzeczywisty)" },
         { src: require("@site/static/img/audyt/wspolne/kamera_metal_detektor.webp").default, title: "Kamera", fullTitle: "Kamera: Metal Inline (pozycja z HMI / wyrzut rzeczywisty)" },
-
-        // Pozycje Wspólne - LKJ i OS
         { src: require("@site/static/img/audyt/wspolne/LKJ_01.webp").default, title: "LKJ_01", fullTitle: "LKJ_01: manometr urządzenia kontroli szwów" },
-        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: Ciśnienie różnicowe" },
-        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie" },
+        { src: require("@site/static/img/audyt/wspolne/OS001.webp").default, title: "OS 001", fullTitle: "OS 001: Ciśnienie różnicowe (str. 236)" },
+        { src: require("@site/static/img/audyt/wspolne/OS002.webp").default, title: "OS 002", fullTitle: "OS 002: Główny wskaźnik powietrza na Osprey - ciśnienie (str. 236)" },
         { src: require("@site/static/img/audyt/wspolne/OS004.webp").default, title: "OS 004", fullTitle: "OS 004: Kabina Filtra Dywanowego - stan filtra Dywanowego" },
         { src: require("@site/static/img/audyt/wspolne/OS006.webp").default, title: "OS 006", fullTitle: "OS 006: Kabina Filtrów Kasetowych - stan filtrów" },
-
-        // Systemy Klejowe 1-7
-        { src: require("@site/static/img/audyt/zmiana_3/glue_panama.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - kanał Panama" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_tpl_dolny.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - TPL Dolny" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_tpl_gorny.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - TPL Górny" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_elastic.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 1 (Cuff elastic)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_leg_elastic.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 2 (Leg elastic)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_folding.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 3 (Pad Folding)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_adl.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadanej 4 (ADL)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_topsheet.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 1 (Topsheet)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 2 (Backsheet)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet_endseal.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 3 (Backsheet Endensal)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_poly_txb.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 4 (Poly TXB)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_sn.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 3 (Waist Fold SN)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_so.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 4 (Waist Fold SO)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_sn.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 1 (Pad to Cover SN)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_so.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 2 (Pad to Cover SO)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_sn.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 1 (Waist Elastic SN)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_so.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 2 (Waist Elastic SO)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_sn.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 3 (Tummy Spray SN)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_so.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 4 (Tummy Spray SO)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_wi.webp").default, title: "System klejowy 6", fullTitle: "System klejowy 6 - WI" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_attachment.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 1 (Cuff Attachment)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_take_down.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 2 (Cuff Take Down)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_lycra.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 3 (Delta Lycra)" },
-        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_pocked_fold.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 4 (Delta Pocked Fold)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_panama.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - kanał Panama (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tpl_dolny.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - TPL Dolny (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tpl_gorny.webp").default, title: "System klejowy 1", fullTitle: "System klejowy 1 - TPL Górny (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_elastic.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 1 (Cuff elastic) (Tank nr. 2 - Szczegółowa instrukcja nawigacji w sekcji 'Interfejs panelu tanku z klejem'.)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_leg_elastic.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 2 (Leg elastic) (Tank nr. 2 - Szczegółowa instrukcja nawigacji w sekcji 'Interfejs panelu tanku z klejem'.j)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_folding.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadane 3 (Pad Folding) (Tank nr. 2 - Szczegółowa instrukcja nawigacji w sekcji 'Interfejs panelu tanku z klejem'.)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_adl.webp").default, title: "System klejowy 2", fullTitle: "System klejowy 2: Wartości zadanej 4 (ADL) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_topsheet.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 1 (Topsheet) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 2 (Backsheet) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_backsheet_endseal.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 3 (Backsheet Endensal) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_poly_txb.webp").default, title: "System klejowy 3", fullTitle: "System klejowy 3: Wartości zadane 4 (Poly TXB) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_sn.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 3 (Waist Fold SN) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_fold_so.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 4 (Waist Fold SO) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_sn.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 1 (Pad to Cover SN) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_pad_to_cover_so.webp").default, title: "System klejowy 4", fullTitle: "System klejowy 4: Wartości zadane 2 (Pad to Cover SO) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_sn.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 1 (Waist Elastic SN) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_waist_elastic_so.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 2 (Waist Elastic SO) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_sn.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 3 (Tummy Spray SN) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_tummy_spray_so.webp").default, title: "System klejowy 5", fullTitle: "System klejowy 5: Wartości zadane 4 (Tummy Spray SO) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_wi.webp").default, title: "System klejowy 6", fullTitle: "System klejowy 6 - WI (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_attachment.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 1 (Cuff Attachment) (str. 115)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_cuff_take_down.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 2 (Cuff Take Down) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_lycra.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 3 (Delta Lycra) (str. 114)" },
+        { src: require("@site/static/img/audyt/zmiana_3/glue_delta_pocket_fold.webp").default, title: "System klejowy 7", fullTitle: "System klejowy 7: Wartości zadane 4 (Delta Pocket Fold) (str. 114)" },
       ]}
     />
 
@@ -242,3 +267,33 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
 
   </TabItem>
 </Tabs>
+
+---
+
+## 🛠️ Interfejs panelu tanku z klejem {#systemy-klejowe}
+
+:::tip Lokalizacja Tanku nr 2
+Wartości dla parametrów **"Cuff elastic"**, **"Leg elastic"** oraz **"Pad folding"** odczytujemy z **Tanku nr 2**.
+Znajduje się on dokładnie naprzeciwko sekcji **Mariage point** wewnątrz maszyny.
+:::
+
+Poniżej znajdują się zdjęcia instruktażowe, które pokazują, jak poruszać się po DOTYKOWYM interfejsie panelu, aby odnaleźć wymagane dane do audytu:
+
+<div style={{ marginTop: "20px" }}>
+  <ImageCarousel
+    changeContext="Instrukcja Tank 2"
+    images={[
+      { src: require("@site/static/img/audyt/opisy/tank_glue_2.webp").default, title: "Lokalizacja", fullTitle: "Widok ogólny Tanku nr 2 (➡️ naklejka z numerem tanka)" },
+      { src: require("@site/static/img/audyt/opisy/tank_glue_2_screen_1.webp").default, title: "Krok 1", fullTitle: "Interfejs Tank 2: Ekran główny" },
+      { src: require("@site/static/img/audyt/opisy/tank_glue_2_screen_2.webp").default, title: "Krok 2", fullTitle: "Wejście do menu" },
+      { src: require("@site/static/img/audyt/opisy/tank_glue_2_screen_3.webp").default, title: "Krok 3", fullTitle: "Wejście do sekcji z zadanymi wartościami" },
+    ]}
+  />
+</div>
+
+:::danger WAŻNE — OBSŁUGA STRZAŁEK NA LIŚCIE
+Po przejściu do menu wyboru parametrów (ostatni krok instrukcji), na ekranie pojawią się strzałki:
+
+- ⬅️ **STRZAŁKI PO LEWEJ (Góra/Dół):** Służą wyłącznie do nawigacji i przewijania listy systemów. **Tylko tych używamy podczas audytu.**
+- ➡️ **STRZAŁKI PO PRAWEJ:** Służą do zmiany nastaw! Kliknięcie ich **zmieni ilość podawanego kleju na pieluchę!** Absolutnie ich nie dotykaj.
+  :::

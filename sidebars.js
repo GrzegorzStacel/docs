@@ -11,6 +11,8 @@ module.exports = {
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
     { type: "doc", id: "audyt/index", label: "🔍 Audyt" },
     { type: "doc", id: "optima/index", label: "📦 Optima" },
+    { type: "doc", id: "btsr/index", label: "🧵 BTSR" },
+    { type: "doc", id: "zlecenie-produkcyjne/index", label: "📋 Zlecenie produkcyjne" },
     // {
     //   type: "category",
     //   label: "Operacje (Linia-RAD05)",

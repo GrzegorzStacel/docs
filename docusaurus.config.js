@@ -65,6 +65,8 @@ const config = {
             { label: "Herman", to: "herman" },
             { label: "Audyt", to: "audyt" },
             { label: "Optima", to: "optima" },
+            { label: "BTSR", to: "btsr" },
+            { label: "Zlecenie produkcyjne", to: "zlecenie-produkcyjne" },
           ],
         },
       ],

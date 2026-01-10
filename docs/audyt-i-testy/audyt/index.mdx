@@ -5,8 +5,11 @@ title: "🔍 Audyt"
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+import Details from "@theme/Details";
 
-:::info Instrukcja przeprowadzania audytu
+## 🔍 Instrukcja przeprowadzania audytu
+
+<Details summary={<summary>Pokaż szczegóły instrukcji...</summary>}>
 
 <div
   style={{
@@ -45,16 +48,16 @@ Należy zweryfikować 4 kategorie audytów. Status wykonania sygnalizowany jest 
 - 🔴 **Kolor czerwony:** Audyt do wykonania.
 - 🟢 **Kolor zielony:** Audyt został już zakończony.
 
-### Opis kategorii:
+### 📑 Opis kategorii:
 
 1. **CIL:** Ankieta dotycząca kompletności kroków wykonanych podczas sprzątania maszyny (zgodnie z listą kontrolną).
 2. **CLM:** Odczyt i wprowadzenie wartości z manometrów oraz panelu HMI (ciśnienia oraz stan filtrów). _Uwaga: Dane do wprowadzenia różnią się w zależności od zmiany._
 3. **SAFETY:** Weryfikacja przestrzegania **standardów bezpieczeństwa** oraz instrukcji BHP.
 4. **QUALITY:** Weryfikacja zgodności z **wymogami jakościowymi** niezbędnymi do utrzymania parametrów produktu.
 
-:::
+</Details>
 
-## Dokumentacja fotograficzna {#dokumentacja}
+## 📸 Dokumentacja fotograficzna {#dokumentacja}
 
 Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdjęcia pomocnicze.
 
@@ -63,8 +66,9 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
 
 {" "}
 
-  <details open>
+<Details open summary={
   <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 1)</summary>
+}>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
       changeContext="Zmiana 1"
@@ -122,14 +126,13 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
     />
 
   </div>
-</details>
+</Details>
 </TabItem>
   <TabItem value="zmiana-2" label="Zmiana 2" default>
 
 {" "}
 
-<details open>
-  <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 2)</summary>
+<Details open summary={<summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 2)</summary>}>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
       changeContext="Zmiana 2"
@@ -194,15 +197,16 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
       ]}
     />
   </div>
-</details>
+</Details>
 
   </TabItem>
   <TabItem value="zmiana-3" label="Zmiana 3">
 
 {" "}
 
-<details open>
-  <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 3)</summary>
+<Details open summary={
+    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Zmiana 3)</summary>
+}>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
       changeContext="Zmiana 3"
@@ -263,7 +267,7 @@ Wybierz odpowiednią zmianę, aby wyświetlić listę punktów kontrolnych i zdj
     />
 
   </div>
-</details>
+</Details>
 
   </TabItem>
 </Tabs>

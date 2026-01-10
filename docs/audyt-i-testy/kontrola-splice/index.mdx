@@ -1,0 +1,68 @@
+---
+title: 📂 Kontrola poprawnego wyrzutu Splice
+---
+
+---
+
+### 📂 Lokalizacja wyrzutu splice
+
+**Str 131** (**Eject**).  
+Sekcja ta określa zakres odrzutu dla operacji **Splice**.
+
+<details>
+  <summary>🔍 Co to jest Splice?</summary>
+  <div>
+    **Splice** to określenie automatycznego łączenia materiału przy zmianie rolki.
+
+    Proces ten polega na połączeniu nowej rolki surowca ze starą (kończącą się) za pomocą specjalnej taśmy klejącej, co zapewnia ciągłość pracy maszyny.
+
+  </div>
+</details>
+
+<details>
+  <summary>🛡️ Dlaczego odrzucamy produkt po Splice?</summary>
+  <div>
+    Produkty te muszą zostać usunięte z linii, aby wyeliminować ryzyko trafienia do klienta pieluszek z naklejoną taśmą technologiczną.
+
+    Dzięki temu, że taśma klejąca posiada wklejony cienki **metalowy pasek**, stanowi ona znacznik dla systemów bezpieczeństwa:
+
+    1. **Czujnik Splice** – to podstawowe narzędzie wykrywające miejsce złączenia.
+    2. **Metal Detektor** – służy jako drugie, niezależne zabezpieczenie.
+
+    Dzięki temu każdy **Splice** zostanie precyzyjnie zlokalizowany i usunięty z linii produkcyjnej.
+
+  </div>
+</details>
+
+---
+
+### ⚙️ Konfiguracja parametrów (Eject)
+
+![Kontrola Splice](/img/splice_kamery/kontrola_splice.webp)
+
+- **🚀 START (np. 89)** Określa moment rozpoczęcia wyrzutu.
+
+  - Od czujnika przejdzie **88** poprawnych sztuk.
+  - **89-ta sztuka** zostanie zidentyfikowana jako pierwsza wadliwa i wyrzucona.&nbsp;
+
+    :::info Odliczanie sztuk rozpoczyna się dokładnie w momencie, gdy czujnik wykryje metalowy pasek na taśmie łączącej.
+    :::
+
+- **🏁 END (np. 95)** Określa moment zakończenia wyrzutu.
+  - Jest to **ostatnia** pieluszka uznana za niepoprawną (licząc od miejsca wykrycia Splice).
+  - **96-ta sztuka** jest już dobra i trafia dalej do Optimy.
+    &nbsp;
+
+---
+
+### 📊 Podsumowanie ustawień
+
+> **Wynik:** Przy ustawieniach Start: **89** / End: **95**, maszyna wyrzuci łącznie **6 sztuk** (od 89 do 95 włącznie). 💡
+>
+> _Jeśli chcesz wyrzucić dokładnie 5 sztuk, parametr End powinien wynosić 94._
+
+:::warning Uwaga dotycząca ilości odrzutu
+Liczba wyrzuconych pieluszek może wydawać się większa, niż wynikałoby to z samego **Splice**.
+
+Oprócz samej głównej taśmy na **Splice**, w procesie pojawiają się później również **taśmy prostujące**. One również muszą zostać całkowicie usunięte z linii, dlatego zakres wyrzutu musi obejmować wszystkie sztuki zawierające te dodatkowe elementy.
+:::

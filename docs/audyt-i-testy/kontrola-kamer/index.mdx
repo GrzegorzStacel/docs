@@ -1,0 +1,142 @@
+---
+title: 📷 Kontrola kamer – poprawne wykonywanie testów
+---
+
+---
+
+## 📄 Testy kamer
+
+### 📍 Lokalizacja
+
+> Testy kamer wykonujemy na **stronie 134** (Camera test).
+
+### ⚙️ Konfiguracja
+
+> Parametry oraz ustawienia testów znajdują się na **stronie 131** (Eject).
+
+### 🕒 Harmonogram
+
+> Weryfikację przeprowadzamy **na każdej zmianie**, a wyniki wypisujemy w ??QIS?? na początku zmiany oraz w audycie.
+
+---
+
+## 🔧 Sekcja Fault Register (Str. 131)
+
+W tej sekcji konfigurujemy parametry odrzutu dla wszystkich systemów wizyjnych, w tym dla kamer **Tape** (Disposal Tape) oraz **Sealing** (Zgrzew), które testujemy codziennie.
+
+### ⚙️ Parametry konfiguracji kamer:
+
+- **Forward Fault (np. 1)** Liczba poprawnych pieluszek wyrzuconych bezpośrednio **PRZED** sztuką wadliwą.
+
+- **Product Fault (np. 60)** Dystans (wyrażony w liczbie sztuk) od momentu wykrycia błędu przez kamerę do fizycznego miejsca wyrzutu.
+
+- **After Fault (np. 1)** Liczba poprawnych pieluszek wyrzuconych bezpośrednio **PO** ostatniej sztuce wadliwej.
+
+  :::tip Logika "bezpiecznego zakresu"
+  Stosując parametry np. **Forward = 1** oraz **After = 1**, tworzymy tzw. "bezpieczny margines". Dzięki temu mamy pewność, że wadliwa sztuka znajduje się **zawsze w środku** wyrzuconego pakietu (pomiędzy dwiema poprawnymi), co daje 100% gwarancji usunięcia błędu z linii.
+  :::
+
+- **Start Waste Control (np. 50)** Liczba pieluszek automatycznie wyrzucanych po starcie maszyny (na drugim biegu). Pozwala to na pełną stabilizację procesów technologicznych przed rozpoczęciem podawania pieluszek do Optimy.
+
+- **Count Waste (np. 20)** Limit błędów pod rząd. Jeśli kamera wykryje ciąg np. 20 wadliwych sztuk, maszyna zostanie zatrzymana.
+  :::info Ważne
+  Licznik ten **zeruje się**, jeśli w serii błędów pojawi się choćby jedna poprawna sztuka (np. 19 wadliwych + 1 dobra = reset licznika).
+  :::
+
+## 🛠️ Kalibracja odrzutu (Gdy test nie wychodzi)
+
+Jeśli podczas testu wadliwa sztuka **nie znajduje się w środku** wyrzuconego pakietu, należy skorygować parametr w sekcji **Fault Register**.
+
+### 🔍 Jak poprawnie sprawdzić pakiet?
+
+Aby ocenić wynik testu, musisz mieć pewność, że pieluszki leżą w kolejności, w jakiej zeszły z maszyny.
+
+1.  **Znajdź kod:** Sprawdź nadruk znajdujący się na **zewnętrznej stronie pieluszki, przy otworze na nogę**.
+2.  **Sortuj według numeracji:** Pieluszki są numerowane w cyklu **od 1 do 99**.
+3.  **Ułóż chronologicznie:** Pieluszki ułóż od najniższego do najwyższego numeru (najwcześniejsza → najpóźniejsza).
+
+**Dopiero po takim posortowaniu możesz wiarygodnie ocenić, czy test wyszedł prawidłowo.**
+
+---
+
+### 🧐 Diagnoza i korekta błędu
+
+Sprawdź posortowany pakiet (zakładając ustawienia Forward=1, After=1, co powinno dać 3 sztuki):
+
+- **Wadliwa sztuka jest 1. w pakiecie** (brak dobrej sztuki z przodu)
+  - **Problem:** Wyrzut następuje za późno.
+  - **Rozwiązanie:** Zmniejsz wartość **Product Fault** (np. z 60 na 59).
+- **Wadliwa sztuka jest ostatnia w pakiecie** (brak dobrej sztuki za nią)
+  - **Problem:** Wyrzut następuje za wcześnie.
+  - **Rozwiązanie:** Zwiększ wartość **Product Fault** (np. z 60 na 61).
+- **Wyrzucono więcej niż 3 sztuki (np. 4 lub 5)**
+  - Sprawdź, czy parametry **Forward** lub **After** nie zostały omyłkowo zwiększone.
+
+### ⚠️ Co jeśli wykryto więcej niż jedną wadliwą sztukę?
+
+Jeśli taśma testowa była za szeroka, system może wykryć **dwie wadliwe sztuki** obok siebie (pakiet 4-sztukowy). Niezależnie od ich liczby, zasada jest ta sama: **wadliwy blok musi być otoczony dobrymi sztukami.**
+
+- **Prawidłowo:** `[Dobra]` + `[Wadliwa]` + `[Wadliwa]` + `[Dobra]` (Błędy są w środku).
+- **Błąd (Za późno):** `[Wadliwa]` + `[Wadliwa]` + `[Dobra]` + `[Dobra]` → Zmniejsz o 1 **Product Fault**.
+- **Błąd (Za wcześnie):** `[Dobra]` + `[Dobra]` + `[Wadliwa]` + `[Wadliwa]` → Zwiększ o 1 **Product Fault**.
+
+:::tip Złota zasada
+Jeśli masz więcej wadliwych sztuk, **traktuj je jako jeden wspólny blok**. Cel to „odizolowanie” tego bloku przynajmniej jedną dobrą pieluszką z każdej strony.
+:::
+
+### 🧮 Zasada obliczeń
+
+> Każda zmiana o **1 jednostkę** w _Product Fault_ przesuwa moment otwarcia klapy wyrzutu o **dokładnie jedną pieluszkę**.
+
+:::warning Ważne
+Po każdej zmianie parametru należy **ponownie przeprowadzić test**, aby potwierdzić, że błąd wrócił na środek pakietu.
+:::
+
+---
+
+## 🛡️ Test Metal Detektora
+
+Podczas przeprowadzania testu metal detektora kluczowe jest miejsce naklejenia taśmy testowej:
+
+- **Zasada naklejania:** Kluczowe jest, aby taśma testowa **nie przeszła przez aktywny czujnik Splice**. Można to osiągnąć na dwa sposoby:
+
+<div style={{ paddingLeft: "20px", marginTop: "10px" }}>
+  1. Nakleić taśmę na materiale już **ZA** czujnikiem Splice. <br />
+  2. Nakleić taśmę gdzieś **PRZED** czujnikiem, ale tak, aby taśma minęła czujnik Splice.
+</div>
+
+- **Cel:** Zapobiega to przypadkowej aktywacji testu wyrzutu Splice. Chcemy sprawdzić wyłącznie reakcję systemu na wykrycie metalu, a nie procedurę łączenia materiału.
+
+:::warning 💡 Ciekawostka: Dlaczego maszyna wyrzuca więcej sztuk?
+Niezależnie od ustawień w _Fault Register_ (nawet przy ustawieniu odrzutu 0 lub 1), system wyrzuci kilka pieluszek po wykryciu metalu.
+
+**Dlaczego tak się dzieje?**
+Wynika to ze specyfiki pracy urządzenia. Po wykryciu metalu czujnik ulega chwilowemu "nasyceniu" (potocznie: rozkalibrowaniu). Przez krótki moment po przejściu taśmy, detektor nadal wysyła sygnał obecności metalu, przez co kolejne, poprawne pieluszki są błędnie identyfikowane jako wadliwe i odrzucane.
+:::
+
+---
+
+## 🌀 Test braku rdzenia (Core Absence Test)
+
+Test wykonuje się poprzez wciśnięcie manetki / uchwytu spustowego znajdującego się przy panelu **otwierania drzwi po sekcji Core Cut**.
+
+Procedura przebiega następująco:
+
+- wciśnij manetkę / uchwyt spustowy odpowiedzialny za **zdmuchnięcie rdzenia** (symulację braku rdzenia),
+- kamera powinna prawidłowo wykryć brak rdzenia, a system powinien wyrzucić pieluszkę pozbawioną rdzenia zgodnie z konfiguracją w sekcji Fault Register.
+
+---
+
+## 🧩 Inne
+
+:::info 💡 Chasing Sealing
+W systemie zaimplementowano funkcję osłony zgrzewania bocznego podczas przejścia taśmy (Splice).
+
+**Jak to działa?**
+
+1. Gdy czujnik wykryje **Splice**, system wylicza liczbę pieluszek, jakie muszą przejechać, aż taśma dotrze do sekcji zgrzewania **Herman**.
+2. Dokładnie w momencie przejścia taśmy łączącej, **sonotroda lekko się unosi**.
+3. Pozwala to na swobodne przejście zgrubienia materiału.
+
+Zapobiega to zatrzymaniu maszyny, które mogłoby nastąpić, gdyby sonotroda uderzyłaby bezpośrednio w taśmę Splice.
+:::

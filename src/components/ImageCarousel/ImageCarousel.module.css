@@ -155,3 +155,22 @@
     font-size: 3rem;
   }
 }
+
+/* Usuwamy display:grid gdy ta klasa jest aktywna */
+.centerLayout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* To wymusza, by miniatury stanęły obok siebie */
+.centerLayout .thumbContainer {
+  width: 300px; /* Stała szerokość dla rzędu */
+  flex: 0 0 300px; /* Nie pozwala elementowi urosnąć powyżej 300px */
+  height: 200px;
+}

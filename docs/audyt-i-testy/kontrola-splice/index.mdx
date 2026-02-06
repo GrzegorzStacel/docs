@@ -2,7 +2,9 @@
 title: 📂 Kontrola poprawnego wyrzutu Splice
 ---
 
----
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
 ### 📂 Lokalizacja wyrzutu splice
 
@@ -27,6 +29,20 @@ Sekcja ta określa zakres odrzutu dla operacji **Splice**.
     Dzięki temu, że taśma klejąca posiada wklejony cienki **metalowy pasek**, stanowi ona znacznik dla systemów bezpieczeństwa:
 
     1. **Czujnik Splice** – to podstawowe narzędzie wykrywające miejsce złączenia.
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    changeContext="Widok urządzenia"
+    images={[
+      {
+        src: require("@site/static/img/audyt/kontrola-splice/czujnik_splice.webp").default,
+        title: "Czujnik Splice",
+        fullTitle: "Widok na czujnik wykrywający złącza (Splice Sensor)",
+      },
+    ]}
+  />
+</div>
+
     2. **Metal Detektor** – służy jako drugie, niezależne zabezpieczenie.
 
     Dzięki temu każdy **Splice** zostanie precyzyjnie zlokalizowany i usunięty z linii produkcyjnej.
@@ -41,7 +57,6 @@ Sekcja ta określa zakres odrzutu dla operacji **Splice**.
 ![Kontrola Splice](/img/splice_kamery/kontrola_splice.webp)
 
 - **🚀 START (np. 89)** Określa moment rozpoczęcia wyrzutu.
-
   - Od czujnika przejdzie **88** poprawnych sztuk.
   - **89-ta sztuka** zostanie zidentyfikowana jako pierwsza wadliwa i wyrzucona.&nbsp;
 

@@ -1,52 +1,280 @@
 ---
-title: 🏭 Dokumentacja
+title: 📘 Dokumentacja
 ---
 
-# 🏭 Instrukcja Produkcyjna: Pomiary i Próbki
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+import InfoModal from "@site/src/components/InfoModal/InfoModal";
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
+
+## 📏 Pomiar worka na linii
+
+Pomiary wykonujemy **dwukrotnie** w trakcie trwania każdego zlecenia:
+
+1. 🟢 **START:** Na początku zlecenia.
+2. 🏁 **KONIEC:** Ok. 1h przed zakończeniem zlecenia.
+
+### 📋 Zasady pomiaru i dokumentacji
 
 ---
 
-### 📋 Słowniczek (To samo!)
+:::tip[1. Jak mierzyć? (Instrukcja)]
+
+- 📐 **Jednostka:** Wszystkie wymiary wykonujemy w **cm** (zgodnie z rysunkiem pomocniczym).
+- 📦 **Pobranie próbki:** Pobierz worek ze spakowanymi pieluszkami (miejsce: **za Metal Detektorem**).
+- ⚙️ **Metoda:** Zmierz wymiary na urządzeniu do mierzenia worków zgodnie z **instrukcją na karcie**.
+  :::
+
+:::info[2. Dokumentacja (Obieg kart)]
+
+- 📍 **Przechowywanie:** Karty pomiarowe muszą znajdować się na **stanowisku LKJ**.
+- 👔 **Archiwizacja:** Na koniec miesiąca karty są odbierane przez **Product Managera**.
+  :::
+
+  {" "}
+
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "15px" }}>
+    <ImageCarousel
+      layout="center"
+      images={[
+        {
+          src: require("@site/static/img/lkj/dokumentacja/dok-pomiar-wypelnionego-worka.webp").default,
+          title: "Karta Pomiarowa",
+          fullTitle: "Wzór poprawnie wypełnionej karty pomiarów wypełnionego worka na linii",
+        },
+      ]}
+    />
+  </div>
+
+### ✍️ Instrukcja wypełniania karty
+
+Poniżej znajduje się wzór skąd należy spisać dane na kartę pomiarową:
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    changeContext="Instrukcja wypełniania karty"
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lokalizacja-danych-zlecenie.webp").default,
+        title: "Lokalizacja danych na zleceniu",
+        fullTitle: "Legenda do pól na karcie pomiarowej",
+      },
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lokalizacja-danych-pomiar-workow.webp").default,
+        title: "Lokalizacja danych na zleceniu",
+        fullTitle: "Legenda do pól na karcie pomiarowej",
+      },
+    ]}
+  />
+</div>
+
+**Skąd brać dane? (Legenda do zdjęć):**
+
+1. **Numer zlecenia** – unikalny numer bieżącej produkcji.
+2. [**Numer artykułu**](#-słowniczek-to-samo) – znajdziesz go w górnej części zlecenia (pamiętaj, że to to samo co numer materiału).
+3. **Rozmiar** – np. Midi, Maxi, Junior. Znajdziesz go na **karcie zlecenia** lub bezpośrednio na **worku**.
+4. **Wymiar H** – wysokość worka.
+5. **Wymiar W** – szerokość boczna.
+6. **Wymiar L** – szerokość frontowa.
+7. **Data** – bieżąca data wykonania pomiaru.
+8. **Podpis** – czytelny podpis osoby wykonującej pomiar.
+
+---
+
+:::danger[Ważne]
+Pamiętaj o dokładnym wpisaniu wyników dwa razy dla każdego zlecenia. Brak wpisu na koniec zlecenia jest traktowany jako błąd w dokumentacji.
+:::
+
+---
+
+## 🧪 Próbki dla laboratorium (Naklejka)
+
+Próbki dostarczamy tylko wtedy, gdy następuje zmiana kluczowych surowców.
+
+:::info
+
+### ⏱️ Kiedy zanieść próbkę?
+
+Po przebudowie, jeśli zmieniły się materiały chłonne i/lub nieprzemakalne:
+
+- **Cuff**
+- **Celuloza**
+- **SAP**
+  :::
+
+:::info
+
+### 📍 Gdzie szukać dokumentu?
+
+Dokument znajduje się w **szafce LKJ**, na **górnej półce**. Szukaj go w **jasno pomarańczowej teczce**.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lokalizacja-naklejki.webp").default,
+        title: "Szafka przy LKJ, górna półka",
+      },
+    ]}
+  />
+</div>
+:::
+
+:::info
+
+### 📑 Skąd brać dane do wypełnienia dokumentacji?
+
+Spisz dane z **aktualnego (nowego)** zlecenia produkcyjnego oraz z panelu HMI na stronie nr. 1.
+
+:::
+
+### ✍️ Wypełnianie naklejki
+
+Dane na naklejkę spisujemy w momencie pobierania próbki po przebudowie.
+
+**Instrukcja wypełniania pól:**
+:::info
+Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
+:::
+
+1.  **Linia** – Wpisz numer linii, na której była przebudowa (np. **RAD 05**).
+2.  🔍[1] **Nr zlecenia** – Znajduje się na dokumencie "Zlecenie produkcyjne".
+3.  🔍[1] [**Nr artykułu**](#-słowniczek-to-samo) – Znajduje się na "Zleceniu produkcyjnym" (patrz: słowniczek).
+4.  **Nr palety** – ???????????? Wpisz numer palety, z której pochodzi pobrany worek. ????????????
+5.  **Ilość SAP** – Spisujemy z **panelu HMI** na maszynie (Strona 1).
+6.  **Ilość celulozy** – Spisujemy z **panelu HMI** na maszynie (Strona 1).
+7.  **Prędkość maszyny** – Odczytaj aktualną prędkość z **panelu HMI** (Strona 1).
+8.  🔍[1] **Waga (min-max)** – Znajduje się na dokumencie "Zlecenie produkcyjne".
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lokalizacja-danych-naklejka.webp").default,
+        title: "[1] Dane na zleceniu produkcyjnym",
+        fullTitle: "Przykład uzupełnienia danych z HMI oraz Zlecenia",
+      },
+      {
+        src: require("@site/static/img/lkj/dokumentacja/naklejka-wzor.webp").default,
+        title: "[2] Prawidłowo wypełniona naklejka",
+        fullTitle: "Przykład uzupełnienia danych z HMI oraz Zlecenia",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 📋 Lista Kontrolna Produktu
+
+Poniżej znajduje się instrukcja wypełniania arkusza kontrolnego po przebudowie.
+
+:::info
+
+### Gdzie szukać dokumentu?
+
+Dokument znajduje się w **szafce LKJ**, na **górnej półce**. Szukaj go w **jasno pomarańczowej teczce**.
+:::
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lokalizacja-naklejki.webp").default,
+        title: "Znajduje się w teczce",
+      },
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu.webp").default,
+        title: "Lista Kontrolna Produktu",
+        fullTitle: "Lista Kontrolna Produktu",
+      },
+    ]}
+  />
+</div>
+
+:::info
+Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
+:::
+
+**Dane nagłówkowe:**
+
+- **Maszyna** – Numer linii produkcyjnej (np. **RAD 05**).
+
+* 🔍 **Kod produktu** – Kod produktu znajduje się na zleceniu produkcyjnym.
+  <InfoModal label=" (Sprawdź szczegóły)" title="Lokalizacja i Synonimy Kodu">
+    <div style={{ textAlign: "left" }}>
+      Kod produktu (Material No) znajduje się w <b>prawym górnym rogu</b> zlecenia.
+      <div style={{ marginTop: "15px", fontWeight: "bold" }}>Pamiętaj, że poniższe terminy oznaczają to samo:</div>
+      <ul style={{ listStyle: "none", padding: 0, margin: "5px 0 0 0" }}>
+        <li>🆔 Numer materiału</li>
+        <li>📦 Numer artykułu</li>
+        <li>🔢 Kod produktu</li>
+      </ul>
+    </div>
+  </InfoModal>
+
+- **Data / Godzina kontroli** – Czas faktycznego przeprowadzenia pomiarów.
+- 🔍 **Opis produktu** – Pełna nazwa towaru ze zlecenia produkcyjnego.
+
+**Punkty kontrolne:**
+
+1.  **Numer rysunku** – Sprawdź numer rysunku produktu po przebudowie.
+2.  **Długość produktu** 🔍 – Wpisz wymiar wg rysunku (mm) oraz wynik pomiaru (mm).
+3.  **Długość pad-a** 🔍 – Wymiar wg rysunku oraz wymiar po mierzeniu.
+4.  **Pozycja rdzenia na padzie** – Wymiary wg rysunku + zaznacz "ptaszka" (✔️), jeśli pozycja jest poprawna.
+5.  **Długość rdzenia** – Wymiar wg rysunku + zaznacz "ptaszka" (✔️).
+6.  **Highloft (ADL)** – Długość i pozycja: wymiar wg rysunku + zaznacz "ptaszka" (✔️).
+7.  **Pozycje klejenia** – Sprawdź zgodność z rysunkiem i zaznacz "ptaszki" (✔️).
+8.  **Szerokość/Pozycja Disposal Tape** – Wymiar wg rysunku i pomiar + zaznacz "ptaszka" (✔️).
+9.  **Ilość SAP** – Wpisz ilość wg zlecenia oraz odczyt z **HMI (Strona 1)**.
+10. **Ilość celulozy i materiał** – Długość (zlecenie), szerokość (etykieta materiału – **zrób zdjęcie!**), gramatura, nastawa **HMI (Strona 1)** oraz nastawa **HMI (Strona 222)** – wpisz dwukrotnie.
+11. **Pozycja kodowania** – Zgodność z rysunkiem + zaznacz "ptaszka" (✔️).
+12. **Kontrola wizualna (10 worków)** – Sprawdź kolejno:
+    - **a)** Wygląd i zgrzew worka, ogólna estetyka.
+    - **b)** Kodowanie na worku (zgodność ze zleceniem i MES) – **przepisz kod!**
+    - **c)** Kodowanie na kartonie (zgodność ze zleceniem i MES) – **przepisz kod!** (Uwaga: nie zawsze wymagane).
+    - **d)** Ilość sztuk i ułożenie wyrobu w worku.
+    - **e)** Wady/dziury na lampie (środkowe wyroby – 50 szt. pod rząd).
+    - **f)** Wady na lampie (zewnętrzne wyroby – 20 szt. pod rząd).
+13. **Wetness Indicator** – Zaznacz "ptaszka" (✔️) czy wskaźnik jest obecny.
+
+&nbsp;
+
+<div style={{ display: "flex", justifyContent: "center", width: "100%", margin: "20px 0" }}>
+  <div style={{ width: "100%", maxWidth: "800px" }}>
+    <ImageCarousel
+      layout="center"
+      changeContext="Lista Kontrolna"
+      images={[
+        {
+          src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu-wzor.webp").default,
+          title: "Wzór wypełnionej listy",
+          fullTitle: "Przykład prawidłowo uzupełnionego arkusza",
+        },
+        {
+          src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu.webp").default,
+          title: "Lokalizacja danych (🔍)",
+          fullTitle: "Gdzie szukać konkretnych parametrów na dokumencie",
+        },
+      ]}
+    />
+  </div>
+</div>
+
+:::caution[Ważne przy punkcie 10]
+Pamiętaj o wykonaniu zdjęcia etykiety celulozy! To niezbędny element dokumentacji przebudowy.
+:::
+
+---
+
+## 📋 Słowniczek (To samo!)
 
 Pamiętaj, że poniższe terminy oznaczają dokładnie to samo:
 
 - 🆔 **Numer materiału**
 - 📦 **Numer artykułu**
 - 🔢 **Kod produktu**
-
----
-
-### 📏 Pomiar worka na linii
-
-Pomiary wykonujemy **dwukrotnie** w trakcie trwania każdego zlecenia:
-
-1.  🟢 **START:** Na początku zlecenia.
-2.  🏁 **STOP:** Ok. 1h przed końcem zlecenia.
-
-**Jak mierzyć?**
-
-- Pobierz worek ze spakowanymi pieluszkami, za metal detektorem.
-- Zmierz wymiary na urządzeniu do mierzenia worków zgodnie z **instrukcją na karcie**.
-
----
-
-### 🧪 Próbki dla laboratorium (Naklejka)
-
-Próbki dostarczamy tylko wtedy, gdy następuje zmiana kluczowych surowców.
-
-**Kiedy zanieść próbkę?**
-Wypełnij naklejkę i dostarcz **1 worek** po przebudowie, jeśli zmieniły się:
-
-- **Cuff** (ściągacze) 🩲
-- **Celuloza** 🪵
-- **SAP** (superabsorbent) 💧
-
-**Co wpisać na naklejce?**
-
-> Spisz dane z **aktualnego (nowego)** zlecenia produkcyjnego. ✍️
-
----
-
-:::tip[Ważna wskazówka]
-Zawsze upewnij się, że dane na naklejce są zgodne z tym, co aktualnie jedzie na maszynie!
-:::

@@ -1,8 +1,8 @@
 module.exports = {
   tutorialSidebar: [
-    { type: "doc", id: "kontrola-wyrzutu-splice/index", label: "🧪 Kontrola poprawnego wyrzutu splice" },
     // { type: "doc", id: "kontrola-kamer/index", label: "📷 Kontrola kamer – poprawne wykonywanie testów" },
     { type: "doc", id: "obliczanie-dlugosci-rolki", label: "📏 Obliczanie długości rolki" },
+    { type: "doc", id: "mlyn/index", label: "⚙️ Młyn" },
     { type: "doc", id: "panel-hmi/index", label: "🖥️ Panel HMI" },
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
     { type: "doc", id: "optima/index", label: "📦 Optima" },

@@ -14,9 +14,10 @@ type ImageItem = {
 type Props = {
   images: ImageItem[];
   changeContext: string;
+  layout?: "grid" | "center";
 };
 
-export default function ImageCarousel({ images, changeContext }: Props) {
+export default function ImageCarousel({ images, changeContext, layout = "grid" }: Props) {
   const [index, setIndex] = useState<number | null>(null);
 
   // Ref do przechowywania początkowej pozycji dotyku
@@ -115,15 +116,10 @@ export default function ImageCarousel({ images, changeContext }: Props) {
   return (
     <>
       {/* 1. SEKCJA MINIATUR (GRID) */}
-      <div className={styles.grid}>
+      <div className={`${styles.grid} ${layout === "center" ? styles.centerLayout : ""}`}>
         {images.map((item, i) => (
           <div key={item.src} className={styles.thumbContainer} onClick={() => setIndex(i)}>
-            <img
-              src={item.src}
-              alt={item.title}
-              className={styles.thumb}
-              // Usunięto loading="lazy" (tak jak w poprzedniej poprawce)
-            />
+            <img src={item.src} alt={item.title} className={styles.thumb} />
 
             <div className={styles.thumbTitle}>{item.title}</div>
           </div>

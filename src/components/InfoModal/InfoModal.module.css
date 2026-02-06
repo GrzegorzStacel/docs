@@ -1,0 +1,61 @@
+.trigger {
+  color: var(--ifm-color-primary);
+  /* Zmieniono z underline dashed na none */
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.trigger:hover {
+  color: var(--ifm-color-primary-darker);
+  /* Opcjonalnie: podkreślenie ciągłe pojawi się tylko po najechaniu myszką */
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background: var(--ifm-background-surface-color);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.content {
+  line-height: 1.6;
+}

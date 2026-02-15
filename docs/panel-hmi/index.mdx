@@ -265,12 +265,48 @@ Jeżeli materiał nie jest rozłożony na całą szerokość głowicy, klej moż
 <br />
 
 <Admonition type="tip" title="Informacja">
-  📄 **Strona 141 (prawdopodobnie)**
+  📄 **Strona 141**
 </Admonition>
 
-<br />
+### 📍 Pozycjonowanie Nadruku
 
-- Funkcja pozwala przesunąć pozycję nadruku na produkcie w górę lub w dół.
+- **Ustawienie Góra/Dół:** Regulację pozycji nadruku w pionie wykonuje się na panelu HMI.
+- **Ustawienie Na Boki:** Jeśli zachodzi potrzeba przesunięcia nadruku poziomo, należy **fizycznie przesunąć dyszę** drukarki na jej mocowaniu wewnątrz maszyny.
+
+### 🔧 Konserwacja i Diagnostyka
+
+- **Błędy i Niewyraźny Nadruk:** Jeśli nadruk jest słabo widoczny lub drukarka zgłasza błąd, przyczyną jest zazwyczaj zbyt gęsty tusz lub zapchana dysza.
+  - 🧼 **Rozwiązanie:** Należy przeprowadzić procedurę czyszczenia dyszy oraz filtra.
+  - 🧪 **Mycie elementów:** Zarówno dyszę, jak i filtr (płytkę) myjemy (przepłukujemy) w dedykowanej **wanience**, używając **alkoholu propylenowego 70%**.
+  - 📑 **Filtr:** Znajduje się wewnątrz drukarki po prawej stronie. Należy go zdemontować i dokładnie wypłukać w wanience z alkoholem.
+
+- **Odczyt Błędów:** Panel główny maszyny nie wyświetla szczegółów awarii drukarki. Dokładny kod błędu i opis problemu znajdziesz wyłącznie **bezpośrednio na wyświetlaczu drukarki**.
+- **Ustawienia Treści:** Wszelkie zmiany dat, godzin oraz edycję szablonów wykonuje się na panelu drukarki.
+
+### 🔄 Stabilność Nadruku (Enkoder)
+
+Jeśli nadruk „pływa” (nie trzyma stałej pozycji na produkcie) i nie można go ustabilizować ustawieniami, problem leży w układzie pomiarowym:
+
+- **Ramię z kołem (Enkoder):** Urządzenie to mierzy prędkość liniową maszyny, aby drukarka wiedziała, kiedy nanieść tusz.
+
+* **Potencjalne usterki mechaniczne:**
+  - 🛠️ Uszkodzona lub poluzowana **sprężyna dociskająca** ramię do wałka napędowego.
+  - 🧼 **Zabrudzenie:** Kółko enkodera lub guma wału napędowego mogą być obklejone pyłem lub resztkami materiału, co powoduje „podskakiwanie” koła.
+  - 📉 **Poślizg (Wytarcie):** Kółko enkodera może być już **wyślizgane/wytarte**, lub guma na wałku napędowym straciła przyczepność. W takim przypadku koło nie kręci się równo z wałkiem, co oszukuje drukarkę w kwestii prędkości maszyny.
+
+:::info[Ważne przy konserwacji]
+Warto regularnie przecierać kółko enkodera oraz gumową powierzchnię wałka napędowego alkoholem, aby zapewnić maksymalną przyczepność i wyeliminować poślizgi.
+:::
+
+<details>
+<summary>
+  Jak działa Enkoder? (Enkoder wałka / Koło pomiarowe)
+</summary>
+Enkoder zczytuje obroty wałka napędowego i wysyła sygnały impulsowe do drukarki. Dzięki temu, jeśli maszyna zwolni lub przyspieszy, drukarka automatycznie dostosuje tempo, aby nadruk nie był **„rozciągnięty” ani „ściśnięty”** – zawsze zachowuje ten sam rozmiar.
+
+Dodatkowo enkoder pozwala na precyzyjne odliczenie **opóźnienia druku (Print Delay)**, czyli dokładnej odległości od czujnika wykrywającego produkt do miejsca, w którym ma pojawić się napis. Brak stabilnego docisku koła do wałka powoduje przekłamania w sygnale, co skutkuje „pływaniem” nadruku lub jego niewłaściwym umiejscowieniem na produkcie.
+
+</details>
 
 <br />
 

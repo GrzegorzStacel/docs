@@ -1,0 +1,75 @@
+---
+title: 🌀 BST - System Prowadzenia Wstęgi
+---
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
+
+# 🌀 Obsługa i Konfiguracja Systemu BST
+
+Dokument zawiera kompletny opis obsługi panelu sterującego oraz procedury ustawcze dla systemu prowadzenia materiału. System ten dba o to, aby krawędź wstęgi była zawsze w tym samym miejscu, zapobiegając jej "pływaniu" na boki.
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "5rem 0" }} />
+
+## 🕹️ Tryby pracy panelu (Zasady działania)
+
+1. **Manual (Ręczny):** 🕹️
+   - **Zasada:** W tym trybie ramię BST jest „ślepe”. Sam ustawiasz ramię w konkretnej pozycji i ono **zostaje tam na sztywno**.
+   - **Działanie:** Ramię nie reaguje na czujnik. Nawet jeśli materiał ucieka, ramię się nie poruszy.
+   - **Kiedy używamy:** Podczas kalibracji (Setup) lub BARDZO awaryjnie gdyby czujnik był uszkodzony.
+
+2. **Automatic (Auto):** 🟢
+   - **Zasada:** Tryb „inteligentny”. System stara się utrzymać krawędź materiału w idealnej, zadanej wartości.
+   - **Działanie:** System analizuje sygnał z czujnika. Jeśli materiał zejdzie z toru, ramię **natychmiast kontruje**, aby przywrócić krawędź na właściwe miejsce.
+   - **Kiedy używamy:** Zawsze podczas normalnej pracy maszyny.
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "5rem 0" }} />
+
+## 🛠️ Procedura: Uczenie Materiału (Setup)
+
+### ⚖️ Logika Sygnału (Ilość Światła)
+
+Podczas procedury Setup uczymy czujnik dwóch stanów, bazując na tym, ile światła dociera do odbiornika:
+
+- **Stan "0" (Pełne zasłonięcie):** Materiał całkowicie blokuje wiązkę czujnika. System zapisuje: "Brak światła = materiał jest głęboko w czujniku". ⬛
+- **Stan "100" (Brak materiału):** Pusta szczelina, nic nie blokuje światła. System zapisuje: "Pełne światło = czujnik jest pusty". ⬜
+- **Punkt pracy ("50"):** W trybie **Auto** system dąży do tego, aby materiał zasłaniał dokładnie **połowę (50%)** wiązki światła. Jeśli sygnał rośnie w stronę 100 lub 0, ramię "wie", że materiał ucieka z czujnika i musi go przesunąć.
+
+### ⚠️ Ważne o prześwicie (Transparentność)
+
+Nie każdy materiał całkowicie blokuje światło.
+
+- Jeśli materiał jest cienki, część światła przez niego przechodzi nawet przy pełnym zasłonięciu.
+- Wtedy podczas uczenia stan "0" może nie być idealnym zerem (np. pokaże 15%).
+- **Wniosek:** System musi widzieć wyraźny **kontrast**. Jeśli szkiełko jest zakurzone, różnica między "0" a "100" zanika i system zaczyna gubić krawędź. 🌫️🧼
+
+### 🛠️ Kroki kalibracji (Krok po kroku)
+
+1️⃣ **Przygotowanie**
+
+- Podejdź do właściwego panelu BST.
+- Przełącz system w **Tryb Manualny** 🕹️.
+
+2️⃣ **Wejście w ustawienia**
+
+- Wybierz opcję **SETUP** na panelu. ⚙️
+- Wciśnij pierwszą ikonę w lewym górnym rogu ekranu ↩️.
+
+3️⃣ **Kalibracja (Zalecane 2 osoby! 👥)**
+Wykonuj ruchy materiałem płynnie, bez szarpania:
+
+- **Krok A (Stan 100):** Wysuń materiał całkowicie poza obszar sensora (tak, aby do czujnika docierało pełne światło i wskazywało 100%). ⬅️⬜
+- **Potwierdzenie:** Wciśnij przycisk z **"ptaszkiem"**. ✅ Automatycznie wyjdzie do menu **SETUP**.
+- **Nawigacja:** Wciśnij ponownie tę samą ikonę w lewym górnym rogu, aby przejść do kolejnego etapu. ↩️
+- **Krok B (Stan 0):** Wsuń materiał głęboko w sensor, aż do samego końca jego szczeliny (pełne zasłonięcie wiązki, 0%). ➡️⬛
+- **Potwierdzenie**: Wciśnij przycisk z "ptaszkiem". ✅
+
+4️⃣ **Zatwierdzenie i Start**
+
+- Po zakończeniu nauczania materiału wciśnij przycisk **SETUP** ↩️.
+- Przełącz system w **Tryb Automatyczny** 🟢.
+
+### 💡 Protip dla Operatora
+
+Jeśli BST "pływa" (ramię cały czas nerwowo drga), najprawdopodobniej materiał pływa lub czujnik jest zakurzony. Zanim zaczniesz nową kalibrację – **najpierw wyczyść szkiełko miękką, suchą szmatką lub przedmuchaj sprężonym powietrzem!** 🧼🧓
+
+Ramię może drgać również w sytuacji, gdy **czułość (Gain) jest ustawiona zbyt wysoko**. Jeśli czyszczenie czujnika nie pomogły, spróbuj nieznacznie zmniejszyć wartość czułości w menu ustawień.

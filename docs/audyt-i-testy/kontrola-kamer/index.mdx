@@ -94,6 +94,37 @@ Po każdej zmianie parametru należy **ponownie przeprowadzić test**, aby potwi
 
 ---
 
+## 🧪 Instrukcja wykonania testu zgrzewania (Sealing) w praktyce
+
+Test ten ma na celu sprawdzenie, czy kamery poprawnie wykrywają błędy zgrzewu bocznego i czy wyrzuca je w odpowiednim momencie.
+
+### 📝 Procedura testowa (Krok po kroku)
+
+1. **Aktywacja:** Wejdź na stronę **Eject** (Str. 134), aby zainicjować symulację błędu zgrzewania poprzez wciśnięcie przycisku ????(sealing)
+2. **Pobranie próbki:** Złap wszystkie pieluszki, które zostały wyrzucone przez klapę podczas testu.
+   - Jeśli tylko jest, to można postawić pusty kubeł, lub w koszulkę aby było łatwiej złapać wszystkie sztuki.
+3. **Selekcja i sortowanie:**
+   - **Szukaj pieluszek wadliwych:** Znajdź wszystkie sztuki, które rozrywają się na obu szwach bocznych. Odłóż je na osobną kupkę. ❌
+   - **Znajdź "wyznaczniki":** Szukaj dwóch specyficznych pieluszek, które są **niezgrzane tylko z jednej strony**.
+   - **Rola wyznaczników:** Są one Twoimi punktami granicznymi. Jedna oznacza początek wyrzutu wadliwych sztuk, a druga ich koniec. Dzięki temu, że są niezgrzane tylko jednostronnie, możesz je szybko ułożyć chronologicznie z poprawnymi pieluszkami. 🔍
+4. **Weryfikacja:** \* Pieluszki bezpośrednio przed pierwszym wyznacznikiem oraz bezpośrednio za drugim wyznacznikiem **muszą być już idealnie zgrzane** (dobre).
+
+### 📝 Dokumentacja i Audyt
+
+- Wynik testu wpisujemy do audytu w formacie: **(Wynik Rzeczywisty) / (Wynik z Panelu)**.
+- **Przykład:** `1-24-2 / 1-24-3` (gdzie środkowa liczba to ilość sztuk).
+
+### 📦 Zakończenie i składowanie (Różnice między maszynami)
+
+| Maszyna   | Sposób pakowania              | Miejsce składowania                                                                                                                                                                                                 |
+| :-------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **RAD20** | Włóż pieluszki do worka. 📦   | Szafka z półkami na testy. Półki są bardzo duże, bez problemu mieszczą pełne worki. Na worku pobranym z magazynu worków z Optimy (aktualnego zlecenia) piszemy wynik, który wpisujemy w audycie oraz aktualną datę. |
+| **RAD05** | Wsadź pieluszki **luzem**. 👐 | Odpowiednia półka na testy. **Uwaga:** Półki są tu małe i nie pomieściłyby całych worków. Wynik piszemy tylko w audycie.                                                                                            |
+
+- **Rotacja:** Stare odpady z danej godziny wyrzucamy – podmieniamy je regularnie co dobę, aby utrzymać porządek i aktualność testów. 🚮
+
+---
+
 ## 🛡️ Test Metal Detektora
 
 Podczas przeprowadzania testu metal detektora kluczowe jest miejsce naklejenia taśmy testowej:
@@ -102,7 +133,7 @@ Podczas przeprowadzania testu metal detektora kluczowe jest miejsce naklejenia t
 
 <div style={{ paddingLeft: "20px", marginTop: "10px" }}>
   1. Nakleić taśmę na materiale już **ZA** czujnikiem Splice. <br />
-  2. Nakleić taśmę gdzieś **PRZED** czujnikiem, ale tak, aby taśma minęła czujnik Splice.
+  2. Nakleić taśmę gdzieś **PRZED** czujnikiem, ale tak, aby taśma **minęła czujnik Splice**.
 </div>
 
 - **Cel:** Zapobiega to przypadkowej aktywacji testu wyrzutu Splice. Chcemy sprawdzić wyłącznie reakcję systemu na wykrycie metalu, a nie procedurę łączenia materiału.

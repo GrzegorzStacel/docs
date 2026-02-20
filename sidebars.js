@@ -1,12 +1,16 @@
 module.exports = {
   tutorialSidebar: [
     // { type: "doc", id: "kontrola-kamer/index", label: "📷 Kontrola kamer – poprawne wykonywanie testów" },
+    { type: "doc", id: "plan-szkolenia/index", label: "📋 Lista pytań" },
     { type: "doc", id: "obliczanie-dlugosci-rolki", label: "📏 Obliczanie długości rolki" },
     { type: "doc", id: "mlyn/index", label: "⚙️ Młyn" },
     { type: "doc", id: "panel-hmi/index", label: "🖥️ Panel HMI" },
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
     { type: "doc", id: "optima/index", label: "📦 Optima" },
     { type: "doc", id: "btsr/index", label: "🧵 BTSR" },
+    { type: "doc", id: "bst/index", label: "🌀 BST" },
+    { type: "doc", id: "cil/index", label: "🧼 CIL" },
+    { type: "doc", id: "gabki/index", label: "🛢️ Gąbki" },
     { type: "doc", id: "zlecenie-produkcyjne/index", label: "📋 Zlecenie produkcyjne" },
     { type: "doc", id: "skaner-liniowy/index", label: "🔫 Skaner liniowy" },
     {

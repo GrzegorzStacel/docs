@@ -1,6 +1,6 @@
 ---
 title: "📦 Optima"
-description: "Pytania i odpowiedzi z obsługi sekcji Optima"
+description: "Kompleksowa instrukcja obsługi i konserwacji sekcji Optima"
 ---
 
 import Admonition from "@theme/Admonition";
@@ -14,17 +14,37 @@ import Admonition from "@theme/Admonition";
 - **Zatrzymanie:** Stop zatrzymuje optimie, nie kończąc cyklu pakowania.
 - **Uruchomienie:** Po zatrzymaniu maszyny należy wykonać **Reset**, a następnie **Start**.
 
+### 🟢 Szybki Start po Resecie
+
+- **Mechanika:** Po wciśnięciu przycisku Reset maszyna ponownie napełnia powietrzem wszystkie swoje elementy pneumatyczne.
+- **Problem:** Ten proces może powodować błędy na łańcuchu.
+- **Protip:** Aby płynnie ruszyć Optimą, wciśnij **Zielony Start** natychmiast po Resecie. 🚀
+
 ## 🛍️ Założenie i ułożenie worków oraz pakiety
 
 1.  Otwórz klapę zabezpieczającą.
 2.  Ułóż worki **białą częścią skierowaną do klapy**.
-3.  Wsadź piny w wycięcia — zużyte piny powinny samoczynnie wypaść do pojemnika znajdującego się z drugiej strony maszyny.
+3.  Wsadź piny w wycięcia — po pobraniu wszystkich worków z danego pakietu w sekcji zgrzewania, na szynie zostają puste piny. Dopiero w momencie przesuwania nowego pakietu, te puste piny są spychane i samoczynnie wpadają do pojemnika znajdującego się z tyłu maszyny.
 
-## 🧹 Opróżnianie Optimy z pozostałego produktu
+### 🔄 Przesunięcie pakietów worków na podajniku
+
+- Ścieżka: `Główna` -> `System` -> `BH work.` -> `Wprowadz. Worków` -> `Funkcje manualne`.
+- **Obsługa:** Jeśli guziki są wyszarzone, wciśnij 🔴 **STOP**. Przytrzymaj przycisk OP lub DR na panelu:
+  - **Przesuń pakiet w stronę OP / lub / DR**
+
+    :::info Uwaga dla maszyn RAD05 i RAD20
+    Kierunki są odwrotne: **OP** przesuwa w stronę napędów, a **DR** przesuwa w stronę operatora.
+    :::
+
+- **Opcja "Zastąp pakiet worków nowym pakietem":** Pozwala na wprowadzenie nowego pakietu worków w miejsce starego, który wpada do pojemnika na piny z tyłu maszyny.
+
+## 🧹 Opróżnianie i Czyszczenie (CIL)
+
+### 🧹 Opróżnianie Optimy z pozostałego produktu
 
 **Opróżnianie całkowite:**
 
-- Ścieżka: `Menu Główny` -> `Funkcje man.` -> `Wyczyść Optima` -> `Start` (przycisk należy przytrzymać nieco dłużej).
+- Ścieżka: `Menu Główny` -> `Funkcje man.` -> `Wyczyść Optima` -> 🟢 `Start` (przycisk należy przytrzymać nieco dłużej).
 - **Działanie:** Maszyna dopakuje wszystkie pieluszki znajdujące się wewnątrz. Jeśli nie uda się utworzyć pełnego kompletu do worka, pozostałe sztuki zostaną wyrzucone sprężonym powietrzem do pojemnika na odpady.
 
 **Opróżnij bagger:**
@@ -32,25 +52,87 @@ import Admonition from "@theme/Admonition";
 - Działa analogicznie jak powyżej, ale dotyczy tylko sztuk znajdujących się w sekcji kompresowania (ściskania).
 
 :::tip
-Jeżeli przyciski na panelu są wyszarzone (nieaktywne), należy najpierw wcisnąć przycisk **STOP**.
+Jeżeli przyciski na panelu są wyszarzone (nieaktywne), należy najpierw wcisnąć przycisk 🔴 **STOP**.
 :::
 
-## 🔄 Przesunięcie pakietów worków na podajniku
+### ✨ Umiejętność wykonania CIL według standardu
 
-- Ścieżka: `Główna` -> `System` -> `BH work.` -> `Wprowadz. Worków` -> `Funkcje manualne`.
-- **Obsługa:** Jeśli guziki są wyszarzone, wciśnij **STOP**. Przytrzymaj przycisk OP lub DR na panelu:
-  - **Przesuń pakiet w stronę OP / lub / DR**
+CIL jest wykonywany przez osoby z sekcji pakowania i obejmuje:
 
-    :::info Uwaga dla maszyny RAD20
-    Kierunki są odwrotne: **OP** przesuwa w stronę napędów, a **DR** przesuwa w stronę operatora.
-    :::
+- Czyszczenie ssawek pobierających worki.
+- Odmuchiwanie lub czyszczenie miękką szmatką wszystkich czujników.
+- Sprzątanie pozostałości po workach i pieluszkach leżących wewnątrz Optimy.
+- Opróżnianie pojemników z plastikowymi kołkami, odrzuconymi produktami oraz pojemnika na resztki odciętej folii.
 
-- **Opcja "Zastąp pakiet worków nowym pakietem":** Pozwala na wprowadzenie nowego pakietu worków w miejsce starego, który wpada do pojemnika na piny z tyłu maszyny.
+## 🌡️ Stacja Zgrzewania i Grzałki
 
-## ⚠️ Czytanie i rozwiązywanie podstawowych błędów
+### 🔌 Wymiana Grzałek
 
-- **Zator i przeciążenie:** Problemy te rozwiązujemy poprzez ręczne usunięcie zablokowanych pieluszek z wnętrza Optimy.
-- **Błąd grzałki:** Wymieniamy grzałki na nowe (dostępne w szafie z częściami zamiennymi dla danej linii). Należy zachować prawidłowy kierunek montażu (polaryzacja: plus do plusa).
+- **Procedura wymiany:**
+  - **Części:** Weź nową/sprawną grzałkę. 🆕
+  - **Demontaż:** Na sekcji zgrzewania użyj **pomarańczowych grzybków** od śrub.
+  - **Góra vs Dół:** Pamiętaj – **górna grzałka jest wyższa** niż dolna! 📏
+  - **Kierunek:** Zwróć uwagę na blaszkę przy wyciąganiu – nową włóż identycznie. 🔄
+  - **Ilość:** Wymieniamy tylko uszkodzoną grzałkę (nie trzeba parami). 1️⃣
+
+* **Błąd grzałki:** Wymieniamy grzałki na nowe (dostępne w szafie z częściami zamiennymi dla danej linii). Należy zachować prawidłowy kierunek montażu (polaryzacja: plus do plusa).
+
+### ⚖️ Kalibracja i Diagnostyka (Panel)
+
+- **Ścieżka dostępu:** `Bagger` ➡️ `Stacja zgrzewania` ➡️ `Manual Functions`.
+- _(Tutaj znajdują się oba poniższe przyciski)_ 👇
+
+1. **Kalibracja:** Kliknij **"Kalibracja kontroli druta zgrzewającego"**. ✅
+2. **Gdy przycisk jest szary (nieaktywny):** Wciśnij **Reset** (czasami trzeba wcisnąć go 2-3 razy, aż błędy znikną). 🔁
+   - Jeśli nadal nie możesz kliknąć kalibracji ➡️ w tym samym widoku panelu znajdź i wciśnij **"Ponowne fazowanie stacji zgrzewającej"**.
+
+### 🚫 Wadliwe Grzałki
+
+- **Jeśli po kalibracji i starcie pojawi się błąd** ➡️ wymień grzałki na inne (może być inny opór na drucie).  
+  Możliwe, że trzeba będzie iść po grzałkę na inną maszynę lub zanieść tą niekompatybilną u nas grzałkę na podmiankę na inną z innej maszyny (może gdzieś indziej będzie działać normalnie).
+
+* **WAŻNE:** Jeśli nie podmienimy jej na innej maszynie, to na niedziałającej grzałce **targamy taśmę** i odkładamy na wieszak dla uszkodzonych! 🚩
+* _Dlaczego?_ Aby ekipa naprawcza nie pomyliła jej ze sprawną i nie powiesiła z powrotem jako dobrą.
+
+### 🖥️ Obsługa Panelu Stacji Zgrzewania
+
+W tej kategorii korzystamy z trzech kluczowych działów:
+
+1. **🕹️ Manual Functions:** Funkcje i ruchy wykonywane ręcznie.
+2. **⚙️ Param (Parametry):** Tutaj ustawiamy np. temperatury. Widoczne są tu wartości min, max oraz rekomendowane.
+3. **⏱️ PLS:** Ustawienia czasów i odległości (kiedy dany element ma wejść/wyjść). Również posiada zakresy min/max.
+
+#### 🌡️ Procedura ustawiania temperatury (w dziale Param)
+
+- **Zasada 1:1:** Zawsze ustawiamy **identyczną temperaturę** na obu grzałkach (górnej i dolnej). 🌡️=🌡️
+- **Korekta na zużycie:** Jeśli grzałka jest starsza i ma większy opór (słabiej grzeje), podbijamy temperaturę. **Pamiętaj:** analogicznie podnosimy wtedy temperaturę na drugiej grzałce.
+- **⚠️ Uwaga o resecie:** Po resecie Optimy (np. po błędzie/awarii) podbite wartości mogą zostać cofnięte do temperatury domyślnej! Zawsze sprawdź to po restarcie.
+
+## 🏗️ Przebudowa i Zerowanie
+
+Podczas przebudowy maszyny korzystamy ze **skoroszytu**, w którym znajduje się szczegółowa instrukcja: co dokładnie i w jaki sposób należy przebudować pod dany produkt z zamówienia.
+
+### 🔄 Ponowne zerowanie Optimy (`System` -> `Manual Functions`)
+
+- **Użycie:** Wyłącznie po przebudowie maszyny.
+- **⚠️ UWAGA:** Przed zerowaniem **wyczyść maszynę z towaru**!
+- Jeśli wypychacz zablokuje się na pieluszce, skalibruje się do błędnej pozycji. ❌
+- **Magazyn worków:** Musi być pusty! Podczas zerowania łańcuch wykona ok. 3 obroty i wyrzuciłby wszystkie znajdujące się w nim pakiety. 📦💨
+
+### 📜 Zmiana Programu (Receptury)
+
+1. **Wybór programu:** Wejdź w **"Receipt"** z menu głównego.
+2. **Identyfikacja:** To, jaki program wybrać, sprawdzisz w **zleceniu produkcyjnym**. Szukaj go po nazwie pieluszek oraz ich ilości w worku.
+   - _Przykład nazwy programu:_ **1x24 MAXI** oznacza:
+     - **1** – pojedynczy pakiet,
+     - **24** – liczba sztuk w worku,
+     - **MAXI** – nazwa produktu.
+3. **Wybór:** Wciśnij przycisk w kształcie entera i wybierz program i zaakceptuj przyciskiem Enter. Wybranie programu (nawet podczas jazdy maszyny) nie powoduje jego aktywowania – będzie w trybie nieaktywnym, co umożliwia nam bezpiecznie podejrzeć jego parametry. 👁️
+4. **Aktywacja:** Wciśnij **"Użyj"**, aby załadować program. Po tej operacji maszyna skalibruje się automatycznie. ✅
+
+   :::danger Ważne!
+   Operacji tej **nie wolno wykonywać podczas pracy maszyny** oraz w sytuacji, gdy aktualne zlecenie nie zostało jeszcze w pełni zrealizowane.
+   :::
 
 ## 📏 Ustawienie wypychaczy i promu
 
@@ -59,32 +141,78 @@ Ustawienie wypychaczy wykonujemy w oparciu o kolorowe oznaczenia (naklejki). Kor
 - **🔵 Niebieskie naklejki:** Ustawienie dla pakietu pojedynczego.
 - **⚪ Białe naklejki:** Ustawienie dla pakietu podwójnego.
 
-### Charakterystyka pracy
+### ⚙️ Charakterystyka pracy
 
-- **Pakiet pojedynczy:** Określona liczba pieluszek (zależnie od zamówienia) jest kompresowana, wpychana do worka i zgrzewana.
-- **Pakiet podwójny:** Pakiety są kompresowane osobno, jeden po drugim. Najpierw do worka wpychany jest pierwszy pakiet, następnie drugi, i dopiero po tym następuje zgrzewanie.
+W zależności od konfiguracji zamówienia, Optima pracuje w jednym z dwóch trybów:
+
+#### 📥 Pakiet pojedynczy
+
+Określona liczba pieluszek (zależnie od zamówienia) jest kompresowana, wpychana do worka i zgrzewana.
+
+#### 📥📥 Pakiet podwójny (Double Pack)
+
+Pakiety są kompresowane osobno, jeden po drugim, przy użyciu systemu windy i klap:
+
+- **Sekwencja windy:** Za wstępną kompresją znajduje się **winda**. Gdy pierwszy pakiet zostanie skompresowany, trafia on na windę, która się opuszcza, a nad nią zamyka się **klapa**.
+- **Połączenie pakietów:** Gdy drugi pakiet zostanie skompresowany i przesunięty nad klapę, otwiera się ona, a winda jedzie do góry. W tym momencie mamy dwa pakiety ułożone jeden na drugim.
+- **Finalizacja:** Tak przygotowany "słupek" jest przesuwany dalej do kompresji głównej oraz do sekcji zgrzewania. Dopiero po zebraniu obu pakietów następuje finalne zgrzanie worka.
 
 ### Rodzaje wypychaczy i regulacja
 
 - **Wypychacze liniowe:** Są to wypychacze znajdujące się przed promem, które przesuwają skompresowany produkt. Ustawiamy je zgodnie z naklejkami.
 - **Popychacz pierwszej kompresji:** Tego elementu **nie ustawiamy do naklejek** – należy go podnieść tylko do góry.
-- **Podłoga:** Pozycję podłogi również regulujemy według dedykowanych naklejek.
+- **Podłoga:** Pozycję podłogi również regulujemy według białych i niebieskich naklejek.
+- **Wymiana blachy:** Podczas przebudowy może być konieczna wymiana blachy pod pokrywą (sekcja magazynu worków) na inny rozstaw pinów. Należy zwrócić uwagę, czy plastikowe piny precyzyjnie zgrywają się z bolcami gdzie pobierane są worki.
 
 :::info Obsługa
 Aby przesunąć lub ustawić wybrany wypychacz, należy wcisnąć przycisk znajdujący się bezpośrednio na jego obudowie.
 :::
 
-## ✨ Umiejętność wykonania CIL według standardu
+## 📡 System Czujników
 
-CIL jest wykonywany przez osoby z sekcji pakowania i obejmuje:
+| Nr    | Funkcja                      | Opis                                                                                    |
+| :---- | :--------------------------- | :-------------------------------------------------------------------------------------- |
+| **1** | **Wejściowy**                | Wykrywa podawanie materiału (wiązka góra-dół). 🔦                                       |
+| **2** | **Sterowanie klapą**         | Wykrywa zatory przy wprowadzaniu do łańcucha. 🛑                                        |
+| **3** | **Wewnątrz okręgu łańcucha** | Kontroluje ruch obrotowy łańcucha. 🔄                                                   |
+| **4** | **Wydmuchujący**             | Jęśli wykryje pieluszkę, kontroluje jej zmuchnięcie z łańcucha. 💨                      |
+| **5** | **Kontrolny**                | Sprawdza, czy odrzucona pieluszka nie została w plastikowych łopatkach za wydmuchem. 🛡️ |
 
-- Czyszczenie ssawek pobierających worki.
-- Odmuchiwanie lub czyszczenie szmatką wszystkich czujników.
-- Sprzątanie pozostałości po workach i pieluszkach leżących wewnątrz Optimy.
-- Opróżnianie pojemnika z plastikowymi kołkami, oraz pojemnika z odrzuconymi produktami
-- oraz pojemnika na resztki odciętej folii.
+### 🔦 Szczegółowy opis czujnika nr 1 (Obecność materiału)
 
-## 🔎 Znajomość defektów powstających w sekcji Optima
+- **Jak to wygląda:** Są to dwa osobne elementy umieszczone naprzeciwko siebie – jeden na górze, drugi na dole (nad i pod ścieżką, którą jadą pieluszki).
+- **Zasada działania:** Górny element wysyła wiązkę światła, a dolny ją odbiera (lub odwrotnie). Tworzą one "niewidzialną barierę".
+- **Wykrywanie:** Gdy pieluszka przechodzi między nimi, przerywa wiązkę światła. Maszyna interpretuje to jako „materiał obecny”.
+- **Komunikacja:** Ten czujnik współpracuje bezpośrednio z drugim czujnikiem (sterującym klapą), aby zapewnić płynne wprowadzanie pieluszek do łańcucha bez zatorów.
+
+### ⚙️ Procedura Regulacji Czujników
+
+Regulację wykonujemy, gdy czujnik pracuje niestabilnie – czyli przestaje poprawnie wykrywać produkt lub generuje tzw. "fałszywe odczyty".
+
+- **Narzędzie:** Śrubokręt krzyżakowy. 🛠️
+- **Problem "ducha" (fałszywa detekcja):** Często zdarza się, że dioda czujnika świeci się (sygnalizuje obecność pieluszki), mimo że jej tam nie ma. Dzieje się tak, ponieważ czujnik jest zbyt czuły i **reaguje na pył produkcyjny, puste tło lub elementy konstrukcyjne maszyny**, traktując je jak towar. 🌫️🏗️
+- **Co regulujemy:** Kręcąc śrubą na obudowie, zmieniamy **czułość czujnika**, (odległość wykrywania materiału od czujnika), aby ignorował zakłócenia, a widział tylko pieluszkę.
+- **Zasada wskaźnika:**
+  - **Dioda świeci:** Materiał wykryty (lub błąd czułości).
+  - **Dioda zgaszona:** Brak materiału.
+- **Test "na rękę":**
+  - Zbliż rękę do czujnika na odległość, w której zazwyczaj przejeżdża pieluszka.
+  - Kręć śrubą tak długo, aż znajdziesz "złoty środek" – moment, w którym dioda precyzyjnie zapala się przy zbliżeniu dłoni i **całkowicie gaśnie** po jej zabraniu (nie reagując na nic, co jest w tle). ☝️🚨
+
+### 💨 Logika Odrzutu i Wydmuchu
+
+- **Pomiar szerokości:** Maszyna sprawdza **łączną szerokość** grupy pieluszek. Jeśli pakiet jest niekompletny, system automatycznie zdmuchnie go z łańcucha do pojemnika, zamiast kierować do kompresji wstępnej. 🗑️
+- **Przycisk ręcznego wydmuchu:** Służy do wymuszenia odrzutu.
+- **⚠️ Krytyczna uwaga (Czas reakcji):** Przycisk ten ma bardzo wolny czas reakcji. Należy go **przytrzymać wyraźnie dłużej**, aż zobaczysz fizyczną reakcję maszyny.
+- **Ryzyko spakowania:** Jeśli wciśniesz przycisk zbyt krótko lub zbyt późno, sygnał nie zostanie przetworzony na czas. W takim przypadku pakiet pieluszek, który zamierzałeś odrzucić, **nie zostanie zdmuchnięty i trafi prosto do kompresji wstępnej**. ⏳🚫
+
+## 🔎 Rozwiązywanie Problemów (Case Studies)
+
+### ⚠️ Czytanie i rozwiązywanie podstawowych błędów
+
+- **Zator i przeciążenie:** Problemy te rozwiązujemy poprzez ręczne usunięcie zablokowanych pieluszek z wnętrza Optimy.
+
+### 🔎 Znajomość defektów powstających w sekcji Optima
 
 - **Defekty mechaniczne:** Dziury w zewnętrznych pieluszkach (spowodowane np. przez uszkodzenia ścian tuneli kompresyjnych).
 - **Błędy zgrzewu:** Niedocięta folia, nieprawidłowy zgrzew lub przegrzany worek.
@@ -96,8 +224,31 @@ CIL jest wykonywany przez osoby z sekcji pakowania i obejmuje:
   Po każdej przebudowie należy przygotować **20 paczek dla LKJ** w celu weryfikacji, czy zewnętrzne pieluszki nie są dziurawe.
 </Admonition>
 
-## ➕ Inne informacje
+### 🔄 Zewnętrzne pieluszki przekręcają się wokół własnej osi
+
+- **Przyczyna:** Wypychacz ustawiony za wysoko.
+- **Mechanika problemu:** Pieluszki wewnętrzne trzymają pion, ponieważ są ściskane z obu stron przez sąsiednie sztuki. Pieluszki zewnętrzne (skrajne) mają oparcie tylko z jednej strony (wewnętrznej), przez co przy zbyt wysoko ustawionym wypychaczu tracą stabilność i obracają się podczas przepychania. 🔃
+- **Rozwiązanie:** Obniżenie wypychacza, aby lepiej stabilizował cały pakiet.
+- **Ważne:** Pierwszego wypychacza nie ustawiamy od zera (uderzyłby w plastikowe łopatki)! Bezpieczne minimum powinno być **14**. 📐
+  - Spójrz na wartości min / max
+
+---
+
+## 📖 Słowniczek i Tipy Operatora
+
+### 🌪️ Stacker i zjawisko "niedolotu"
+
+W sekcji stackera złożone pieluszki wpadają pomiędzy łopatki na łańcuch.
+
+- **Prawidłowy proces:** Pieluszka musi wsunąć się do łopatki do samego końca, aby pakiet został równo uformowany.
+- **Niedolot:** Jeśli pieluszka nie wleci do końca łopatki, nazywamy to "niedolotem". Niedoloty mogą skutkować powstaniem zatoru zatrzymującego Optimę lub tworzeniem nierównych pakietów podczas kompresji. 🛑
+
+### ➕ Inne informacje
 
 - **Czujnik worków:** Jeśli zabraknie worków (czujnik nie jest zakryty i pika alarm), podczas przebudowy można położyć pojedynczy worek na czujniku, aby go tymczasowo dezaktywować.
 - **Instrukcja przebudowy:** Przebudowę Optimy wykonujemy zawsze według instrukcji zawierającej wszystkie wymagane wymiary.
-- **Wymiana blachy:** Podczas przebudowy może być konieczna wymiana blachy pod pokrywą (sekcja dokładania worków) na inny rozstaw pinów. Należy zwrócić uwagę, czy plastikowe piny precyzyjnie zgrywają się z bolcami gdzie pobierane są worki.
+
+### 💡 Protipy
+
+- **OP i DR:** Pamiętaj o kierunkach OP (Operator) i DR (Drive). W maszynach RAD05 i RAD20 kierunki przy podajniku worków są odwrotne.
+- **Wyszarzone przyciski:** Jeżeli przyciski na panelu są nieaktywne, należy najpierw wcisnąć przycisk **STOP**.

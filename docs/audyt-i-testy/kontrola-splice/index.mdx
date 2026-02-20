@@ -14,9 +14,13 @@ Sekcja ta określa zakres odrzutu dla operacji **Splice**.
 <details>
   <summary>🔍 Co to jest Splice?</summary>
   <div>
-    **Splice** to określenie automatycznego łączenia materiału przy zmianie rolki.
+    **Splice** to określenie automatycznego łączenia materiału przy zmianie rolki. Słowo to oznacza po prostu „łączenie”. 🤝
 
     Proces ten polega na połączeniu nowej rolki surowca ze starą (kończącą się) za pomocą specjalnej taśmy klejącej, co zapewnia ciągłość pracy maszyny.
+
+    * **Taśma łącząca:** To mocna taśma klejąca łącząca koniec starej rolki z początkiem nowej. Zawiera w sobie **kawałek metalizy** (metalowy pasek), aby czujnik (metal detektor) mógł go wykryć i zainicjować wyrzut. 🧲🚨
+    * **Taśma prostująca:** Na prawie wszystkich materiałach (z wyjątkiem: ADL, TAPE, SAP oraz Celulozy), oprócz głównej sklejki, stosuje się dwa mniejsze kawałki tej samej taśmy klejącej na brzegach materiału.
+        * **Rola:** Ich zadaniem jest fizyczne wyprostowanie materiału w miejscu łączenia, aby nie powstały zakładki lub zmarszczenia podczas przechodzenia przez wałki. 📏
 
   </div>
 </details>
@@ -24,7 +28,7 @@ Sekcja ta określa zakres odrzutu dla operacji **Splice**.
 <details>
   <summary>🛡️ Dlaczego odrzucamy produkt po Splice?</summary>
   <div>
-    Produkty te muszą zostać usunięte z linii, aby wyeliminować ryzyko trafienia do klienta pieluszek z naklejoną taśmą technologiczną.
+    **Dlaczego to problem?** Wszystkie te elementy (taśma łącząca, metaliza i taśmy prostujące) są ciałami obcymi. Produkt w tych miejscach jest wadliwy i musi zostać usunięty z linii, aby wyeliminować ryzyko trafienia do klienta pieluszek z naklejoną taśmą technologiczną.
 
     Dzięki temu, że taśma klejąca posiada wklejony cienki **metalowy pasek**, stanowi ona znacznik dla systemów bezpieczeństwa:
 
@@ -81,3 +85,52 @@ Liczba wyrzuconych pieluszek może wydawać się większa, niż wynikałoby to z
 
 Oprócz samej głównej taśmy na **Splice**, w procesie pojawiają się później również **taśmy prostujące**. One również muszą zostać całkowicie usunięte z linii, dlatego zakres wyrzutu musi obejmować wszystkie sztuki zawierające te dodatkowe elementy.
 :::
+
+---
+
+## 🛠️ Procedura Testu Splice (W praktyce)
+
+### 🧪 Cel testu
+
+Sprawdzenie, czy faktyczny odrzut pokrywa się z ustawieniami na panelu i czy żadna pieluszka z taśmą (Splice) nie trafiła do dobrych produktów.
+
+### 🕒 Kiedy najlepiej robić test?
+
+- **Rekomendacja:** Najlepiej podczas zmiany rolki materiału **ADL**, ewentualnie **Tape** (taśma do zaklejania zużytej pieluszki). 🩹
+- **Uzasadnienie (ADL):** Kawałki ADL są długie, więc zazwyczaj cała sklejka trafia do **jednej sztuki**, co eliminuje konieczność sortowania.
+- **Uzasadnienie (Tape):** Taśma cięta jest wąsko, więc sklejka może pojawić się na **2-3 sztukach**. To nie jest optymalne, ale jest to nadal akceptowalna ilość do szybkiego sprawdzenia.
+- **Uwaga:** Unikaj testów na każdym innym materiale ponieważ mają one **taśmy prostujące**. Powodują one duży wyrzut z "dobrymi" sztukami w środku, co wymusza żmudne sortowanie całego pakietu według kodów chronologicznych.
+
+### 📝 Wykonanie testu (Krok po kroku)
+
+1. **Pobranie próbki:** Odsun kosz na odrzucone pieluszki i złap wszystkie pieluszki wyrzucone przez maszynę podczas operacji Splice.
+   - Pamiętaj przystawić kosz z powrotem 😉
+2. **Lokalizacja błędu:** Przejrzyj wszystkie odrzucone sztuki i znajdź pieluszkę (lub pieluszki), na których znajduje się fizyczna taśma **Splice**. 🔍
+3. **Sortowanie (Logika kodu):** \* Używając pieluszki z taśmą jako punktu odniesienia, sprawdź jej numer kodu.
+   - Posortuj resztę "dobrych" pieluszek (tych bez taśmy) według numeracji:
+     - **Na lewą stronę:** Pieluszki z numerami wcześniejszymi niż kod sztuki wadliwej (produkcja PRZED taśmą Splice). ⬅️
+     - **Na prawą stronę:** Pieluszki z numerami późniejszymi niż kod sztuki wadliwej (produkcja PO taśmie Splice). ➡️
+4. **Weryfikacja zakresu:** Sprawdź, czy liczba sztuk po lewej i prawej stronie zgadza się z tym, co ustawiłeś na panelu w sekcji **Eject**.
+
+### 📝 Dokumentacja i Audyt
+
+- **Format wpisu:** Wynik wpisujemy jako: **(Wynik Rzeczywisty) / (Wynik z Panelu)**.
+- **Przykład:** `1-4-2 / 1-4-3`.
+  - _Interpretacja:_ Środkowa liczba to liczba sztuk z taśmą, a boczne to margines dobrych sztuk przed i po.
+
+### 📦 Zakończenie i składowanie (Różnice między maszynami)
+
+| Maszyna   | Sposób pakowania              | Miejsce składowania                                                                                                                                                                                                 |
+| :-------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **RAD20** | Włóż pieluszki do worka. 📦   | Szafka z półkami na testy. Półki są bardzo duże, bez problemu mieszczą pełne worki. Na worku pobranym z magazynu worków z Optimy (aktualnego zlecenia) piszemy wynik, który wpisujemy w audycie oraz aktualną datę. |
+| **RAD05** | Wsadź pieluszki **luzem**. 👐 | Odpowiednia półka na testy. **Uwaga:** Półki są tu małe i nie pomieściłyby całych worków. Wynik piszemy tylko w audycie.                                                                                            |
+
+- **Rotacja:** Stare odpady z danej godziny wyrzucamy – podmieniamy je regularnie co dobę, aby utrzymać porządek i aktualność testów. 🚮
+
+---
+
+### ⚙️ Korekta
+
+Jeśli wyniki rzeczywiste (to, co trzymasz w ręku) nie pokrywają się z wartościami na panelu – **należy skorygować parametry Start/End na panelu**. ✅
+
+---

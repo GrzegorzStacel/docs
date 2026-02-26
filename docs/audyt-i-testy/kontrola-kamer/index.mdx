@@ -2,6 +2,8 @@
 title: 📷 Kontrola kamer – poprawne wykonywanie testów
 ---
 
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
 ## 📄 Testy kamer
@@ -9,6 +11,29 @@ title: 📷 Kontrola kamer – poprawne wykonywanie testów
 ### 📍 Lokalizacja
 
 > Testy kamer wykonujemy na **stronie 134** (Camera test).
+
+Na tej stronie przeprowadzamy weryfikację poprawności odrzutu tylko dla wybranych sekcji. Należy trzymać się poniższych wytycznych:
+
+- **Wykonujemy testy dla:**
+  - **Tape**
+  - **Chassis Sealing 2** (drugi zgrzew boczny)
+- **NIE wykonujemy testów dla:**
+  - **Highloft**
+  - **Tummy width**
+  - **Chassis Sealing 1** (pierwszy zgrzew boczny) – **Powód:** Na pierwszym zgrzewie materiał jest na tyle wąski, że kamera często nie jest w stanie poprawnie wychwycić błędu. Skutkuje to ryzykiem przepuszczenia wadliwego zgrzewu do dobrego produktu.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/audyt/kontrola-kamer/kontrola_kamer.webp").default,
+        title: "HMI - kontrola kamer",
+        fullTitle: "Panel testowy kamer do manualnego sprawdzania poprawności odrzutu sekcji Tape oraz Chassis Sealing 2 (str 134).",
+      },
+    ]}
+  />
+</div>
 
 ### ⚙️ Konfiguracja
 
@@ -94,13 +119,13 @@ Po każdej zmianie parametru należy **ponownie przeprowadzić test**, aby potwi
 
 ---
 
-## 🧪 Instrukcja wykonania testu zgrzewania (Sealing) w praktyce
+## 🧪 Instrukcja wykonania testu zgrzewania (Chassis sealing) w praktyce
 
 Test ten ma na celu sprawdzenie, czy kamery poprawnie wykrywają błędy zgrzewu bocznego i czy wyrzuca je w odpowiednim momencie.
 
 ### 📝 Procedura testowa (Krok po kroku)
 
-1. **Aktywacja:** Wejdź na stronę **Eject** (Str. 134), aby zainicjować symulację błędu zgrzewania poprzez wciśnięcie przycisku ????(sealing)
+1. **Aktywacja:** Wejdź na stronę **Eject** (Str. 134), aby zainicjować symulację błędu zgrzewania poprzez wciśnięcie przycisku "Chassis sealing"
 2. **Pobranie próbki:** Złap wszystkie pieluszki, które zostały wyrzucone przez klapę podczas testu.
    - Jeśli tylko jest, to można postawić pusty kubeł, lub w koszulkę aby było łatwiej złapać wszystkie sztuki.
 3. **Selekcja i sortowanie:**

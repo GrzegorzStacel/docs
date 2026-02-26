@@ -1,0 +1,75 @@
+---
+title: 🔄 Obsługa Akumulatorów i Procesu Splice
+---
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+### 🔘 Sterowanie ręczne procesem Splice i obsługą akumulatora
+
+Poniższa kaseta umożliwia operatorowi manualne wyzwolenie procedury łączenia materiału, zmianę aktywnej strony rozwijacza, odblokowanie trzpienia oraz opuszczanie akumulatora.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/splice/splice_1.webp").default,
+        title: "Kaseta obsługi splice",
+        fullTitle: "Panel sterowniczy z przyciskami wymuszania Splice, przełącznikiem zmiany materiału oraz przyciskiem zwalniania hamulca akumulatora.",
+      },
+    ]}
+  />
+</div>
+
+### ⚡ Wymuszony Splice
+
+Jeśli podczas biegu maszyny wciśniesz przycisk zmiany strony rozwijacza, system wymusi rozpoczęcie procesu **Splice**.
+
+- **Efekt:** Akumulator zacznie się podnosić, przygotowując zapas materiału, i nastąpi automatyczne połączenie wstęgi.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/splice/splice_2.webp").default,
+        title: "Akumulator przed i po splice",
+        fullTitle: "Porównanie stanów akumulatora: pozycja dolna (oczekiwanie) oraz powrót do bazy po zakończeniu cyklu łączenia wstęgi.",
+      },
+      {
+        src: require("@site/static/img/splice/splice_3.webp").default,
+        title: "Akumulator podczas splice",
+        fullTitle: "Widok podniesionego akumulatora w trakcie procesu Splice – buforowanie zapasu materiału przed automatycznym połączeniem wstęg.",
+      },
+    ]}
+  />
+</div>
+
+---
+
+### 🛑 Hamulec Akumulatora i Luzowanie Materiału
+
+Przycisk **"Zwolnij hamulec akumulatora"** jest kluczowy, gdy maszyna stanie, a akumulator pozostanie w pozycji podniesionej. Pozwala on na bezpieczne sprowadzenie go na dół przed ponownym startem.
+
+- **Ryzyko poluzowania:** Jeśli maszyna zostanie uruchomiona przy podniesionym akumulatorze, może to spowodować poluzowanie się materiału.
+- **Owijanie na rolkach:** Materiał, który straci napięcie, ma tendencję do natychmiastowego owijania się wokół rolek napędowych. Może to doprowadzić do całkowitego zerwania wstęgi.
+- **Reakcja łańcuchowa:** Zerwany materiał może spowodować zerwanie się innych materiałów.
+- **Konsekwencje:** Powoduje to konieczność ponownego przeciągania materiałów od zera, co jest czasochłonne i generuje długi przestój maszyny. ⏱️❌
+- **Specyfika Rad 05:** Na tej maszynie problem luzowania dotyczy głównie sekcji **Outer** i **Inner**. Pozostałe materiały zazwyczaj przechodzą bez komplikacji.
+
+---
+
+### 🛠️ Procedura ręcznego opuszczania akumulatora (Rad 05)
+
+Jeśli chcesz zluzować akumulator, aby wrócił do pozycji początkowej (na dole), wykonaj poniższe kroki.
+
+> ⚠️ **Uwaga:** Procedura potwierdzona na Rad 05, na innych maszynach może wyglądać inaczej.
+
+1. **Dostęp do sterowania napędami:** Podczas postoju na panelu wejdź na **stronę 410**.
+2. **Potwierdzenie:** Wciśnij przycisk **"I understand, go on"**, aby przejść do **strony 411**.
+3. **Dezaktywacja sekcji:** Znajdź konkretny akumulator, który chcesz opuścić (np. **Cuff Accu**). Wyłącz go – przycisk powinien zaświecić się na pomarańczowo.
+4. **Odblokowanie trzpienia:** Aby odblokować możliwość swobodnego obracania się trzpienia, należy wyłączyć przełącznik **"zmiana materiału"**. Jest to niezbędne przy ręcznych manipulacjach rolką. 🔓
+5. **Zwalnianie hamulca:** \* Wciskaj przycisk zwolnienia hamulca akumulatora **WYŁĄCZNIE PULSACYJNIE**. ⚠️
+   - W tym samym czasie kręć rolką, ręcznie zwijając nadmiar materiału.
+   - **Dlaczego pulsacyjnie?** Zbyt długie trzymanie przycisku spowoduje gwałtowne opadnięcie akumulatora, co doprowadzi do poplątania materiału.
+6. **Przywrócenie gotowości:** Po opuszczeniu akumulatora koniecznie włącz z powrotem funkcję **Accu** dla danej sekcji na panelu. ✅

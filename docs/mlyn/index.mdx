@@ -57,6 +57,19 @@ Instrukcja bezpiecznego wprowadzania nowej rolki materiału oraz rozwiązywania 
   - Odetnij początkowy fragment materiału za etykietą surowca 🚩.  
     Jeśli zauważysz, że brzeg materiału jest zagięty, odetnij go dalej, aż do uzyskania prostego pasa materiału 📏🔝.
 
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/mlyn/mlyn_etykieta_1.webp").default,
+        title: "Etykieta do odcięcia",
+        fullTitle: "Informacyjna etykieta, gdzie znajdziemy szerokość materiału i średnicę rolki",
+      },
+    ]}
+  />
+</div>
+
 - **Formowanie szpica** 📐✂️
   - **Załóż** rolkę na trzpień i zabezpiecz ją ogranicznikiem / dystansem ⚙️🔒.
   - ✂️ **Wytnij** na początku wstęgi trójkąt równoramienny (szpic) o wysokości **max. 35 cm** 🔺. Ułatwi to precyzyjne wprowadzenie materiału do szczeliny 🎯.
@@ -288,3 +301,48 @@ Poniżej znajduje się opis elementów sterujących oraz wskaźników widocznych
 8.  🏗️ **Zawór podtrzymujący (Szczelina 2 / Lewa rolka):**
     - ⬅️ **W LEWO:** Zamknięty.
     - ➡️ **W PRAWO:** Otwarty.
+
+## 🧶 Parametry celulozy
+
+W procesie teoretycznie wykorzystujemy dwa rodzaje celulozy, które różnią się szerokością wstęgi oraz gramaturą:
+
+| Kod materiału | Szerokość wstęgi celulozy | Gramatura celulozy |
+| :------------ | :------------------------ | :----------------- |
+| **G1.319**    | 496 mm                    | 757,0 g/m²         |
+| **G1.397**    | 500 mm                    | 815,0 g/m²         |
+
+:::info Uwaga
+Materiał o kodzie **G1.319** jest używany bardzo rzadko.
+
+Standardowo w procesie **wykorzystuje się głównie** celulozę z kodem **G1.397**.
+:::
+
+## 🏷️ Odczytywanie informacji z etykiet celulozy
+
+Proces weryfikacji materiału na linii jest kluczowy dla zachowania ciągłości produkcji i poprawności gramatury wkładu chłonnego.
+
+### 🔍 Proces weryfikacji i skanowania
+
+W celu potwierdzenia poprawności dostarczonego materiału, stosujemy następującą procedurę:
+
+1. **Pobranie karty:** Z towaru przywiezionego na linię ściągamy **kartę zbiorczą**.
+2. **Skanowanie:** Za pomocą skanera liniowego odbijamy znajdujący się na niej **kod SCC**.
+3. **Zatwierdzenie:** System weryfikuje dane – w ten sposób potwierdzamy poprawność kodu materiału przed jego użyciem w procesie.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/mlyn/mlyn_etykieta_2.webp").default,
+        title: "Etykieta na zbiorcza (foto do zmiany!!!)",
+        fullTitle: "Informacyjna etykieta, gdzie znajdziemy szerokość materiału (500mm) i średnicę rolki (1500mm)",
+      },
+      {
+        src: require("@site/static/img/mlyn/mlyn_etykieta_2.webp").default,
+        title: "Etykieta na rolce",
+        fullTitle: "Informacyjna etykieta, gdzie znajdziemy szerokość materiału (500mm) i średnicę rolki (1500mm)",
+      },
+    ]}
+  />
+</div>

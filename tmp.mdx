@@ -5,3 +5,20 @@ Górna linia
 Odzielająca linia
 
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "5rem 0" }} />
+
+karuzela i zdjęcia duże na śrdoku
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/hmi/hmi_serwo_napedy.webp").default,
+        title: "HMI - serwo napędy",
+        fullTitle: "Widok parametrów pracy serwonapędów z możliwością regulacji prędkości procesowych.",
+      },
+    ]}
+  />
+</div>

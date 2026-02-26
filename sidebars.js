@@ -11,6 +11,7 @@ module.exports = {
     { type: "doc", id: "bst/index", label: "🌀 BST" },
     { type: "doc", id: "cil/index", label: "🧼 CIL" },
     { type: "doc", id: "gabki/index", label: "🛢️ Gąbki" },
+    { type: "doc", id: "splice/index", label: "🔄 Splice" },
     { type: "doc", id: "zlecenie-produkcyjne/index", label: "📋 Zlecenie produkcyjne" },
     { type: "doc", id: "skaner-liniowy/index", label: "🔫 Skaner liniowy" },
     {

@@ -3,6 +3,7 @@ title: "🖥️ Panel HMI"
 ---
 
 import Admonition from "@theme/Admonition";
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
 
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
@@ -318,3 +319,44 @@ Finalny etap procesu — składanie **wzdłużne i poprzeczne** produktu:
 
 - Składanie wzdłużne odbywa się przed **Herman'em**.
 - Składanie poprzeczne jest po **final rotatorze**.
+
+## 📂 Inne
+
+### 🖥️ Panel kontrolny parametrów serwonapędów
+
+**Widok parametrów pracy serwonapędów z możliwością regulacji prędkości procesowych.**
+
+Pozwala ona na:
+
+- **Precyzyjna regulacja:** Możliwość korygowania prędkości procesowych dla konkretnych sekcji, co jest niezbędne przy dokładnej synchronizacji maszyny. ⚙️📊
+
+:::danger UWAGA
+Nie zmieniamy żadnych wartości na tej stronie bez bardzo ważnego powodu! Pochopne zmiany mogą rozsynchronizować cały proces.
+:::
+
+:::info Kiedy dopuszczalna jest regulacja?
+Korektę wprowadzamy tylko w sytuacjach krytycznych dla stabilności biegu materiału:
+
+- **Zbyt wolna praca rolki:** Materiał w danej sekcji nadmiernie się napina, co prowadzi do jego ciągłego zrywania.
+- **Zbyt szybka praca rolki:** Powstaje luz na wstędze, który powoduje wkręcanie się materiału w rolkę napędową lub inne podzespoły, co również skutkuje zerwaniem.
+  :::
+
+:::tip Procedura weryfikacji prędkości
+Ponieważ dla prędkości serwonapędów nie istnieje oficjalny dokument **KUM**, liderzy linii wypracowali własny system kontroli:
+
+- Po każdej przebudowie maszyny, liderzy robią zdjęcia najważniejszych stron panelu HMI (w tym tej strony).
+- W razie wątpliwości lub podejrzenia rozsynchronizowania, należy **odszukać na grupie zdjęcie z ostatniej przebudowy maszyny na dany model pieluszki** i przywrócić wartości zgodnie z tym wzorcem. 📸
+  :::
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/hmi/hmi_serwo_napedy.webp").default,
+        title: "HMI - serwo napędy",
+        fullTitle: "Widok parametrów pracy serwonapędów z możliwością regulacji prędkości procesowych.",
+      },
+    ]}
+  />
+</div>

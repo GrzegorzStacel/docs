@@ -148,10 +148,41 @@ Robimy tę regulację np. wtedy, gdy **ADL nie zakrywa w całości kanału Panam
 
 <br />
 
-<Admonition type="warning" title="Do uzupełnienia ⚠️">
-  Do uzupełnienia, jak to się robi
+### 🔍 Punkt 0 (Ciekawostka – procedury specjalistyczne)
+
+<Admonition type="warn" title="Uwaga">
+  W standardowych warunkach pracy nie dokonujemy tutaj żadnych zmian! Tych ustawień używa się wyłącznie w rzadkich, uzasadnionych przypadkach.
 </Admonition>
 
+Wartość **Punktu 0** zmieniamy tylko w przypadku wyciągania całego modułu (Unitu) z maszyny lub wymiany go na nowy. Wyjątkiem jest sytuacja, w której mechanik zaznaczy pierwotną pozycję noża i zamontuje go dokładnie w tym samym ustawieniu – wtedy kalibracja zazwyczaj nie jest wymagana.
+
+- **Wymiana samego noża:** Standardowa wymiana zużytego ostrza na nowe (tego samego typu) nie wymaga ponownej konfiguracji Punktu 0.
+- **Zasady regulacji:**
+  - Wszelkich zmian parametrów dokonujemy **WYŁĄCZNIE NA POSTOJU MASZYNY**. 🛑
+  - Próba zmiany tych wartości podczas biegu maszyny spowodowałaby natychmiastową utratę synchronizacji, co doprowadziłoby do całkowitego "rozjechania się" produktu w danej sekcji.
+- **Pomoc wizualna:** Na panelu sterowania dostępny jest przycisk **Picture**. Po jego wciśnięciu system wyświetli zdjęcie pomocnicze, które pokazuje, jak prawidłowo ustawić nóż w pozycji bazowej.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/hmi/hmi_punkt_zero_nozy_01.webp").default,
+        title: "Interfejs nastaw Punktu 0",
+        fullTitle: "Panel HMI przedstawiający listę modułów tnących (Unitów) wraz z przypisanymi im wartościami kalibracji Punktu 0.",
+      },
+      {
+        src: require("@site/static/img/hmi/hmi_punkt_zero_nozy_02.webp").default,
+        title: "Instrukcja wizualna ustawienia noża",
+        fullTitle: "Widok pomocniczy wyświetlany po wciśnięciu przycisku Picture, pokazujący prawidłowe fizyczne pozycjonowanie noża względem Vacuum.",
+      },
+    ]}
+  />
+</div>
+- **Co dokładnie regulujemy?** Parametr ten nie odpowiada za głębokość cięcia, lecz za dokładne umiejscowienie noża na obwodzie bębna **Vacuum**. 📏🌐 - **Skutki błędnego ustawienia:** Jeśli
+Punkt 0 zostanie zatwierdzony w momencie, gdy nóż fizycznie znajduje się w innej pozycji niż wymaga tego program (np. jest oddalony od punktu styku z Vacuum), sterownik przyjmie tę błędną
+lokalizację jako bazową. - **Konsekwencja:** Cały proces cięcia materiału zostanie przesunięty w czasie. W efekcie nóż będzie uderzał w materiał w niewłaściwym momencie, co przełoży się na
+błędne wymiary gotowego produktu lub uszkodzenie surowca. 📏❌
 <br />
 
 ---

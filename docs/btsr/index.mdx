@@ -1,3 +1,5 @@
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
 # 🧵 System kontroli naciągu nici (BTSR)
@@ -18,6 +20,24 @@ W procesie wykorzystujemy dwa rodzaje czujników, które różnią się miejscem
 
 1.  **Czujnik OFFLINE (Poza maszyną)** ➡️ Znajduje się przy szafach ze szpulami. Kontroluje nić na samym początku drogi.
 2.  **Czujnik INLINE (Na linii)** ➡️ Znajduje się bezpośrednio wewnątrz maszyny. Monitoruje naciąg podczas nakładania nici na produkt.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/btsr/btsr_01.webp").default,
+        title: "Rozwijacz z rolkami oraz czujnikiem offline",
+        fullTitle: "Widok szafy lycry z zainstalowanym rozwijaczem, rolkami prowadzącymi oraz czujnikiem typu OFFLINE monitorującym parametry nici poza maszyną.",
+      },
+      {
+        src: require("@site/static/img/btsr/btsr_02.webp").default,
+        title: "Czujniki inline",
+        fullTitle: "Lokalizacja czujników typu INLINE zamontowanych bezpośrednio wewnątrz maszyny, odpowiedzialnych za kontrolę naciągu podczas procesu nakładania nici na produkt.",
+      },
+    ]}
+  />
+</div>
 
 ---
 

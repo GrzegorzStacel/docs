@@ -1,0 +1,156 @@
+---
+title: ⚙️ Unit Pull and Press – Instrukcja i Obsługa
+---
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+## 🎯 Rola Pull and Press w procesie
+
+1. **Utrzymanie poprawnej drogi** prowadzenia wstęgi.
+2. **Utrzymanie optymalnego napięcia** wstęgi.
+3. **Zapewnienie stabilności** wstęgi przed składaniem i cięciem.
+
+---
+
+## ⚙️ Zasada działania
+
+Zespół napędowy (serwonapęd) napędza rolki Pull and Press poprzez **pas zębaty** i łożyskowane **wały Kardana**.
+
+- **Czystość:** Zarówno pas napędowy, jak i koła zębate muszą być utrzymywane w nienagannej czystości.
+- **Mechanika:** Połączenia wałów Kardana muszą być dokręcone wszystkimi śrubami.
+- **Sterowanie:** Z panelu HMI sterujemy prędkością Pull and Press. W razie konieczności sprawdź profil prędkości z dokumentacją **KUM**.
+
+---
+
+## 🛠️ Konserwacja pasa – klucz do stabilności
+
+Pas jest najważniejszym elementem stykowym. Należy kontrolować:
+
+- **Klin prowadzący:** Nie może być wyrwany ani podwinięty.
+- **Powierzchnia robocza:** Brak uszkodzeń mechanicznych i śladów wytarcia w miejscu styku z wstęgą.
+- **Odtłuszczanie:** Czyścić wyłącznie **alkoholem**.
+  > ⚠️ **Uwaga:** Zatłuszczony pas to ślizganie się wstęgi i brak stabilności procesu.
+
+---
+
+## 📏 Kontrola szczelin i zagłębienia
+
+Kontroli dokonujemy zgodnie z harmonogramem **KUM**.
+
+1. **Szczeliny rolek:** Płytkę szczelinomierza wsuwamy między rolki dociskowe. Szczelina po obu stronach musi być identyczna, a przyrząd powinien wchodzić z lekkim oporem.
+2. **Zagłębienie pasów:** Weryfikujemy za pomocą miarki między korpusem a zawieszonym na siłowniku uchwycie górnej roli.
+
+---
+
+## 💨 Ciśnienie docisku (Parametr PA)
+
+Układ pneumatyczny stabilizuje wstęgę. Należy kontrolować ciśnienie zgodnie z parametrami procesu.
+
+- **Zbyt małe ciśnienie:** Niestabilne prowadzenie wstęgi w stronę noża końcowego, ślizganie się taśmy na rolkach.
+- **Zbyt duże ciśnienie:** Szybsze zużycie siłownika, dodatkowe drgania oraz przyspieszone zużycie pasa.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_03.webp").default,
+        title: "Pull & Press - regulacja wysokości noża",
+        fullTitle: "Śruba regulacyjna wysokość szczeliny pomiędzy nożem a pasem transportowym.",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_04.webp").default,
+        title: "Pull & Press - Manometr",
+        fullTitle: "Wskaźnik ciśnienia.",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🔧 Instrukcje regulacji
+
+### Regulacja zagłębienia (na podniesionym siłowniku)
+
+1. Poluzuj nakrętkę kontrującą **A**.
+2. **Zmniejszenie zagłębienia:** Wkręć nakrętkę **B** w prawo.
+3. **Zwiększenie zagłębienia:** Wykręć nakrętkę **B** w lewo (zmiana skoku siłownika).
+4. Dokręć nakrętkę kontrującą **A**.
+   > ⚖️ **Ważne:** Ustawienia po stronie operatora i napędów muszą być identyczne.
+
+### Regulacja szczelin (na opuszczonym siłowniku)
+
+1. Poluzuj nakrętkę kontrującą **A**.
+2. Przez obrót trzpieniem siłownika **B** wkręcamy lub wykręcamy element, aby uzyskać wymaganą szczelinę.
+3. Dokręć nakrętkę kontrującą.
+
+---
+
+## 🚨 Skutki niesprawności Unitu
+
+**NIESPRAWNY PULL AND PRESS = NIESTABILNY PROCES**
+
+Zabrudzony/zużyty pas, niewłaściwe szczeliny lub złe ciśnienie powodują:
+
+1. Zatory lub niepoprawne wejście pieluch w łańcuch płytek Optima.
+2. Poszarpane lub niestabilne cięcie końcowe.
+3. Długotrwałe stabilizowanie produktu po rozruchu.
+4. Niestabilne składanie pieluchy i niestabilna pozycja rdzenia.
+
+---
+
+## 📉 Kontrola zużycia pasa
+
+| Stan pasa    | Opis sytuacji                                                              |
+| :----------- | :------------------------------------------------------------------------- |
+| ❌ **ZŁY**   | Paski zębate wyszczerbione lub zdeformowane, uszkodzenia powierzchni pasa. |
+| ✅ **DOBRY** | Paski zębate równe na całym obwodzie, powierzchnia pasa bez uszkodzeń.     |
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_01.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_02.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_05.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_06.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_07.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_08.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_09.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_10.webp").default,
+        title: "Pull & Press (TMP - uzupełnić & przenieść)",
+        fullTitle: "uzupełnić & przenieść",
+      },
+    ]}
+  />
+</div>

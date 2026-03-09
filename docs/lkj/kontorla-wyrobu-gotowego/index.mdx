@@ -2,6 +2,8 @@
 title: 🏭 Kontrola wyrobu gotowego
 ---
 
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
 ## 🔍 Kontrola wizualna i testy lampą UV
@@ -31,7 +33,23 @@ Sprawdzamy każdy element produktu:
 - Mierzymy pieluszkę zgodnie z rysunkami technicznymi:
 - Narzędzie: linijka
 
-(dodać zdjęcia)
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/lkj/kontrola-wyrobu-gotowego/lkj_kontrola_wyrobu_01.webp").default,
+        title: "Przyrżąd do mierzenia pełnych worków",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/lkj/kontrola-wyrobu-gotowego/lkj_kontrola_wyrobu_02.webp").default,
+        title: "Przyrżąd do mierzenia pełnych worków",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
 
 ---
 

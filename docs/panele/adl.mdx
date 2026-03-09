@@ -1,0 +1,52 @@
+---
+title: 🔘 Panel koło Unit ADL & Mariage Point
+---
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/panele/panel_adl.webp").default,
+        title: "Panel koło Unit ADL",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 📂 Odchylanie rolki folii
+
+Przycisk ten służy do odchylenia rolki dociskowej od czarnej, gumowej rolki napędowej.
+
+- **Zastosowanie:** Używamy go głównie podczas przeciągania folii (np. po zerwaniu), aby uniknąć uciążliwego wciskania materiału w wąską szczelinę.
+- **Zasada działania:** Działa identycznie jak zawory rozdzielaczowe stosowane przy rolkach dociskowych lub pasach transportowych.
+- **Automatyzacja:** Po starcie maszyny układ **samoczynnie wraca** do pozycji roboczej (dociskowej). 🔄
+
+---
+
+### ✂️ Przycisk "C & PL ręcznie / auto" (Obsługa ADL)
+
+Przełącznik ten determinuje moment startu podawania materiału ADL.
+
+- **Tryb Auto (Przekręcony w prawo):** Po starcie maszyny na pierwszym biegu ADL nie startuje. Podawanie zaczyna się dopiero po wejściu na **drugi bieg**.
+  - **Minus:** Podczas przeskoku na drugi bieg kilka kawałków ADL może wypaść luzem na maszynę.
+  - **Dlaczego nie włączamy na stałe?** – Podobno wtedy materiał się brudzi i krzywo się wkleja. Ale to jest tylko indywidualna opinia.
+- **Tryb Ręczny/Wymuszony:** Włączamy go, aby ADL startował już na pierwszym biegu. Jest to przydatne, gdy:
+  - Występują problemy z łapaniem materiału przez Vacuum.
+  - Wymagana jest regulacja, gdy wstęga się przesunęła.
+- **Preferencje:** Może być włączony na stałe, zależy to od preferencji operatora. 👤
+
+---
+
+### 🛠️ Przycisk "Zakładanie Highloft"
+
+Służy do specyficznej konfiguracji napędów w celu synchronizacji cięcia.
+
+- **Działanie:** Wyłącza wszystkie napędy na maszynie, pozostawiając aktywny jedynie **nóż i kowadło ADL**.
+- **Cel:** Precyzyjne ustawienie momentu cięcia tak, aby nóż uderzał w kowadło dokładnie w miejscu **pomiędzy dziurami** materiału Highloft.
+- **Alternatywa:** Ten sam efekt można uzyskać bezpośrednio z poziomu panelu HMI – wybór metody zależy od preferencji operatora. ⚙️
+
+---

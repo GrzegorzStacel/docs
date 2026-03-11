@@ -1,5 +1,6 @@
 ---
 title: 🏭 Kontrola wyrobu gotowego
+toc_max_heading_level: 4
 ---
 
 import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
@@ -53,11 +54,57 @@ Sprawdzamy każdy element produktu:
 
 ---
 
-## 📚 Znajomość katalogu defektów
+## 📖 Znajomość katalogu defektów
 
-- W teczce znajdują się wszystkie przypadki defektów, pogrupowane w działy z opisami i zdjęciami
-- Każdy przypadek zawiera **instrukcje działań**
-- W razie problemu, np. z rdzeniem, sprawdzamy odpowiedni dział w katalogu defektów i porównujemy przypadek z opisanymi przykładami, podejmując działania zgodnie z wytycznymi.
+W teczce stanowiskowej znajduje się kompletne zestawienie przypadków defektów, pogrupowane w działy z opisami i zdjęciami. Każdy przypadek zawiera konkretną instrukcję działań, które należy podjąć.
+
+W razie wystąpienia problemu (np. z rdzeniem), odszukaj odpowiedni dział w katalogu, porównaj wadę z opisem i postępuj zgodnie z wytycznymi.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/lkj/kontrola-wyrobu-gotowego/lkj-katalog-bledow_01.webp").default,
+        title: "Katalog błędów",
+        fullTitle: "Znajduje się w szafce LKJ, w górnej szufladzie",
+      },
+      {
+        src: require("@site/static/img/lkj/kontrola-wyrobu-gotowego/lkj-katalog-bledow_02.webp").default,
+        title: "Katalog błędów",
+        fullTitle: "Zbiór zdefiniowanych wad i problemów jakościowych produktu",
+      },
+    ]}
+  />
+</div>
+
+### 🧪 Przykładowa procedura postępowania przy negatywnym teście kieszonki
+
+W przypadku, gdy test na obciążenie **500g** zakończy się wynikiem negatywnym, należy podjąć następujące kroki:
+
+#### 1. Weryfikacja na niższym obciążeniu (300g)
+
+- Wytnij kolejną kieszonkę i wykonaj test na obciążeniu **300g**.
+- **Jeśli test 300g jest pozytywny:**
+  - Poinformuj Lidera Linii o konieczności korekty (ma on **30 minut** na poprawę parametrów).
+  - Produkcja może być kontynuowana w trakcie wprowadzania poprawek.
+  - Po upływie 30 minut zweryfikuj, czy problem został usunięty. Jeśli nie – zatrzymaj linię.
+
+#### 2. Postępowanie przy wyniku negatywnym (poniżej 300g)
+
+Jeśli test na obciążeniu **300g również nie wyjdzie**, należy natychmiast:
+
+- **Zatrzymać linię produkcyjną.**
+- **Izolacja produktu:** Przejrzyj palety wyprodukowane od momentu ostatniego poprawnego testu.
+- **Oznaczenie i zabezpieczenie towaru:** - Wszystkie palety z wadą odstaw na **miejsce towaru zablokowanego**.
+  - Każdą paletę oznacz **niewypełnioną żółtą kartką** – jest to sygnał dla magazynierów, że towaru nie wolno zabierać.
+- **Wznowienie pracy:** Jeśli przyczyna usterki została usunięta i parametry są poprawne, **produkcja zostaje wznowiona**.
+
+#### 3. Weryfikacja laboratoryjna
+
+1. Pobierz próbki (**5 sztuk** produktu) i niezwłocznie **zanieś je do laboratorium**.
+2. W czasie, gdy laboratorium analizuje próbki, zespół na linii musi upewnić się, że problem został trwale usunięty.
+3. **Decyzja o blokadzie:** O ostatecznym losie zabezpieczonych palet (nałożeniu oficjalnej blokady jakościowej lub dopuszczeniu do obrotu) decyduje pracownik laboratorium.
 
 ---
 
@@ -67,13 +114,17 @@ Przykłady typowych defektów:
 
 - Uszkodzenia zewnętrznych pieluszek spowodowane przez uszkodzone ściany tuneli kompresyjnych
 - Niedocięta folia przy zgrzewie
-- Nieprawidłowo zgrzany lub przypalony worek
+- Nieprawidłowo zgrzany lub przegrzany worek
 - Zarysowania i dziury na workach
 - Odstający worek, bo pieluszki nie zostały dopchnięte do końca
 - Dziury na składaniu worka w miejscu wejścia metalowych ??strzałek
-- Nadruk na worku z nieprawidłowej strony
-- Brak nadruku lub nieprawidłowy **kod lot**
+- Kod LOT na worku jest z nieprawidłowej strony
+- Kod LOT jest nieczytelny / niewyraźny
+- Kod LOT za mały / duży
+- Brak kodu LOT
+- Nieprawidłowy kod LOT
 - Zbyt mocna kompresja, może spowodować powstanie grudek w rdzeniu
+- Nieprawidłowa ilość pieluszek w worku
 
 > ⚠️ Po każdej przebudowie: **produkujemy 20 paczek dla LKJ**, aby sprawdzić zewnętrzne pieluszki.
 
@@ -91,7 +142,9 @@ Sprawdzamy:
 - ✅ Pieluszki wepchnięte do końca, minimalna przestrzeń wolna
 - ✅ Ucho worka prawidłowo przymocowane
 
-> ⚠️ Jeśli pieluszka wystawała i zgrzew powstał razem z nią → **cały worek należy wyrzucić do kosza** (SAP mógł się rozsypać).
+> - ⚠️ **Jeśli podczas zgrzewania pieluszka wystawała i została zgrzana razem z workiem:**
+>   - Jeżeli **rdzeń został przecięty** i zawartość (SAP) się rozsypała — **cały worek należy wyrzucić do kosza**.
+>   - Jeżeli **rdzeń jest nienaruszony** (mimo przygrzania pieluszki do zgrzewu) — worek należy przepakować.
 
 ---
 
@@ -100,6 +153,10 @@ Sprawdzamy:
 - Waga znajduje się **przy komputerze**.
 - Kładziemy pieluszkę na wagę.
 - W aplikacji, w sekcji **Quality** na teście **"Ciężar produktu [g]"**, klikamy przycisk przy danej pieluszce, a waga automatycznie wypełni tabelkę w systemie.
+
+* **Codzienna weryfikacja (Pierwsza zmiana):** \* Każdego dnia na pierwszej zmianie należy sprawdzić poprawność wskazań wagi.
+  - W tym celu wyjmij **odważnik 200g** z metalowej skrzynki LKJ i połóż go na wadze.
+  - Upewnij się, że urządzenie wskazuje prawidłową wartość, zanim zaczniesz ważyć produkty.
 
 ---
 

@@ -7,12 +7,119 @@ import InfoModal from "@site/src/components/InfoModal/InfoModal";
 
 <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
 
+## 📂 Dokumentacja w jasnopomarańczowej teczce
+
+W jasnopomarańczowej teczce stanowiskowej znajdują się zarówno czyste arkusze, jak i miejsce na przechowywanie wypełnionych dokumentów. Poniżej lista dokumentów uporządkowana od najczęściej wypełnianych:
+
+### 1. Karta papierowa QIS (Co 1 lub 2 godziny)
+
+Jest to główny arkusz, w którym odnotowujemy wszystkie bieżące testy jakościowe.
+
+- **Częstotliwość:** Każda zmiana, regularnie co 1–2 h.
+- **Cel:** Bieżąca kontrola parametrów produkcji.
+
+<div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      { src: require("@site/static/img/lkj/dokumentacja/lkj-papierowy-qis_01.webp").default, title: "Karta QIS", fullTitle: "Wzór prawidłowo wypełnionej karty papierowej QIS" },
+      { src: require("@site/static/img/lkj/dokumentacja/lkj-papierowy-qis_02.webp").default, title: "Karta QIS", fullTitle: "Wzór prawidłowo wypełnionej karty papierowej QIS" },
+    ]}
+  />
+</div>
+
+### 2. Karta kontroli zgięcia rdzenia (2 razy na zmianę)
+
+Weryfikacja poprawności złożenia pieluszek po wyjęciu z opakowania.
+
+- **Częstotliwość:** Na początku oraz w połowie każdej zmiany.
+- **Procedura:** Sprawdzamy **10 sztuk**. Kontrolujemy zagięcia od strony środka (nie od pasa).
+- **Norma:** Pomiar linijką – jeśli zagięcie występuje, musi być **poniżej 30 mm**.
+- **Limit:** Wynik jest OK, jeśli maksymalnie 1 sztuka na 10 przekracza 30 mm (przy założeniu, że mniej niż 5 na 10 ma zagięcia mniejsze niż 30mm).
+
+<div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lkj-zagiecie-rdzenia.webp").default,
+        title: "Kontrola zgięcia rdzenia",
+        fullTitle: "Karta kontroli zgięcia rdzenia",
+      },
+    ]}
+  />
+</div>
+
+### 3. Pomiar wypełnionego worka (2 razy na zlecenie)
+
+Kontrola wymiarów gotowego opakowania na linii.
+
+- **Częstotliwość:** Na początku oraz tuż przed zakończeniem danego zlecenia produkcyjnego.
+
+<div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/dok-pomiar-wypelnionego-worka.webp").default,
+        title: "Karta pomiaru worka",
+        fullTitle: "Prawidłowo wypełniony arkusz pomiarowy wymiarów zewnętrznych worka",
+      },
+    ]}
+  />
+</div>
+
+### 4. Lista kontrolna produktu (Po przebudowie)
+
+Dokumentacja audytu po zmianie asortymentu.
+
+- **Częstotliwość:** Po każdej przebudowie maszyny.
+- **Procedura:** Najpierw weryfikacja pierwszych **20 paczek**, następnie fizyczne pomiary w ciągu **60 minut** od ruszenia maszyny.
+
+<div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu-wzor.webp").default,
+        title: "Lista Kontrolna Produktu",
+        fullTitle: "Wzór wypełnienia Listy Kontrolnej po przebudowie maszyny",
+      },
+    ]}
+  />
+</div>
+
+### 5. Karta kontroli wagi i linijek (Raz dziennie)
+
+- **Częstotliwość:** Codziennie na **pierwszej zmianie**.
+- **Waga:** Sprawdzenie odważnikiem **200g** z metalowej skrzynki LKJ i zapisanie wyniku.
+- **Linijki:** Przeliczenie wszystkich linijek na linii (sprawdzenie zgodności numerów grawerowanych).
+
+<div style={{ display: "flex", gap: "20px", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      { src: require("@site/static/img/lkj/dokumentacja/lkj-kontrola-wag-linijek_01.webp").default, title: "Karta wagi", fullTitle: "Wzór wpisu kontroli wagi odważnikiem" },
+      { src: require("@site/static/img/lkj/dokumentacja/lkj-kontrola-wag-linijek_02.webp").default, title: "Ewidencja linijek", fullTitle: "Spis numerów grawerowanych linijek" },
+    ]}
+  />
+</div>
+
+### 6. Karta nadzoru zagrożeń (Raz w tygodniu)
+
+- **Częstotliwość:** W każdy poniedziałek na **pierwszej zmianie**.
+- **Cel:** Kontrola elementów maszyny pod kątem bezpieczeństwa i sprawności według listy kontrolnej.
+
+<div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+  <ImageCarousel
+    images={[
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lkj-karta-nadzoru-zagrozen.webp").default,
+        title: "Karta nadzoru zagrożeń",
+        fullTitle: "Tygodniowy raport sprawności elementów maszyny",
+      },
+    ]}
+  />
+</div>
+
+---
+
 ## 📏 Pomiar worka na linii
-
-Pomiary wykonujemy **dwukrotnie** w trakcie trwania każdego zlecenia:
-
-1. 🟢 **START:** Na początku zlecenia.
-2. 🏁 **KONIEC:** Ok. 1h przed zakończeniem zlecenia.
 
 ### 📋 Zasady pomiaru i dokumentacji
 
@@ -41,6 +148,11 @@ Pomiary wykonujemy **dwukrotnie** w trakcie trwania każdego zlecenia:
           src: require("@site/static/img/lkj/dokumentacja/dok-pomiar-wypelnionego-worka.webp").default,
           title: "Karta Pomiarowa",
           fullTitle: "Wzór poprawnie wypełnionej karty pomiarów wypełnionego worka na linii",
+        },
+        {
+          src: require("@site/static/img/lkj/kontrola-wyrobu-gotowego/lkj_kontrola_wyrobu_01.webp").default,
+          title: "Przyrżąd do mierzenia pełnych worków",
+          fullTitle: "",
         },
       ]}
     />
@@ -101,13 +213,14 @@ Po przebudowie, jeśli zmieniły się materiały chłonne i/lub nieprzemakalne:
 - **Cuff**
 - **Celuloza**
 - **SAP**
-  :::
+
+:::
 
 :::info
 
 ### 📍 Gdzie szukać dokumentu?
 
-Dokument znajduje się w **szafce LKJ**, na **górnej półce**. Szukaj go w **jasno pomarańczowej teczce**.
+Naklejki znajdują się w **szafce LKJ**, na **górnej półce**. Szukaj je przy teczkach.
 
 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
   <ImageCarousel
@@ -142,7 +255,10 @@ Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
 1.  **Linia** – Wpisz numer linii, na której była przebudowa (np. **RAD 05**).
 2.  🔍[1] **Nr zlecenia** – Znajduje się na dokumencie "Zlecenie produkcyjne".
 3.  🔍[1] [**Nr artykułu**](#-słowniczek-to-samo) – Znajduje się na "Zleceniu produkcyjnym" (patrz: słowniczek).
-4.  **Nr palety** – ???????????? Wpisz numer palety, z której pochodzi pobrany worek. ????????????
+4.  **Nr palety** – Wpisz numer palety, z której pochodzi pobrany worek.
+    - **Pobieranie bieżące:** Pobierając worki za wykrywaczem metali (Metal Detector), sprawdź numer na etykiecie palety, która jest aktualnie kompletowana przez paletowego.
+    - **Weryfikacja w systemie MES:** Jeśli zapomnisz sprawdzić numer przy palecie, możesz to zweryfikować w systemie **MES** (zakładka: _Zeskanowane palety_).
+      - **Sposób lokalizacji:** Odczytaj godzinę produkcji z kodu lot znajdującego się na worku, a następnie w systemie MES odszukaj numer palety, która była kompletowana dokładnie w tym czasie.
 5.  **Ilość SAP** – Spisujemy z **panelu HMI** na maszynie (Strona 1).
 6.  **Ilość celulozy** – Spisujemy z **panelu HMI** na maszynie (Strona 1).
 7.  **Prędkość maszyny** – Odczytaj aktualną prędkość z **panelu HMI** (Strona 1).
@@ -156,6 +272,11 @@ Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
         src: require("@site/static/img/lkj/dokumentacja/lokalizacja-danych-naklejka.webp").default,
         title: "[1] Dane na zleceniu produkcyjnym",
         fullTitle: "Przykład uzupełnienia danych z HMI oraz Zlecenia",
+      },
+      {
+        src: require("@site/static/img/lkj/dokumentacja/lkj_etykieta.webp").default,
+        title: "Numer palety",
+        fullTitle: "Etykieta z numerem identyfikacyjnym aktualnie kompletowanej palety.",
       },
       {
         src: require("@site/static/img/lkj/dokumentacja/naklejka-wzor.webp").default,
@@ -172,6 +293,16 @@ Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
 
 Poniżej znajduje się instrukcja wypełniania arkusza kontrolnego po przebudowie.
 
+### Zasady uzupełniania kolumn:
+
+- **Kolumna 1 (Wartości referencyjne):** Tutaj spisujemy wartości bezpośrednio z aktualnego **rysunku technicznego** produktu.
+- **Kolumna 2 (Pomiary po przebudowie):** Wypełniamy ją na podstawie fizycznego sprawdzenia 20 paczek po przebudowie maszyny.
+
+### Limity czasowe i przebieg procesu:
+
+1.  **Weryfikacja wstępna:** Sprawdzamy 20 paczek po przebudowie. Jeśli wszystko jest ok, maszyna zostaje dopuszczona do ruchu.
+2.  **Czas na pomiary:** Od momentu ruszenia maszyny mamy **maksymalnie 60 minut** na dokładne, fizyczne zmierzenie wymiarów pieluszki i wpisanie wyników do arkusza.
+
 :::info
 
 ### Gdzie szukać dokumentu?
@@ -185,12 +316,13 @@ Dokument znajduje się w **szafce LKJ**, na **górnej półce**. Szukaj go w **j
     images={[
       {
         src: require("@site/static/img/lkj/dokumentacja/lokalizacja-naklejki.webp").default,
-        title: "Znajduje się w teczce",
+        title: "Lokalizacja Listy Kontrolnej",
+        fullTitle: "Lista Kontrolna Produktu przechowywana jest w jasnoróżowej teczce stanowiskowej",
       },
       {
         src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu.webp").default,
         title: "Lista Kontrolna Produktu",
-        fullTitle: "Lista Kontrolna Produktu",
+        fullTitle: "Czysta, niewypełniona Lista Kontrolna Produktu",
       },
     ]}
   />
@@ -258,16 +390,12 @@ Punkty oznaczone ikoną 🔍 znajdziesz na wzorcowych zdjęciach poniżej.
         {
           src: require("@site/static/img/lkj/dokumentacja/lista-kontrolna-produktu.webp").default,
           title: "Lokalizacja danych (🔍)",
-          fullTitle: "Gdzie szukać konkretnych parametrów na dokumencie",
+          fullTitle: "Czysta, niewypełniona Lista Kontrolna Produktu",
         },
       ]}
     />
   </div>
 </div>
-
-:::caution[Ważne przy punkcie 10]
-Pamiętaj o wykonaniu zdjęcia etykiety celulozy! To niezbędny element dokumentacji przebudowy.
-:::
 
 ---
 

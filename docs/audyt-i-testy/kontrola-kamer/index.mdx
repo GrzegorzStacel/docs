@@ -180,19 +180,3 @@ Procedura przebiega następująco:
 
 - wciśnij manetkę / uchwyt spustowy odpowiedzialny za **zdmuchnięcie rdzenia** (symulację braku rdzenia),
 - kamera powinna prawidłowo wykryć brak rdzenia, a system powinien wyrzucić pieluszkę pozbawioną rdzenia zgodnie z konfiguracją w sekcji Fault Register.
-
----
-
-## 🧩 Inne
-
-:::info 💡 Chasing Sealing
-W systemie zaimplementowano funkcję osłony zgrzewania bocznego podczas przejścia taśmy (Splice).
-
-**Jak to działa?**
-
-1. Gdy czujnik wykryje **Splice**, system wylicza liczbę pieluszek, jakie muszą przejechać, aż taśma dotrze do sekcji zgrzewania **Herman**.
-2. Dokładnie w momencie przejścia taśmy łączącej, **sonotroda lekko się unosi**.
-3. Pozwala to na swobodne przejście zgrubienia materiału.
-
-Zapobiega to zatrzymaniu maszyny, które mogłoby nastąpić, gdyby sonotroda uderzyłaby bezpośrednio w taśmę Splice.
-:::

@@ -1,0 +1,318 @@
+---
+title: 🏗️ System klejenia i konfiguracja głowic
+---
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+# 🏗️ System klejenia i konfiguracja głowic
+
+Instrukcja identyfikacji metod aplikacji oraz lokalizacji głowic na sterowaniu maszyny.
+
+## 🛠️ Metody aplikacji (Logika podawania)
+
+- **Continuum:** Klejenie odbywa się w sposób ciągły (nieprzerwany).
+- **Count:** Klejenie taktowane (podawanie impulsowe).
+- **Allegro:** Specjalistyczna aplikacja przeznaczona do klejenia nitek lycry.
+
+---
+
+## 🔼 Górny rząd głowic w panelu HMI str. 410
+
+### 1. Glue Cuff Elastic
+
+- **Typ aplikacji:** Allegro, Taktowane
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/1-cuff-elastic.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 2. Glue Cuff Foot seam
+
+- **Status:** Brak głowicy na maszynie.
+
+### 3. Glue Poly Endseal
+
+- **Status:** Brak głowicy na maszynie.
+
+### 4. Glue Leg Elastic
+
+- **Typ aplikacji:** Allegro, taktowane
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/4-leg-elastic.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 5. Glue Tummy spray
+
+- **Typ aplikacji:** Natryskowo
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tummy.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 6. Glue Waist Fold
+
+- **Opis:** Klejenie zakładki pasa.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/6-waiste-fold.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 7. Glue Upper Tissue
+
+- **Typ aplikacji:** Taktowane
+- **Opis:** Klejenie TPL górnego.
+
+:::danger
+**Uzupełnić pic**
+:::
+
+### 8. Glue Delta Lycra
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/8-delta-lycra.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## ↔️ Środkowy rząd głowic
+
+### 9. Glue Cuff Take Down
+
+- **Opis:** Attachment po brzegach, take down od środka.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/9-cuff-attachment-take-down-(cuff-take-down).webp").default,
+        title: "",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/klejenia/9-cuff-take-down-attachment.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 10. Glue Poly-Backsheet
+
+- **Typ aplikacji:** Dotykowo, Ciągłe
+- **Opis:** Łączenie folii z warstwą backsheet.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/10-folia-backsheet.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 11. Glue Topsheet
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/11-topsheet.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 12. Glue Waist Elastic
+
+:::danger
+**Uzupełnić pic**
+:::
+
+### 13. Glue Pad Fold
+
+- **Opis:** W systemie występuje błąd w nazewnictwie – przycisk opisany jako **Glue Pad Fold** w rzeczywistości steruje głowicą **Core Wrap**.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/13-pad-fold-to-core-wrap.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 14. Glue Tpl Upper Channel
+
+- **Typ aplikacji:** Dotykowo, Ciągłe
+- **Opis:** Klejenie na kanał panama; TPL upper jest na pozostałej części rdzenia.
+
+:::danger
+**Uzupełnić pic**
+:::
+
+### 15. Glue Delta Pocket
+
+- **Opis:** Klejenie kieszonki Delta.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/15-delta-pocked-fold-(delta-pocked).webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🔽 Dolny rząd głowic
+
+### 16. Glue Cuff Folding
+
+- **Status:** Brak głowicy na maszynie.
+
+### 17. Glue Poly
+
+- **Typ aplikacji:** Dotykowo, Ciągłe
+- **Opis:** Klejenie folii.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/17-poly.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 18. Glue AQL
+
+- **Typ aplikacji:** Natryskowo, Ciągłe
+- **Opis:** Błąd w nazwie. Jest to ADL / Highloft.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/18-adl-(aql).webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 19. Glue Tummy
+
+:::danger
+**Uzupełnić pic**
+:::
+
+### 20. Glue Pad to Cover
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/20-pad-to-cover.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 21. Glue Wetness Ind.
+
+- **Typ aplikacji:** Natryskowo, Taktowane
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/21-wetness-ind.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+### 22. Glue Tpl Lower
+
+- **Typ aplikacji:** Dotykowo, Ciągłe
+- **Opis:** TPL dolny.
+
+:::danger
+**Uzupełnić pic**
+:::

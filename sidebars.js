@@ -7,6 +7,7 @@ module.exports = {
     { type: "doc", id: "panel-hmi/index", label: "🖥️ Panel HMI" },
     { type: "doc", id: "herman/index", label: "🔊 Herman" },
     { type: "doc", id: "klejenia/index", label: "🏗️ Klejenia" },
+    { type: "doc", id: "tanki/index", label: "🛢️ Tanki" },
     { type: "doc", id: "pull-and-press/index", label: "⚙️ Unit Pull & Press" },
     { type: "doc", id: "optima/index", label: "📦 Optima" },
     { type: "doc", id: "btsr/index", label: "🧵 BTSR" },

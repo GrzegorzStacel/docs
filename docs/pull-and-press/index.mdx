@@ -10,6 +10,19 @@ import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
 2. **Utrzymanie optymalnego napięcia** wstęgi.
 3. **Zapewnienie stabilności** wstęgi przed składaniem i cięciem.
 
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_11.webp").default,
+        title: "Pull & Press",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
 ---
 
 ## ⚙️ Zasada działania
@@ -19,6 +32,19 @@ Zespół napędowy (serwonapęd) napędza rolki Pull and Press poprzez **pas zę
 - **Czystość:** Zarówno pas napędowy, jak i koła zębate muszą być utrzymywane w nienagannej czystości.
 - **Mechanika:** Połączenia wałów Kardana muszą być dokręcone wszystkimi śrubami.
 - **Sterowanie:** Z panelu HMI sterujemy prędkością Pull and Press. W razie konieczności sprawdź profil prędkości z dokumentacją **KUM**.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_05.webp").default,
+        title: "Zespół napędowy",
+        fullTitle: "Serwonapęd, pas zębaty oraz łożyskowane wały Kardana",
+      },
+    ]}
+  />
+</div>
 
 ---
 
@@ -31,6 +57,23 @@ Pas jest najważniejszym elementem stykowym. Należy kontrolować:
 - **Odtłuszczanie:** Czyścić wyłącznie **alkoholem**.
   > ⚠️ **Uwaga:** Zatłuszczony pas to ślizganie się wstęgi i brak stabilności procesu.
 
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_09.webp").default,
+        title: "Ślady wytarcia",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_10.webp").default,
+        title: "Dobry i uszkodzony klin prowadzący",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
 ---
 
 ## 📏 Kontrola szczelin i zagłębienia
@@ -39,6 +82,29 @@ Kontroli dokonujemy zgodnie z harmonogramem **KUM**.
 
 1. **Szczeliny rolek:** Płytkę szczelinomierza wsuwamy między rolki dociskowe. Szczelina po obu stronach musi być identyczna, a przyrząd powinien wchodzić z lekkim oporem.
 2. **Zagłębienie pasów:** Weryfikujemy za pomocą miarki między korpusem a zawieszonym na siłowniku uchwycie górnej roli.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_01.webp").default,
+        title: "Szczelina pomiędzy rolkami",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_02.webp").default,
+        title: "Szczelina zagłębienia pasów",
+        fullTitle: "Tą regulacje wykonują osoby z utrzymania ruchu",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_08.webp").default,
+        title: "Rysunek poglądowy",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
 
 ---
 
@@ -54,14 +120,9 @@ Układ pneumatyczny stabilizuje wstęgę. Należy kontrolować ciśnienie zgodni
     layout="center"
     images={[
       {
-        src: require("@site/static/img/pull_and_press/pull_press_03.webp").default,
-        title: "Pull & Press - regulacja wysokości noża",
-        fullTitle: "Śruba regulacyjna wysokość szczeliny pomiędzy nożem a pasem transportowym.",
-      },
-      {
         src: require("@site/static/img/pull_and_press/pull_press_04.webp").default,
-        title: "Pull & Press - Manometr",
-        fullTitle: "Wskaźnik ciśnienia.",
+        title: "Manometr docisku",
+        fullTitle: "",
       },
     ]}
   />
@@ -77,13 +138,47 @@ Układ pneumatyczny stabilizuje wstęgę. Należy kontrolować ciśnienie zgodni
 2. **Zmniejszenie zagłębienia:** Wkręć nakrętkę **B** w prawo.
 3. **Zwiększenie zagłębienia:** Wykręć nakrętkę **B** w lewo (zmiana skoku siłownika).
 4. Dokręć nakrętkę kontrującą **A**.
-   > ⚖️ **Ważne:** Ustawienia po stronie operatora i napędów muszą być identyczne.
+
+:::warning
+⚖️ Ustawienia po stronie operatora i napędów muszą być identyczne.
+:::
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_03.webp").default,
+        title: "Regulacja zagłębienia",
+        fullTitle: "Tą regulacje wykonuje osoba z utrzymania ruchu",
+      },
+    ]}
+  />
+</div>
 
 ### Regulacja szczelin (na opuszczonym siłowniku)
 
 1. Poluzuj nakrętkę kontrującą **A**.
 2. Przez obrót trzpieniem siłownika **B** wkręcamy lub wykręcamy element, aby uzyskać wymaganą szczelinę.
 3. Dokręć nakrętkę kontrującą.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_07.webp").default,
+        title: "Nakrętka kontrująca i trzpień siłownika",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/pull_and_press/pull_press_06.webp").default,
+        title: "Szczelina pomiędzy rolkami",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
 
 ---
 
@@ -106,51 +201,3 @@ Zabrudzony/zużyty pas, niewłaściwe szczeliny lub złe ciśnienie powodują:
 | :----------- | :------------------------------------------------------------------------- |
 | ❌ **ZŁY**   | Paski zębate wyszczerbione lub zdeformowane, uszkodzenia powierzchni pasa. |
 | ✅ **DOBRY** | Paski zębate równe na całym obwodzie, powierzchnia pasa bez uszkodzeń.     |
-
-<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
-  <ImageCarousel
-    layout="center"
-    images={[
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_01.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_02.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_05.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_06.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_07.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_08.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_09.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-      {
-        src: require("@site/static/img/pull_and_press/pull_press_10.webp").default,
-        title: "Pull & Press (TMP - uzupełnić & przenieść)",
-        fullTitle: "uzupełnić & przenieść",
-      },
-    ]}
-  />
-</div>

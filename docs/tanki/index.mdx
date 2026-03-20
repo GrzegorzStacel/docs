@@ -1,0 +1,178 @@
+---
+title: 🖥️ Obsługa i sterowanie systemem klejowym 🌡️
+---
+
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+
+# 🖥️ Obsługa i sterowanie systemem klejowym ⚙️
+
+## 🛢️ Sterowanie zbiornikiem
+
+Kliknięcie ikony zbiornika umożliwia przejście do menu sterowania podstawowymi funkcjami, takimi jak:
+
+- **💤 Czuwanie**
+- **🔗 Sprzężenie zbiornika z linią**
+- **🔥 Grzanie zbiornika**
+- **⏱️ Włącznik/wyłącznik czasowy** (funkcja nieużywana)
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_01.webp").default,
+        title: "Ikona zbiornika",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🏎️ Menu aplikacji klejowych
+
+Kliknięcie ikony **M (Motor) ⚙️** powoduje przejście do menu aplikacji klejowych, które zawiera informacje o:
+
+- **🟢 Statusie załączonej pompy**
+- **🔄 Sprzężeniu z linią**
+- **📉 Aktualnym ciśnieniu**
+- **🔄 Prędkości obrotowej pomp**
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_02.webp").default,
+        title: "Ikona aplikacji klejowych 'M'",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 📊 Szczegóły aplikacji i ustawienia
+
+Kliknięcie w konkretną aplikację wyświetla **📈 wykres liniowy**, przedstawiający wzrost prędkości pomp w relacji do prędkości linii.
+
+Kolejna zakładka menu zapewnia dostęp do **🛠️ ustawień wewnętrznych**, takich jak:
+
+- **🔘 Załączenie/wyłączenie ciśnienia startowego**
+- **📍 Wartość ciśnienia startowego**
+- **⚡ Warunek aktywacji funkcji wytwarzania ciśnienia**
+
+W żółtym polu 🟨 wyświetlana jest **📋 aktualna wartość ciśnienia** w układzie.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_03.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_04.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🌡️ Nastawy temperatur zbiornika
+
+Kliknięcie w ikonę zbiornika powoduje przejście do menu nastaw temperatur dla poszczególnych stref grzewczych:
+
+- **🧥 Płaszcz zbiornika** – odpowiada za grzanie ścian bocznych.
+- **🧱 Ruszt** – odpowiada za grzanie dolnej części zbiornika.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_05.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🐍 Temperatury węży klejowych
+
+Kliknięcie w ikonę węża klejowego wyświetla **🌡️ aktualne** oraz **🎯 zadane** temperatury kanałów grzewczych.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_06.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🔫 Temperatury głowic klejowych
+
+Kliknięcie w **📥 aplikator klejowy** powoduje przejście do podglądu **🌡️ aktualnych** oraz **🎯 zadanych** temperatur na głowicach klejowych.
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_07.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+---
+
+## 🔐 Zaawansowane ustawienia zbiornika
+
+W celu wejścia do zaawansowanych ustawień zbiornika klejowego należy kolejno wybrać ikonę **🛢️ Zbiornik**, a następnie górną ikonę **⚙️ Ustawienia**. Dalszą część menu rozwija się, klikając ikonę **"➡️ strzałka w prawo"**, gdzie dostępna jest konfiguracja następujących elementów:
+
+- **🔧 Czynności serwisowe**
+- **✅ Konfiguracja gotowości systemu**
+- **📏 Jednostki temperatur i ciśnień**
+- **🖥️ Konfiguracja sterowania zbiornikiem** (Profinet z linii, sterowanie panelem na zbiorniku, tryb podwójny itp.)
+
+<div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+  <ImageCarousel
+    layout="center"
+    images={[
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_08.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+      {
+        src: require("@site/static/img/klejenia/tanki/tanki_09.webp").default,
+        title: "",
+        fullTitle: "",
+      },
+    ]}
+  />
+</div>
+
+> ### ⚠️ OSTRZEŻENIE 🛑
+>
+> Wyżej wymienione opcje oraz wszystkie pozostałe ustawienia zaawansowane są **🚫 zabronione** dla pracowników bez odpowiednich kwalifikacji w zakresie obsługi systemów klejowych.

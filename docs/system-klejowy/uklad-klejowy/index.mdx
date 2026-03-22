@@ -1,0 +1,70 @@
+---
+title: 🧴 Obsługa układu klejowego i procedura Cup Test
+---
+
+## ⚙️ Regulacja klejenia z panelu HMI
+
+Regulacja parametrów klejenia jest podzielona na dwa kluczowe obszary.. Przy wprowadzaniu korekt należy pamiętać o poniższych zasadach:
+
+### 📏 Pozycja i długość (Strony 121–126)
+
+Zmiany fizycznego położenia kleju na produkcie oraz długości poszczególnych ścieżek wykonujemy na **stronach od 121 do 126**.
+
+- **Zależność długości od gramatury:** Jeśli wydłużasz odcinek klejenia (np. z 20 cm na 40 cm), pamiętaj, że zadana masa kleju pozostanie bez zmian, ale rozłoży się na większej powierzchni. Aby zachować siłę spoiny, po wydłużeniu ścieżki należy skorygować wydajność pompy.
+
+### ⚖️ Ilość kleju i obroty pompy (Strony 114-115)
+
+Ilość podawanego kleju regulujemy poprzez **zwiększenie lub zmniejszenie obrotów pompy na stronie 115**.
+
+- **Nadmiar kleju:** Zbyt duża ilość (zbyt wysokie obroty) może powodować „przebijanie” kleju przez materiał. Skutkuje to oklejaniem się rolek procesowych, co po ok. 40 minutach pracy prowadzi do niestabilności prowadzenia produktu („pływanie” materiału).
+
+:::tip Zapamiętaj
+Zmiana długości klejenia na stronach 121-126 wymaga korekty obrotów pompy na stronie 115, aby utrzymać właściwą gramaturę.
+:::
+
+---
+
+## ☕ Cup Test – Procedura cotygodniowa
+
+Test wydajności pompy (Cup Test) wykonujemy raz w tygodniu zgodnie z poniższym schematem:
+
+1.  Przygotuj dwie foremki.
+2.  Do pierwszej spuść „brudny” klej zalegający w głowicy, aby oczyścić układ przed pomiarem.
+3.  Zważ pustą, drugą foremkę na wadze i zapisz jej masę na ściance.
+4.  Podstaw foremkę pod głowicę.
+5.  Uruchom pompę na zbiorniku (tanku) na **dokładnie 1 minutę** (użyj stopera).
+6.  Zważ foremkę z klejem, odejmij masę samej foremki i zapisz wynik netto.
+7.  Wprowadź dane do systemu audytowego.
+
+---
+
+## 🛠️ Procedura udrażniania głowic i dysz
+
+Jeśli dysza podaje klej nierównomiernie lub jest zapchana, spróbuj "przepłukać" układ pod ciśnieniem.
+
+### Metoda 1: Przepływ wymuszony (Standardowy)
+
+1.  Przejdź na **stronę 121** w HMI.
+2.  Znajdź odpowiednią głowicę i zmień jej tryb z **Automatic** na **Hold**. Otworzy to elektrozawór (domyślnie otwiera się on tylko podczas biegu maszyny).
+3.  _Alternatywnie:_ Możesz otworzyć zawór ręcznie niebieskim przyciskiem bezpośrednio na elektrozaworze głowicy.
+4.  Przejdź na **stronę 114 lub 115** i w sekcji pompy przełącz tryb z **Auto** na **Hold**.
+    > ⚠️ **Uwaga:** Jeśli opuścisz stronę 114, pompa automatycznie wróci w tryb **Auto**. Aby temu zapobiec, możesz tymczasowo wyłączyć synchronizację zbiornika z maszyną.
+
+### Metoda 2: „Strzał” ciśnieniem (Skuteczniejsza)
+
+Jeśli standardowe "płukanie" nie pomaga, wykorzystaj ciśnienie statyczne:
+
+1.  Na **stronie 114** włącz pompę w tryb ręczny na kilka sekund przy **zamkniętych** dyszach. Pompa nabije maksymalne ciśnienie w wężach.
+2.  Przejdź na **stronę 121** (lub użyj przycisku na głowicy) i otwórz elektrozawór.
+3.  Skumulowane ciśnienie powinno „wystrzelić” zanieczyszczenia z dyszy.
+
+---
+
+## 🚨 Diagnostyka i awarie
+
+- **Brak reakcji z HMI:** Jeśli elektrozawór reaguje na przycisk fizyczny, a nie reaguje na sterowanie z panelu, prawdopodobnie uszkodzona jest **cewka elektrozaworu**.
+- **Brak efektów płukania:** Jeśli po kilku próbach „strzału” dysza nadal nie podaje kleju, należy wezwać klejowych.
+
+:::danger WAŻNE: Ochrona pompy
+Nigdy nie uruchamiaj pompy, gdy klej w zbiorniku lub wężach jest zastygły (system jest niedogrzany). Próba przepchnięcia twardego kleju doprowadzi do natychmiastowego **uszkodzenia mechanicznego pompy**.
+:::

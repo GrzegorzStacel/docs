@@ -1,6 +1,7 @@
 module.exports = {
   tutorialSidebar: [
     // { type: "doc", id: "kontrola-kamer/index", label: "📷 Kontrola kamer – poprawne wykonywanie testów" },
+    { type: "doc", id: "konfiguracja-zlecen/index", label: "⚙️ Konfiguracja zleceń" },
     { type: "doc", id: "plan-szkolenia/index", label: "📋 Lista pytań" },
     { type: "doc", id: "obliczanie-dlugosci-rolki", label: "📏 Obliczanie długości rolki" },
     { type: "doc", id: "mlyn/index", label: "⚙️ Młyn" },

@@ -1,0 +1,86 @@
+---
+title: "🔄 Prowadzenie materiałów RAD21"
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import ImageCarousel from "@site/src/components/ImageCarousel/ImageCarousel";
+import Details from "@theme/Details";
+
+<div style={{ height: "1px", background: "linear-gradient(90deg, transparent, #e0e0e0, transparent)", margin: "2rem 0" }} />
+
+## 📸 Dokumentacja fotograficzna {#dokumentacja}
+
+Wybierz odpowiednią sekcje, aby wyświetlić galerię zdjęć.
+
+<Tabs>
+  <TabItem value="adl" label="ADL" default>
+
+{" "}
+
+<Details open summary={
+  <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (ADL)</summary>
+}>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Zmiana 1"
+      images={[
+         { src: require("@site/static/img/prowadzenie_materialow/adl/01.webp").default, title: "B 01" },
+         
+      ]}
+    />
+
+  </div>
+</Details>
+</TabItem>
+  <TabItem value="backsheet-foil" label="Backsheet + Foil" default>
+
+{" "}
+
+<Details open summary={<summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Backsheet + Foil)</summary>}>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel changeContext="Zmiana 2" images={[{ src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A03" }]} />
+  </div>
+</Details>
+
+  </TabItem>
+  <TabItem value="topsheet" label="Topsheet">
+
+{" "}
+
+<Details open summary={
+    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Topsheet)</summary>
+}>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Zmiana 3"
+      images={[
+        { src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A 01", fullTitle: "A 01: ciśnienie głowicy CoreWrap SO (nie dotyczy swimpants)" },
+      ]}
+    />
+
+  </div>
+</Details>
+
+  </TabItem>
+
+  <TabItem value="bs_foil" label="BS + Foil">
+
+{" "}
+
+<Details open summary={
+    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Topsheet)</summary>
+}>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Zmiana 3"
+      images={[
+        { src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A 01", fullTitle: "A 01: ciśnienie głowicy CoreWrap SO (nie dotyczy swimpants)" },
+      ]}
+    />
+
+  </div>
+</Details>
+
+  </TabItem>
+</Tabs>

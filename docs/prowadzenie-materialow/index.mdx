@@ -23,10 +23,18 @@ Wybierz odpowiednią sekcje, aby wyświetlić galerię zdjęć.
 }>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
-      changeContext="Zmiana 1"
+      changeContext="ADL"
       images={[
-         { src: require("@site/static/img/prowadzenie_materialow/adl/01.webp").default, title: "B 01" },
-         
+         { src: require("@site/static/img/prowadzenie_materialow/adl/01.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/adl/02.webp").default },
+           { src: require("@site/static/img/prowadzenie_materialow/adl/03.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/adl/04.webp").default },
+            { src: require("@site/static/img/prowadzenie_materialow/adl/05.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/adl/06.webp").default },
+           { src: require("@site/static/img/prowadzenie_materialow/adl/07.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/adl/08.webp").default },
+             { src: require("@site/static/img/prowadzenie_materialow/adl/09.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/adl/10.webp").default }
       ]}
     />
 
@@ -39,7 +47,26 @@ Wybierz odpowiednią sekcje, aby wyświetlić galerię zdjęć.
 
 <Details open summary={<summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Backsheet + Foil)</summary>}>
   <div style={{ marginTop: "15px" }}>
-    <ImageCarousel changeContext="Zmiana 2" images={[{ src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A03" }]} />
+    <ImageCarousel changeContext="Backsheet + Foil" images={[
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/02.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/03.webp").default },
+ { src: require("@site/static/img/prowadzenie_materialow/bs_foil/04.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/05.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/06.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/07.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/08.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/09.webp").default },
+ { src: require("@site/static/img/prowadzenie_materialow/bs_foil/10.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/11.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/12.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/13.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/14.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/15.webp").default },
+      { src: require("@site/static/img/prowadzenie_materialow/bs_foil/16.webp").default },
+
+      ]} />
+
   </div>
 </Details>
 
@@ -53,9 +80,20 @@ Wybierz odpowiednią sekcje, aby wyświetlić galerię zdjęć.
 }>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
-      changeContext="Zmiana 3"
+      changeContext="Topsheet"
       images={[
-        { src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A 01", fullTitle: "A 01: ciśnienie głowicy CoreWrap SO (nie dotyczy swimpants)" },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/01.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/02.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/03.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/04.webp").default },
+           { src: require("@site/static/img/prowadzenie_materialow/topsheet/05.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/06.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/07.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/08.webp").default },
+           { src: require("@site/static/img/prowadzenie_materialow/topsheet/09.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/10.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/11.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/topsheet/12.webp").default },
       ]}
     />
 
@@ -64,18 +102,106 @@ Wybierz odpowiednią sekcje, aby wyświetlić galerię zdjęć.
 
   </TabItem>
 
-  <TabItem value="bs_foil" label="BS + Foil">
+  <TabItem value="cuff" label="Cuff">
 
 {" "}
 
 <Details open summary={
-    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Topsheet)</summary>
+    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Cuff)</summary>
 }>
   <div style={{ marginTop: "15px" }}>
     <ImageCarousel
-      changeContext="Zmiana 3"
+      changeContext="Cuff"
       images={[
-        { src: require("@site/static/img/prowadzenie_materialow/bs_foil/01.webp").default, title: "A 01", fullTitle: "A 01: ciśnienie głowicy CoreWrap SO (nie dotyczy swimpants)" },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/01.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/02.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/03.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/04.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/cuff/05.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/06.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/07.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/08.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/cuff/09.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/10.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/11.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/12.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/cuff/13.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/14.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/15.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/16.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/cuff/17.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/18.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/19.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/20.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/21.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/cuff/22.webp").default },
+      ]}
+    />
+
+  </div>
+</Details>
+
+  </TabItem>
+
+  <TabItem value="outer" label="Outer">
+
+{" "}
+
+<Details open summary={
+    <summary style={{ cursor: "pointer" }}>▶️ Kliknij, aby rozwinąć/ukryć listę (Inner + Outer)</summary>
+}>
+  <div style={{ marginTop: "15px" }}>
+    <ImageCarousel
+      changeContext="Outer"
+      images={[
+        { src: require("@site/static/img/prowadzenie_materialow/outer/01.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/02.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/03.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/04.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/outer/05.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/06.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/07.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/08.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/outer/09.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/10.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/11.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/12.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/outer/13.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/14.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/15.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/16.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/outer/17.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/18.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/19.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/20.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/21.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/22.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/23.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/24.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/25.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/26.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/27.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/28.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/29.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/30.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/31.webp").default },
+          { src: require("@site/static/img/prowadzenie_materialow/outer/32.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/33.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/34.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/35.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/36.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/37.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/38.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/39.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/40.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/41.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/42.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/43.webp").default },
+         { src: require("@site/static/img/prowadzenie_materialow/outer/44.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/45.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/46.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/47.webp").default },
+        { src: require("@site/static/img/prowadzenie_materialow/outer/48.webp").default },
       ]}
     />
 
